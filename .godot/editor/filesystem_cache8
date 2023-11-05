@@ -27,9 +27,10 @@ Kraken.png::CompressedTexture2D::809923352146525413::1699142406::1699145161::1::
 ::res://Level assets/Stage two/::1699145161
 Jelly fish.png::CompressedTexture2D::4531696707378108934::1699143661::1699145161::1::::<><>::
 Shark.png::CompressedTexture2D::8899724260290697123::1699141332::1699145161::1::::<><>::
-::res://Player assets/::1699210697
+::res://Player assets/::1699210807
 spaceAstronauts_013.png::CompressedTexture2D::4682435243064401611::1550445224::1699210793::1::::<><>::
 spaceAstronauts_015.png::CompressedTexture2D::1170942361016636567::1550445224::1699210793::1::::<><>::
+spaceMissiles_001.png::CompressedTexture2D::6695487331868987681::1550445229::1699210875::1::::<><>::
 ::res://Scenes/::1699208297
 Main.tscn::PackedScene::8448330927533625053::1699208297::0::1::::<><>::
 ::res://Scripts/::1699041571
