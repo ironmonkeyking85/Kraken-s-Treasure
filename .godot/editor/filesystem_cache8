@@ -1,23 +1,37 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699139098
-icon.svg::CompressedTexture2D::5023676984038024171::1699044822::1699044832::1::::<><>::
-::res://Assets/::1699045369
-::res://Assets/interactables/::1699045369
-::res://Assets/Music/::1699045208
-::res://Assets/Sound effects/::1699045225
-::res://Enemy assets/::1699045276
-::res://Enemy assets/level one/::1699045253
-::res://Enemy assets/level three/::1699045276
-::res://Enemy assets/level two/::1699045265
-::res://Level assets/::1699045440
-::res://Level assets/Stage one/::1699045412
-::res://Level assets/Stage three/::1699045440
-::res://Level assets/Stage two/::1699045428
-::res://Player assets/::1699045150
-::res://Scenes/::1699045192
-::res://Scripts/::1699045171
-::res://Shaders/::1699045460
-::res://UI/::1699045610
-::res://UI/In-game GUI/::1699045610
-::res://UI/In-game HUD/::1699045581
-::res://UI/Title screen GUI/::1699045499
+::res://::1699136567
+icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
+::res://Assets/::1699041769
+::res://Assets/interactables/::1699145503
+Diamond.png::CompressedTexture2D::5026554923390057448::1699145476::1699145503::1::::<><>::
+Gold coin.png::CompressedTexture2D::1052724496351990665::1699144187::1699145161::1::::<><>::
+Ruby.png::CompressedTexture2D::1321525800668719395::1699145123::1699145161::1::::<><>::
+::res://Assets/Music/::1699041608
+::res://Assets/Sound effects/::1699145767
+coin3.ogg::AudioStreamOggVorbis::1847473119291091596::1637232361::1699208234::1::::<><>::
+explosion3.ogg::AudioStreamOggVorbis::4033889710654310857::1637232367::1699208234::1::::<><>::
+hit2.ogg::AudioStreamOggVorbis::4950426766510459630::1637232372::1699208234::1::::<><>::
+::res://Enemy assets/::1699041676
+::res://Enemy assets/level one/::1699041653
+::res://Enemy assets/level three/::1699041676
+::res://Enemy assets/level two/::1699041665
+::res://Level assets/::1699145161
+Coral Hazard.png::CompressedTexture2D::8570551764255793424::1699140845::1699145161::1::::<><>::
+::res://Level assets/Stage one/::1699145161
+Mines.png::CompressedTexture2D::9161213819041234409::1699141963::1699145161::1::::<><>::
+Squid.png::CompressedTexture2D::1988933958812056015::1699141630::1699145161::1::::<><>::
+::res://Level assets/Stage three/::1699145161
+Kraken-sheet.png::CompressedTexture2D::8502836881986415695::1699143029::1699145161::1::::<><>::
+Kraken.json::JSON::-1::1699146629::0::1::::<><>::
+Kraken.png::CompressedTexture2D::809923352146525413::1699142406::1699145161::1::::<><>::
+::res://Level assets/Stage two/::1699145161
+Jelly fish.png::CompressedTexture2D::4531696707378108934::1699143661::1699145161::1::::<><>::
+Shark.png::CompressedTexture2D::8899724260290697123::1699141332::1699145161::1::::<><>::
+::res://Player assets/::1699041550
+::res://Scenes/::1699041592
+::res://Scripts/::1699041571
+::res://Shaders/::1699041860
+::res://UI/::1699042010
+::res://UI/In-game GUI/::1699042010
+::res://UI/In-game HUD/::1699041981
+::res://UI/Title screen GUI/::1699041899
