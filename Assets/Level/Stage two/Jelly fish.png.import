@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dte3qmh035dqt"
-path="res://.godot/imported/Kraken-sheet.png-99053caa43856b94b8351b9ddd8fb97b.ctex"
+uid="uid://b5tgnam54b0pm"
+path="res://.godot/imported/Jelly fish.png-7b7439e27d130c634f7b447d3392e239.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level assets/Stage three/Kraken-sheet.png"
-dest_files=["res://.godot/imported/Kraken-sheet.png-99053caa43856b94b8351b9ddd8fb97b.ctex"]
+source_file="res://Assets/Level/Stage two/Jelly fish.png"
+dest_files=["res://.godot/imported/Jelly fish.png-7b7439e27d130c634f7b447d3392e239.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3r04ahnxoxvd"
-path="res://.godot/imported/Mines.png-342aabc3efa219d651599b1eee5c377d.ctex"
+uid="uid://lslk4c6ph2sn"
+path="res://.godot/imported/Kraken.png-91a78cfdb63c6f6b9c459e702dc2ca15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level assets/Stage one/Mines.png"
-dest_files=["res://.godot/imported/Mines.png-342aabc3efa219d651599b1eee5c377d.ctex"]
+source_file="res://Assets/Level/Stage three/Kraken.png"
+dest_files=["res://.godot/imported/Kraken.png-91a78cfdb63c6f6b9c459e702dc2ca15.ctex"]
 
 [params]
 

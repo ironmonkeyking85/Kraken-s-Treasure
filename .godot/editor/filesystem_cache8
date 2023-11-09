@@ -1,36 +1,43 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699136567
+::res://::1699556582
 icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
-::res://Assets/::1699041769
-::res://Assets/interactables/::1699145503
-Diamond.png::CompressedTexture2D::5026554923390057448::1699145476::1699145503::1::::<><>::
-Gold coin.png::CompressedTexture2D::1052724496351990665::1699144187::1699145161::1::::<><>::
-Ruby.png::CompressedTexture2D::1321525800668719395::1699145123::1699145161::1::::<><>::
+::res://Addons/::1699556545
+::res://Assets/::1699556582
+::res://Assets/Auto Loads/::1699556346
+::res://Assets/Enemies/::1699041676
+::res://Assets/Enemies/level one/::1699041653
+::res://Assets/Enemies/level three/::1699041676
+::res://Assets/Enemies/level two/::1699041665
+::res://Assets/Fonts/::1699555361
+::res://Assets/Interactables/::1699145503
+Diamond.png::CompressedTexture2D::5026554923390057448::1699145476::1699556583::1::::<><>::
+Gold coin.png::CompressedTexture2D::1052724496351990665::1699144187::1699556583::1::::<><>::
+Ruby.png::CompressedTexture2D::1321525800668719395::1699145123::1699556583::1::::<><>::
+::res://Assets/Level/::1699556247
+Coral Hazard.png::CompressedTexture2D::8570551764255793424::1699140845::1699556247::1::::<><>::
+::res://Assets/Level/Stage one/::1699556247
+Mines.png::CompressedTexture2D::9161213819041234409::1699141963::1699556247::1::::<><>::
+Squid.png::CompressedTexture2D::1988933958812056015::1699141630::1699556247::1::::<><>::
+::res://Assets/Level/Stage three/::1699556247
+Kraken-sheet.png::CompressedTexture2D::8502836881986415695::1699143029::1699556247::1::::<><>::
+Kraken.json::JSON::-1::1699143029::0::1::::<><>::
+Kraken.png::CompressedTexture2D::809923352146525413::1699142406::1699556247::1::::<><>::
+::res://Assets/Level/Stage two/::1699556247
+Jelly fish.png::CompressedTexture2D::4531696707378108934::1699143661::1699556247::1::::<><>::
+Shark.png::CompressedTexture2D::8899724260290697123::1699141332::1699556247::1::::<><>::
 ::res://Assets/Music/::1699041608
+::res://Assets/Player/::1699556262
+spaceAstronauts_013.png::CompressedTexture2D::4682435243064401611::1550445224::1699556262::1::::<><>::
+spaceAstronauts_015.png::CompressedTexture2D::1170942361016636567::1550445224::1699556262::1::::<><>::
+spaceMissiles_001.png::CompressedTexture2D::6695487331868987681::1550445229::1699556262::1::::<><>::
+::res://Assets/Props/::1699556420
+::res://Assets/Props/Background/::1699556420
+::res://Assets/Props/Forground/::1699556408
+::res://Assets/Resources/::1699556117
 ::res://Assets/Sound effects/::1699208234
 coin3.ogg::AudioStreamOggVorbis::1847473119291091596::1637232361::1699208234::1::::<><>::
 explosion3.ogg::AudioStreamOggVorbis::4033889710654310857::1637232367::1699208234::1::::<><>::
 hit2.ogg::AudioStreamOggVorbis::4950426766510459630::1637232372::1699208234::1::::<><>::
-::res://Enemy assets/::1699041676
-::res://Enemy assets/level one/::1699041653
-::res://Enemy assets/level three/::1699041676
-::res://Enemy assets/level two/::1699041665
-::res://Level assets/::1699145161
-Coral Hazard.png::CompressedTexture2D::8570551764255793424::1699140845::1699145161::1::::<><>::
-::res://Level assets/Stage one/::1699145161
-Mines.png::CompressedTexture2D::9161213819041234409::1699141963::1699145161::1::::<><>::
-Squid.png::CompressedTexture2D::1988933958812056015::1699141630::1699145161::1::::<><>::
-::res://Level assets/Stage three/::1699145161
-Kraken-sheet.png::CompressedTexture2D::8502836881986415695::1699143029::1699145161::1::::<><>::
-Kraken.json::JSON::-1::1699146629::0::1::::<><>::
-Kraken.png::CompressedTexture2D::809923352146525413::1699142406::1699145161::1::::<><>::
-::res://Level assets/Stage two/::1699145161
-Jelly fish.png::CompressedTexture2D::4531696707378108934::1699143661::1699145161::1::::<><>::
-Shark.png::CompressedTexture2D::8899724260290697123::1699141332::1699145161::1::::<><>::
-::res://Player assets/::1699210807
-spaceAstronauts_013.png::CompressedTexture2D::4682435243064401611::1550445224::1699210793::1::::<><>::
-spaceAstronauts_015.png::CompressedTexture2D::1170942361016636567::1550445224::1699210793::1::::<><>::
-spaceMissiles_001.png::CompressedTexture2D::6695487331868987681::1550445229::1699210875::1::::<><>::
 ::res://Scenes/::1699208297
 Main.tscn::PackedScene::8448330927533625053::1699208297::0::1::::<><>::
 ::res://Scripts/::1699041571

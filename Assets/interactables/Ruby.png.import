@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s3flpn6ykdix"
-path="res://.godot/imported/Ruby.png-a3e1666c6eafc869e084834e1d09a937.ctex"
+path="res://.godot/imported/Ruby.png-c5f7905568d4996a73a434f9e17be395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/interactables/Ruby.png"
-dest_files=["res://.godot/imported/Ruby.png-a3e1666c6eafc869e084834e1d09a937.ctex"]
+source_file="res://Assets/Interactables/Ruby.png"
+dest_files=["res://.godot/imported/Ruby.png-c5f7905568d4996a73a434f9e17be395.ctex"]
 
 [params]
 

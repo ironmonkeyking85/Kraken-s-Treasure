@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7yha3exwayx4"
-path="res://.godot/imported/spaceAstronauts_013.png-b48cdd9b4c73389eac09c34f8df57541.ctex"
+uid="uid://qxhiqsvwncx0"
+path="res://.godot/imported/spaceAstronauts_015.png-9515784d352f30b44a96050b1b212177.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player assets/spaceAstronauts_013.png"
-dest_files=["res://.godot/imported/spaceAstronauts_013.png-b48cdd9b4c73389eac09c34f8df57541.ctex"]
+source_file="res://Assets/Player/spaceAstronauts_015.png"
+dest_files=["res://.godot/imported/spaceAstronauts_015.png-9515784d352f30b44a96050b1b212177.ctex"]
 
 [params]
 
