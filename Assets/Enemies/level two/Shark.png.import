@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8cklbs2anphx"
-path="res://.godot/imported/Coral Hazard.png-dd33d265433fd5e67909440002e85834.ctex"
+uid="uid://dy2dfm84lcwmt"
+path="res://.godot/imported/Shark.png-3e6aa752421a6aecf231fa6fe88417ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level assets/Stage three/Coral Hazard.png"
-dest_files=["res://.godot/imported/Coral Hazard.png-dd33d265433fd5e67909440002e85834.ctex"]
+source_file="res://Assets/Enemies/level two/Shark.png"
+dest_files=["res://.godot/imported/Shark.png-3e6aa752421a6aecf231fa6fe88417ff.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dte3qmh035dqt"
-path="res://.godot/imported/Kraken-sheet.png-1457241f0e5ec530ef97e24536bb7115.ctex"
+path="res://.godot/imported/Kraken-sheet.png-a4d14444b5e6671e7f2dd3a874f74f3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Level/Stage three/Kraken-sheet.png"
-dest_files=["res://.godot/imported/Kraken-sheet.png-1457241f0e5ec530ef97e24536bb7115.ctex"]
+source_file="res://Assets/Enemies/level three/Kraken-sheet.png"
+dest_files=["res://.godot/imported/Kraken-sheet.png-a4d14444b5e6671e7f2dd3a874f74f3c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3lppmggxbe1t"
-path="res://.godot/imported/Squid.png-f60987ba2ab0410262af840c81f73cd6.ctex"
+uid="uid://d3r04ahnxoxvd"
+path="res://.godot/imported/Mines.png-1b81ae996bb42df37674ea7e15f282fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Level/Stage one/Squid.png"
-dest_files=["res://.godot/imported/Squid.png-f60987ba2ab0410262af840c81f73cd6.ctex"]
+source_file="res://Assets/Enemies/level one/Mines.png"
+dest_files=["res://.godot/imported/Mines.png-1b81ae996bb42df37674ea7e15f282fb.ctex"]
 
 [params]
 

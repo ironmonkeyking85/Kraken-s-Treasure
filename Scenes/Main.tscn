@@ -1,40 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=3 format=3 uid="uid://dsmo1nei03b0x"]
 
-[ext_resource type="Texture2D" uid="uid://b7yha3exwayx4" path="res://Assets/Player/spaceAstronauts_013.png" id="1_cyix4"]
-[ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_vlg2m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_weg1d"]
-size = Vector2(26, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1hn2n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_cyix4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_vlg2m")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shl3b"]
-radius = 14.0
-height = 50.0
+[ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
+[ext_resource type="Resource" uid="uid://cge6wrqwox6g6" path="res://Resources/custom_resource.tres" id="2_s13xs"]
 
 [node name="Main Scene" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_weg1d")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_1hn2n")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CapsuleShape2D_shl3b")
+[node name="Player" parent="." instance=ExtResource("1_awg6l")]
+playerphysics = ExtResource("2_s13xs")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2nlx0bogfs7r"
-path="res://.godot/imported/spaceMissiles_001.png-ea17e30d405d318d4d591ae0ada7bbf6.ctex"
+uid="uid://dudv0adsei42g"
+path="res://.godot/imported/Coral Hazard.png-19690dbb39ea5e5c3b33f2d477db240b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/spaceMissiles_001.png"
-dest_files=["res://.godot/imported/spaceMissiles_001.png-ea17e30d405d318d4d591ae0ada7bbf6.ctex"]
+source_file="res://Assets/Enemies/level two/Coral Hazard.png"
+dest_files=["res://.godot/imported/Coral Hazard.png-19690dbb39ea5e5c3b33f2d477db240b.ctex"]
 
 [params]
 
