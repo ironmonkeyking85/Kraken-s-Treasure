@@ -13,6 +13,7 @@ size = Vector2(549, 77)
 up_direction = Vector2(0, -1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(320, -3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-307, 292)
@@ -21,7 +22,7 @@ shape = SubResource("RectangleShape2D_85v07")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-256, 361)
+position = Vector2(-267, 326)
 rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
