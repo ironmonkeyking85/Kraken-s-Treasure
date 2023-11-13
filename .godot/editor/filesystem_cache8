@@ -1,5 +1,5 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699567383
+2a60927148abd1d33b818b535e306557
+::res://::1699886981
 icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
 ::res://Addons/::1699556545
 ::res://Assets/::1699567383
@@ -36,15 +36,16 @@ spaceAstronauts_015.png::CompressedTexture2D::1170942361016636567::1550445224::1
 coin3.ogg::AudioStreamOggVorbis::1847473119291091596::1637232361::1699208234::1::::<><>::
 explosion3.ogg::AudioStreamOggVorbis::4033889710654310857::1637232367::1699208234::1::::<><>::
 hit2.ogg::AudioStreamOggVorbis::4950426766510459630::1637232372::1699208234::1::::<><>::
-::res://Auto Loads/::1699556346
-::res://Resources/::1699565810
-Custom_Resource.gd::GDScript::-1::1699565633::0::1::::CustomResurce<>Resource<>::
-custom_resource.tres::Resource/CustomResurce::5204154373105354815::1699565810::0::1::::<><>::res://Resources/Custom_Resource.gd
-::res://Scenes/::1699566951
-Main.tscn::PackedScene::8448330927533625053::1699566951::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn
-player.tscn::PackedScene::5325533638394233076::1699566951::0::1::::<><>::res://Scripts/player.gd<>uid://b7yha3exwayx4::::res://Assets/Player/spaceAstronauts_013.png<>uid://qxhiqsvwncx0::::res://Assets/Player/spaceAstronauts_015.png
-::res://Scripts/::1699566610
-player.gd::GDScript::-1::1699566610::0::1::::<>CharacterBody2D<>::
+::res://Auto Loads/::1699567410
+::res://Auto Loads/Singletons/::1699567410
+::res://Resources/::1699885673
+Custom_Resource.gd::GDScript::-1::1699885673::0::1::::CustomResource<>Resource<>::
+custom_resource.tres::Resource/CustomResource::5204154373105354815::1699574992::0::1::::<><>::res://Resources/Custom_Resource.gd
+::res://Scenes/::1699886927
+Main.tscn::PackedScene::8448330927533625053::1699886927::0::1::::<><>::uid://ch4y04wsoqxds
+player.tscn::PackedScene::5325533638394233076::1699886927::0::1::::<><>::res://Scripts/player.gd<>uid://b7yha3exwayx4
+::res://Scripts/::1699886927
+player.gd::GDScript::-1::1699886927::0::1::::<>CharacterBody2D<>::
 ::res://Shaders/::1699041860
 ::res://UI/::1699042010
 ::res://UI/In-game GUI/::1699042010

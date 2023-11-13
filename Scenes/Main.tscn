@@ -1,11 +1,31 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
-[ext_resource type="Resource" uid="uid://cge6wrqwox6g6" path="res://Resources/custom_resource.tres" id="2_s13xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85v07"]
+size = Vector2(549, 77)
 
 [node name="Main Scene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-playerphysics = ExtResource("2_s13xs")
+up_direction = Vector2(0, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-307, 292)
+shape = SubResource("RectangleShape2D_85v07")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-256, 361)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-307, 292)
+shape = SubResource("RectangleShape2D_85v07")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]

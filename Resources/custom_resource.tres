@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CustomResource" load_steps=2 format=3 uid="uid://cge6wrqwox6g6"]
-
-[ext_resource type="Script" path="res://Resources/Custom_Resource.gd" id="1_jc0vu"]
-
-[resource]
-script = ExtResource("1_jc0vu")
-speed = 6
-gravity = 10.0
-buoyancy = 5.0
