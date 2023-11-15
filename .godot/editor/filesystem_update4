@@ -1,5 +1,11 @@
-res://Scenes/Main.tscn
-res://Resources/Custom_Resource.gd
 res://Scenes/player.tscn
 res://Scripts/player.gd
-res://Resources/custom_resource.tres
+res://Scenes/Main.tscn
+res://Scripts/State Mechine/Damaged.gd
+res://Scripts/State Mechine/Distoryed.gd
+res://Scripts/State Mechine/Moving.gd
+res://Scripts/State Mechine/Shooting.gd
+res://Scripts/State Mechine/StateMechine.gd
+res://state.gd
+res://Scripts/State Mechine/state.gd
+res://Auto Loads/Singletons/Globals.gd

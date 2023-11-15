@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699886981
+::res://::1700009356
 icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
+state.gd::GDScript::-1::1700010079::0::1::::State<>Node<>::
 ::res://Addons/::1699556545
 ::res://Assets/::1699567383
 ::res://Assets/Enemies/::1699557762
@@ -39,11 +40,17 @@ hit2.ogg::AudioStreamOggVorbis::4950426766510459630::1637232372::1699208234::1::
 ::res://Auto Loads/::1699567410
 ::res://Auto Loads/Singletons/::1699567410
 ::res://Resources/::1699887031
-::res://Scenes/::1699912190
-Main.tscn::PackedScene::8448330927533625053::1699911191::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn
-player.tscn::PackedScene::5325533638394233076::1699912190::0::1::::<><>::res://Scripts/player.gd<>uid://qxhiqsvwncx0::::res://Assets/Player/spaceAstronauts_015.png
-::res://Scripts/::1699911191
-player.gd::GDScript::-1::1699911191::0::1::::Player<>CharacterBody2D<>::
+::res://Scenes/::1700009193
+Main.tscn::PackedScene::8448330927533625053::1700008521::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn
+player.tscn::PackedScene::5325533638394233076::1700010085::0::1::::<><>::res://Scripts/player.gd<>uid://qxhiqsvwncx0::::res://Assets/Player/spaceAstronauts_015.png<>res://Scripts/State Mechine/StateMechine.gd<>res://Scripts/State Mechine/Moving.gd<>res://Scripts/State Mechine/Shooting.gd<>res://Scripts/State Mechine/Damaged.gd<>res://Scripts/State Mechine/Distoryed.gd
+::res://Scripts/::1700009045
+player.gd::GDScript::-1::1700009045::0::1::::Player<>CharacterBody2D<>::
+::res://Scripts/State Mechine/::1700009193
+Damaged.gd::GDScript::-1::1700010079::0::1::::State<>Node<>::
+Distoryed.gd::GDScript::-1::1700009045::0::1::::State<>Node<>::
+Moving.gd::GDScript::-1::1700009193::0::1::::State<>Node<>::
+StateMechine.gd::GDScript::-1::1700009045::0::1::::StateMechine<>Node<>::
+Shooting.gd::GDScript::-1::1700009045::0::1::::State<>Node<>::
 ::res://Shaders/::1699041860
 ::res://UI/::1699042010
 ::res://UI/In-game GUI/::1699042010

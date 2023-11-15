@@ -1,4 +1,5 @@
 class_name Player
+
 extends CharacterBody2D
 
 
@@ -7,12 +8,11 @@ var gravity: float = 100.0
 var pressure: float = 100.0
 var propulsion: float = 100.0
 
-enum States {MOVING, SHOOTING, DAMAGED, DISTORYED}
+func _ready():
+	
+	Globals.Player = self
 
-
-
-
-func _physics_process(delta):
+func _physics_process(delta: float)-> void:
 	velocity.x = 0
 	velocity.y = 0
 	
