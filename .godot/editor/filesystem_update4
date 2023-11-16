@@ -9,3 +9,5 @@ res://Scripts/State Mechine/StateMechine.gd
 res://state.gd
 res://Scripts/State Mechine/state.gd
 res://Auto Loads/Singletons/Globals.gd
+res://Scripts/State Machine/state.gd
+res://Scripts/State Machine/StateMechine.gd

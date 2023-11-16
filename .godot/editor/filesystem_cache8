@@ -1,7 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700009356
+::res://::1700011581
 icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
-state.gd::GDScript::-1::1700010079::0::1::::State<>Node<>::
 ::res://Addons/::1699556545
 ::res://Assets/::1699567383
 ::res://Assets/Enemies/::1699557762
@@ -38,19 +37,22 @@ coin3.ogg::AudioStreamOggVorbis::1847473119291091596::1637232361::1699208234::1:
 explosion3.ogg::AudioStreamOggVorbis::4033889710654310857::1637232367::1699208234::1::::<><>::
 hit2.ogg::AudioStreamOggVorbis::4950426766510459630::1637232372::1699208234::1::::<><>::
 ::res://Auto Loads/::1699567410
-::res://Auto Loads/Singletons/::1699567410
+::res://Auto Loads/Singletons/::1700011552
+Globals.gd::GDScript::-1::1700011552::0::1::::<>Node<>::
 ::res://Resources/::1699887031
-::res://Scenes/::1700009193
-Main.tscn::PackedScene::8448330927533625053::1700008521::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn
-player.tscn::PackedScene::5325533638394233076::1700010085::0::1::::<><>::res://Scripts/player.gd<>uid://qxhiqsvwncx0::::res://Assets/Player/spaceAstronauts_015.png<>res://Scripts/State Mechine/StateMechine.gd<>res://Scripts/State Mechine/Moving.gd<>res://Scripts/State Mechine/Shooting.gd<>res://Scripts/State Mechine/Damaged.gd<>res://Scripts/State Mechine/Distoryed.gd
-::res://Scripts/::1700009045
-player.gd::GDScript::-1::1700009045::0::1::::Player<>CharacterBody2D<>::
-::res://Scripts/State Mechine/::1700009193
-Damaged.gd::GDScript::-1::1700010079::0::1::::State<>Node<>::
-Distoryed.gd::GDScript::-1::1700009045::0::1::::State<>Node<>::
-Moving.gd::GDScript::-1::1700009193::0::1::::State<>Node<>::
-StateMechine.gd::GDScript::-1::1700009045::0::1::::StateMechine<>Node<>::
-Shooting.gd::GDScript::-1::1700009045::0::1::::State<>Node<>::
+::res://Scenes/::1700095737
+Main.tscn::PackedScene::8448330927533625053::1700095737::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn
+player.tscn::PackedScene::5325533638394233076::1700095885::0::1::::<><>::res://Scripts/player.gd<>uid://qxhiqsvwncx0::::res://Assets/Player/spaceAstronauts_015.png<>res://Scripts/State Mechine/StateMechine.gd<>res://Scripts/State Mechine/Moving.gd<>res://Scripts/State Mechine/Shooting.gd<>res://Scripts/State Mechine/Damaged.gd<>res://Scripts/State Mechine/Distoryed.gd
+::res://Scripts/::1700095076
+player.gd::GDScript::-1::1700095076::0::1::::Player<>CharacterBody2D<>::
+::res://Scripts/State Machine/::0
+::res://Scripts/State Mechine/::1700095737
+Damaged.gd::GDScript::-1::1700092417::0::1::::<>Node<>::
+Distoryed.gd::GDScript::-1::1700092408::0::1::::<>Node<>::
+Moving.gd::GDScript::-1::1700095076::0::1::::MovingState<>State<>::
+Shooting.gd::GDScript::-1::1700092408::0::1::::<>Node<>::
+state.gd::GDScript::-1::1700095373::0::1::::State<>Node<>::
+StateMechine.gd::GDScript::-1::1700095866::0::1::::StateMachine<>Node<>::
 ::res://Shaders/::1699041860
 ::res://UI/::1699042010
 ::res://UI/In-game GUI/::1699042010

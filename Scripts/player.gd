@@ -11,6 +11,7 @@ var propulsion: float = 100.0
 func _ready():
 	
 	Globals.Player = self
+	
 
 func _physics_process(delta: float)-> void:
 	velocity.x = 0

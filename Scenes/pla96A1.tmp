@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://ch4y04wsoqxds"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
+[ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_3h8k4"]
+[ext_resource type="Script" path="res://Scripts/State Mechine/StateMechine.gd" id="3_4kbmo"]
+[ext_resource type="Script" path="res://Scripts/State Mechine/Moving.gd" id="3_kogu3"]
+[ext_resource type="Script" path="res://Scripts/State Mechine/Shooting.gd" id="4_y5h1f"]
+[ext_resource type="Script" path="res://Scripts/State Mechine/Damaged.gd" id="5_stp80"]
+[ext_resource type="Script" path="res://Scripts/State Mechine/Distoryed.gd" id="6_6s5s5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
+
+[node name="Player" type="CharacterBody2D"]
+up_direction = Vector2(0, 1)
+slide_on_ceiling = false
+script = ExtResource("1_00ytg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_26x2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3h8k4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="StateMechine" type="Node" parent="."]
+script = ExtResource("3_4kbmo")
+
+[node name="MovingState" type="Node" parent="StateMechine"]
+script = ExtResource("3_kogu3")
+
+[node name="ShootingState" type="Node" parent="StateMechine"]
+script = ExtResource("4_y5h1f")
+
+[node name="DamagedState" type="Node" parent="StateMechine"]
+script = ExtResource("5_stp80")
+
+[node name="DistoryedState" type="Node" parent="StateMechine"]
+script = ExtResource("6_6s5s5")
