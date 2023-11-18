@@ -1,6 +1,5 @@
-
-
-extends Node
+class_name Damaged_state
+extends State
 
 
 

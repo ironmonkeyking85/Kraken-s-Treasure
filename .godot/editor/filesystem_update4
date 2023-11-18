@@ -1,13 +1,9 @@
 res://Scenes/player.tscn
 res://Scripts/player.gd
-res://Scenes/Main.tscn
-res://Scripts/State Mechine/Damaged.gd
-res://Scripts/State Mechine/Distoryed.gd
-res://Scripts/State Mechine/Moving.gd
-res://Scripts/State Mechine/Shooting.gd
-res://Scripts/State Mechine/StateMechine.gd
-res://state.gd
-res://Scripts/State Mechine/state.gd
-res://Auto Loads/Singletons/Globals.gd
-res://Scripts/State Machine/state.gd
 res://Scripts/State Machine/StateMechine.gd
+res://Scripts/State Machine/Moving.gd
+res://Scripts/State Machine/state.gd
+res://Scenes/Main.tscn
+res://Scripts/State Machine/Shooting.gd
+res://Scripts/State Machine/Distoryed.gd
+res://Scripts/State Machine/Damaged.gd

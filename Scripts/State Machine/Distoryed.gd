@@ -1,6 +1,5 @@
-
-
-extends Node
+class_name Distoryed_state
+extends State
 
 
 # Called when the node enters the scene tree for the first time.
