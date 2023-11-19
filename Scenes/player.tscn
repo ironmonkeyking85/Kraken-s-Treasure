@@ -50,8 +50,10 @@ libraries = {
 script = ExtResource("3_8dvw5")
 state = NodePath("MovingState")
 
-[node name="MovingState" type="Node" parent="StateMachine"]
+[node name="MovingState" type="Node" parent="StateMachine" node_paths=PackedStringArray("player_movement", "animation")]
 script = ExtResource("4_sm46w")
+player_movement = NodePath("../..")
+animation = NodePath("../../AnimationPlayer")
 
 [node name="ShootingState" type="Node" parent="StateMachine"]
 script = ExtResource("5_44le1")
