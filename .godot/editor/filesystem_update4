@@ -1,9 +1,4 @@
-res://Scenes/player.tscn
-res://Scripts/player.gd
-res://Scripts/State Machine/StateMechine.gd
-res://Scripts/State Machine/Moving.gd
-res://Scripts/State Machine/state.gd
 res://Scenes/Main.tscn
-res://Scripts/State Machine/Shooting.gd
-res://Scripts/State Machine/Distoryed.gd
-res://Scripts/State Machine/Damaged.gd
+res://Scripts/State Machine/Moving.gd
+res://Scripts/player.gd
+res://Scenes/player.tscn

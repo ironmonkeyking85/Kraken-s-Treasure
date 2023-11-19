@@ -13,14 +13,14 @@
 [sub_resource type="Animation" id="Animation_ui7ui"]
 resource_name = "attacking"
 
-[sub_resource type="Animation" id="Animation_duam4"]
-resource_name = "taking_damage"
-
 [sub_resource type="Animation" id="Animation_kmqm7"]
 resource_name = "distroyed"
 
 [sub_resource type="Animation" id="Animation_hnxs1"]
 resource_name = "moving"
+
+[sub_resource type="Animation" id="Animation_duam4"]
+resource_name = "taking_damage"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n8d3w"]
 _data = {
