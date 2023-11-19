@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch4y04wsoqxds"]
+[gd_scene load_steps=14 format=3 uid="uid://ch4y04wsoqxds"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
 [ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_3h8k4"]
@@ -9,6 +9,26 @@
 [ext_resource type="Script" path="res://Scripts/State Machine/Distoryed.gd" id="7_cvb6j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
+
+[sub_resource type="Animation" id="Animation_ui7ui"]
+resource_name = "attacking"
+
+[sub_resource type="Animation" id="Animation_duam4"]
+resource_name = "taking_damage"
+
+[sub_resource type="Animation" id="Animation_kmqm7"]
+resource_name = "distroyed"
+
+[sub_resource type="Animation" id="Animation_hnxs1"]
+resource_name = "moving"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n8d3w"]
+_data = {
+"attacking": SubResource("Animation_ui7ui"),
+"distroyed": SubResource("Animation_kmqm7"),
+"moving": SubResource("Animation_hnxs1"),
+"taking_damage": SubResource("Animation_duam4")
+}
 
 [node name="Player" type="CharacterBody2D"]
 up_direction = Vector2(0, 1)
@@ -22,9 +42,13 @@ shape = SubResource("CapsuleShape2D_26x2p")
 texture = ExtResource("2_3h8k4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n8d3w")
+}
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("3_8dvw5")
+state = NodePath("MovingState")
 
 [node name="MovingState" type="Node" parent="StateMachine"]
 script = ExtResource("4_sm46w")
