@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Scripts/State Machine/Distoryed.gd" id="7_cvb6j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
+radius = 23.0
+height = 62.0
 
 [sub_resource type="Animation" id="Animation_ui7ui"]
 resource_name = "attacking"

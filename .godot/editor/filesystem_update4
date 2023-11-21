@@ -1,4 +1,4 @@
 res://Scenes/Main.tscn
 res://Scripts/State Machine/Moving.gd
-res://Scripts/player.gd
 res://Scenes/player.tscn
+res://Scripts/Camera.gd

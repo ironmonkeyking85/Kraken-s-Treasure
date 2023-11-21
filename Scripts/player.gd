@@ -13,6 +13,9 @@ extends CharacterBody2D
 @onready var distoryed_state = $StateMachine/DistoryedState as Distoryed_state
 
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #connect states together here
@@ -21,14 +24,14 @@ func _ready():
 #Change Player to state you want to connect to.
 #moving_state.player_actions.connect(fsm.change_state.bind(Player)) 
 	pass
-
-
-func _physics_process(delta: float)-> void:
+	
+func _process(delta) -> void:
 	velocity.x = 0
 	velocity.y = 0
 
 	if Input.is_action_pressed("Right"):
 		velocity.x += 1
+		
 
 	if Input.is_action_pressed("Left"):
 		velocity.x -= 1
@@ -41,6 +44,9 @@ func _physics_process(delta: float)-> void:
 
 	velocity *= propulsion
 	move_and_slide()
+
+func _physics_process(delta: float)-> void:
+	pass
 
 
 
