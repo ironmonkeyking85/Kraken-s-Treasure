@@ -1,9 +1,11 @@
+Sprite2D
+ParallaxLayer
 CollisionShape2D
 Area2D
+Marker2D
 Node2D
 CanvasLayer
 Path2D
-Sprite2D
 CharacterBody2D
 ParallaxBackground
 TileMap

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=10 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_hiqtc"]
@@ -7,11 +7,14 @@
 [ext_resource type="Script" path="res://Scripts/parallax_forground.gd" id="5_yx5k5"]
 [ext_resource type="PackedScene" uid="uid://ccp71ywpqse6j" path="res://Scenes/squid.tscn" id="6_qsyl1"]
 [ext_resource type="PackedScene" uid="uid://d4jt270msjc1a" path="res://Scenes/sea_mine.tscn" id="7_8vm6u"]
+[ext_resource type="PackedScene" uid="uid://dfv8d5by4efgo" path="res://Scenes/gold_coin.tscn" id="8_a4lnq"]
+[ext_resource type="PackedScene" uid="uid://bp172cp8agdwt" path="res://Scenes/treasure_chest.tscn" id="9_hcqwk"]
 
 [node name="Main Scene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
+process_callback = 0
 script = ExtResource("1_hiqtc")
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
@@ -28,3 +31,7 @@ script = ExtResource("5_yx5k5")
 [node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
 
 [node name="SeaMine" parent="." instance=ExtResource("7_8vm6u")]
+
+[node name="GoldCoin" parent="." instance=ExtResource("8_a4lnq")]
+
+[node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]

@@ -65,3 +65,8 @@ script = ExtResource("6_rijtl")
 
 [node name="DistoryedState" type="Node" parent="StateMachine"]
 script = ExtResource("7_cvb6j")
+
+[node name="HarpoonGun" type="Marker2D" parent="."]
+texture_filter = 1
+position = Vector2(24, 10)
+rotation = 1.5708

@@ -1,11 +1,9 @@
 res://Scenes/Main.tscn
 res://Scripts/State Machine/Moving.gd
 res://Scenes/player.tscn
+res://Scenes/player_projectile.tscn
+res://Scripts/player.gd
 res://Scripts/Camera.gd
 res://Scenes/parallax_background.tscn
-res://Scenes/squid.tscn
-res://Scenes/sea_mine.tscn
-res://Scenes/h_u_d.tscn
-res://Scenes/hud.tscn
-res://Scenes/gold_coin.tscn
-res://Scenes/treasure_chest.tscn
+res://Scripts/State Machine/Shooting.gd
+res://Scripts/player_projectile.gd

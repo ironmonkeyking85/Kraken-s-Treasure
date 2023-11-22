@@ -10,3 +10,5 @@ func _process(delta):
 	#camera zoom needs to be less than 0.7 to work properly and follow the player
 	position = player.global_position
 	
+	
+	
