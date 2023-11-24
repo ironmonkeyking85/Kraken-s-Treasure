@@ -48,9 +48,8 @@ libraries = {
 "": SubResource("AnimationLibrary_n8d3w")
 }
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+[node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_8dvw5")
-state = NodePath("MovingState")
 
 [node name="MovingState" type="Node" parent="StateMachine" node_paths=PackedStringArray("player_movement", "animation")]
 script = ExtResource("4_sm46w")
