@@ -7,3 +7,5 @@ res://Scripts/Camera.gd
 res://Scenes/parallax_background.tscn
 res://Scripts/State Machine/Shooting.gd
 res://Scripts/player_projectile.gd
+res://Scripts/State Machine/StateMechine.gd
+res://Scripts/State Machine/state.gd

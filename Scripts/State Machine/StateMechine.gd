@@ -1,6 +1,8 @@
 class_name StateMachine
 extends Node
 
+enum PlAYERSTATES { IDLE, ATTACK, MOVING, DAMAGED, DISTORYED }
+
 @export var state: State
 
 func _ready():

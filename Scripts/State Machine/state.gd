@@ -1,25 +1,36 @@
 class_name State
 extends Node
 
-signal state_change(new_state)
+const character_animation_name: String = "Animation"
+const character_aduio_name: String = "Audio"
 
+@export var state_name : String = ""
+@export var animation_name : String = ""
+
+var characterbody_reference : CharacterBody2D = null
+var animation_reference : AnimationPlayer = null
+var audio_reference : Node = null
+
+func Initialize( character_body : CharacterBody2D ) -> void:
+	characterbody_reference = character_body
+	animation_reference = character_body.get_node(character_animation_name)
+	audio_reference = character_body.get_node(character_aduio_name)
 
 func enter() -> void:
-	pass
-
-func _handle_input(event):
-	pass	
-
-func update(_delta):
-	pass
-
-func physics_update(_delta: float) -> void:
-	pass
-
-func _on_animation_finished(_anim_name):
-	pass
+	animation_reference.play(animation_name)
 	
 func exit() -> void:
 	pass
+	
+func input(event : InputEvent) -> StateMachine.StateType:
+	return StateMachine.StateType.Invalid
+
+func main_update(_delta : float) -> StateMachine.StateType:
+	return StateMachine.StateType.Invalid
+	
+
+func physics_update(_delta: float) -> StateMachine.StateType:
+	return StateMachine.StateType.Invalid
+
 
 
