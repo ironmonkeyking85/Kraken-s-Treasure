@@ -5,7 +5,7 @@ extends Node
 # https://www.nightquestgames.com/how-to-build-state-machines-in-godot-4/
 # https://www.youtube.com/@uheartbeast ,  https://youtu.be/qwOM3v8T33Q?si=6udP4TlX_t7EWECm
 # https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/
-# https://shaggydev.com/2023/10/08/godot-4-state-machines/ ,  https://youtu.be/oqFbZoA2lnU?si=whz4ahq72KPsI7-F
+# https://shaggydev.com/2023/10/08/godot-4-state-machines/  https://youtu.be/oqFbZoA2lnU?si=whz4ahq72KPsI7-F
 
 # Enumeration for player states
 enum PlAYERSTATES { IDLE, ATTACK, MOVING, DAMAGED, DISTORYED, INVALID }

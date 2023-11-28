@@ -1,19 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch4y04wsoqxds"]
+[gd_scene load_steps=9 format=3 uid="uid://ch4y04wsoqxds"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
 [ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_3h8k4"]
-[ext_resource type="Script" path="res://Scripts/State Machine/StateMechine.gd" id="3_8dvw5"]
-[ext_resource type="Script" path="res://Scripts/State Machine/Moving.gd" id="4_sm46w"]
-[ext_resource type="Script" path="res://Scripts/State Machine/Shooting.gd" id="5_44le1"]
-[ext_resource type="Script" path="res://Scripts/State Machine/Damaged.gd" id="6_rijtl"]
-[ext_resource type="Script" path="res://Scripts/State Machine/Distoryed.gd" id="7_cvb6j"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
-radius = 23.0
-height = 62.0
 
 [sub_resource type="Animation" id="Animation_ui7ui"]
 resource_name = "attacking"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_kmqm7"]
 resource_name = "distroyed"
@@ -32,10 +35,21 @@ _data = {
 "taking_damage": SubResource("Animation_duam4")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
+radius = 23.0
+height = 62.0
+
 [node name="Player" type="CharacterBody2D"]
 up_direction = Vector2(0, 1)
 slide_on_ceiling = false
 script = ExtResource("1_00ytg")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n8d3w")
+}
+
+[node name="AttackAudio" type="AudioStreamPlayer2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_26x2p")
@@ -43,29 +57,9 @@ shape = SubResource("CapsuleShape2D_26x2p")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_3h8k4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_n8d3w")
-}
-
-[node name="StateMachine" type="Node" parent="."]
-script = ExtResource("3_8dvw5")
-
-[node name="MovingState" type="Node" parent="StateMachine" node_paths=PackedStringArray("player_movement", "animation")]
-script = ExtResource("4_sm46w")
-player_movement = NodePath("../..")
-animation = NodePath("../../AnimationPlayer")
-
-[node name="ShootingState" type="Node" parent="StateMachine"]
-script = ExtResource("5_44le1")
-
-[node name="DamagedState" type="Node" parent="StateMachine"]
-script = ExtResource("6_rijtl")
-
-[node name="DistoryedState" type="Node" parent="StateMachine"]
-script = ExtResource("7_cvb6j")
-
 [node name="HarpoonGun" type="Marker2D" parent="."]
 texture_filter = 1
 position = Vector2(24, 10)
 rotation = 1.5708
+
+[node name="Action_timer" type="Timer" parent="."]

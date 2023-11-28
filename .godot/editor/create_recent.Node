@@ -1,4 +1,9 @@
 Sprite2D
+AnimationTree
+CharacterBody2D
+AudioStreamPlayer
+Timer
+AudioStreamPlayer2D
 ParallaxLayer
 CollisionShape2D
 Area2D
@@ -6,13 +11,11 @@ Marker2D
 Node2D
 CanvasLayer
 Path2D
-CharacterBody2D
 ParallaxBackground
 TileMap
 RemoteTransform2D
 Camera2D
 Node
 AnimationPlayer
-Timer
 StaticBody2D
 AnimatedSprite2D

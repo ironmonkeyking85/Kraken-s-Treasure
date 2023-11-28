@@ -2,16 +2,16 @@ class_name State
 extends Node
 
  # Constants for the names of animation and audio nodes
-const character_animation_name: String = "Animation"
-const character_aduio_name: String = "Audio"
+const CHARACTER_ANIMATION_NAME: String = "Animation"
+const CHARACTER_AUDIO_NAME: String = "AttackAudio"
 
 # Exported variables for the state and animation names
 @export var state_name : String = ""
 @export var animation_name : String = ""
 
 # References to the character body, animation player, and audio nodes
-var characterbody_reference : CharacterBody2D = null
-var animation_reference : AnimationPlayer = null
+@export var characterbody_reference : CharacterBody2D = null
+@export var animation_reference : AnimationPlayer = null
 var audio_reference : Node = null
 
 # Function to initialize the state with a character body
@@ -20,9 +20,9 @@ var audio_reference : Node = null
 func Initialize( character_body : CharacterBody2D ) -> void:
 	characterbody_reference = character_body
 # Get the animation player node from the character body.	
-	animation_reference = character_body.get_node(character_animation_name)
+	animation_reference = characterbody_reference.get_node(CHARACTER_ANIMATION_NAME)
 # Get the audio node from the character body.	
-	audio_reference = character_body.get_node(character_aduio_name)
+	audio_reference = characterbody_reference.get_node(CHARACTER_AUDIO_NAME)
 
 # Function called when entering the state
 # This function is invoked when the state is entered.

@@ -6,11 +6,8 @@ extends CharacterBody2D
 @export var pressure: float = 100.0
 @export var propulsion: float = 150.0
 # adding "as" and class name allow for auto complete
-@onready var fsm = $"." as StateMachine
-@onready var moving_state = $StateMachine/MovingState as Moving_State
-@onready var shooting_state = $StateMachine/ShootingState as Shooting_state
-@onready var damaged_state = $StateMachine/DamagedState as Damaged_state
-@onready var distoryed_state = $StateMachine/DistoryedState as Distoryed_state
+#@onready var fsm = $"." as StateMachine
+
 
 
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
@@ -18,11 +15,7 @@ var playerprojectile = preload("res://Scenes/player_projectile.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#connect states together here
-#connect mothod needs arguments to work, change_state is not being called parentheses"()"	aren't needed.
-#bind allow you to pass in the arguments.
-#Change Player to state you want to connect to.
-#moving_state.player_actions.connect(fsm.change_state.bind(Player)) 
+
 	pass
 	
 func _process(delta) -> void:
