@@ -1,3 +1,6 @@
 res://Scenes/Main.tscn
 res://Scripts/State Machine/Moving.gd
 res://Scenes/parallax_background.tscn
+res://Scenes/sea_mine.tscn
+res://Scenes/squid.tscn
+res://Scripts/squid.gd

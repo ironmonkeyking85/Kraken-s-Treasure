@@ -1,3 +1,7 @@
+CollisionShape2D
+Area2D
+PathFollow2D
+AnimationPlayer
 Sprite2D
 AnimationTree
 CharacterBody2D
@@ -5,8 +9,6 @@ AudioStreamPlayer
 Timer
 AudioStreamPlayer2D
 ParallaxLayer
-CollisionShape2D
-Area2D
 Marker2D
 Node2D
 CanvasLayer
@@ -16,6 +18,5 @@ TileMap
 RemoteTransform2D
 Camera2D
 Node
-AnimationPlayer
 StaticBody2D
 AnimatedSprite2D
