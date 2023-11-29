@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlxh66t4kw6q3"]
+[gd_scene load_steps=3 format=3 uid="uid://dlxh66t4kw6q3"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_43x5u"]
 [ext_resource type="Texture2D" uid="uid://bojunbgc87rvf" path="res://Assets/Level/Stage one/ocean static bg.png" id="2_ixc7c"]
-[ext_resource type="Texture2D" uid="uid://x1pk25mbw7m4" path="res://Assets/Level/Stage one/Sprite-0001.png" id="2_rmjgd"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_43x5u")
@@ -11,7 +10,3 @@ script = ExtResource("1_43x5u")
 texture = ExtResource("2_ixc7c")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture = ExtResource("2_rmjgd")
-centered = false
