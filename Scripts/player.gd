@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var gravity: float = 100.0
 @export var pressure: float = 100.0
 @export var propulsion: float = 150.0
+var treasure_amount: int = 0
 # adding "as" and class name allow for auto complete
 #@onready var fsm = $"." as StateMachine
 
@@ -50,3 +51,8 @@ func _physics_process(delta: float)-> void:
 
 
 
+
+
+func _on_hitbox_area_entered(area):
+	if area.name == CoinPickUp:
+		treasure_amount += Coin

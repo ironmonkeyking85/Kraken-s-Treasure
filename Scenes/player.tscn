@@ -1,7 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch4y04wsoqxds"]
+[gd_scene load_steps=10 format=3 uid="uid://ch4y04wsoqxds"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
 [ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_3h8k4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
+radius = 23.0
+height = 62.0
 
 [sub_resource type="Animation" id="Animation_ui7ui"]
 resource_name = "attacking"
@@ -35,15 +39,21 @@ _data = {
 "taking_damage": SubResource("Animation_duam4")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26x2p"]
-radius = 23.0
-height = 62.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_rf107"]
+radius = 33.1059
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 up_direction = Vector2(0, 1)
 slide_on_ceiling = false
 script = ExtResource("1_00ytg")
+buoyancy = null
+gravity = null
+pressure = null
+propulsion = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_26x2p")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
@@ -51,9 +61,6 @@ libraries = {
 }
 
 [node name="AttackAudio" type="AudioStreamPlayer2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_26x2p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_3h8k4")
@@ -64,3 +71,10 @@ position = Vector2(24, 10)
 rotation = 1.5708
 
 [node name="Action_timer" type="Timer" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_rf107")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
