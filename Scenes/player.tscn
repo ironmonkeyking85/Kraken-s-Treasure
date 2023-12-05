@@ -47,10 +47,6 @@ scale = Vector2(0.5, 0.5)
 up_direction = Vector2(0, 1)
 slide_on_ceiling = false
 script = ExtResource("1_00ytg")
-buoyancy = null
-gravity = null
-pressure = null
-propulsion = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_26x2p")

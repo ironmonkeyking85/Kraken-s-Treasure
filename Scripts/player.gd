@@ -54,5 +54,4 @@ func _physics_process(delta: float)-> void:
 
 
 func _on_hitbox_area_entered(area):
-	if area.name == CoinPickUp:
-		treasure_amount += Coin
+	pass

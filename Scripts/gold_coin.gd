@@ -1,13 +1,14 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
+func _on_coin_pick_up_body_entered(body):
+	if body.name == "Player":
+		Globals.gold_coins += 1
+		print(Globals.gold_coins)
+		$AnimationPlayer.play("Coin_picked_up")
+		await $AnimationPlayer.animation_finished
+		queue_free()

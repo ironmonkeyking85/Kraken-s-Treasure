@@ -4,3 +4,4 @@ res://Scenes/gold_coin.tscn
 res://Scripts/gold_coin.gd
 res://Scripts/player.gd
 res://Scenes/player.tscn
+res://Auto Loads/Singletons/Globals.gd

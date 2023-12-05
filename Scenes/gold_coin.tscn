@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://o87ho0215jm4" path="res://Assets/Interactables/Gold coin.png" id="2_mx02c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdknv"]
+radius = 7.0
 
 [sub_resource type="Animation" id="Animation_yah1t"]
 length = 0.001
@@ -42,6 +43,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0.486275)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CoinPickUp/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_s4em1"]
@@ -83,6 +96,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0.827451), Color(1, 1, 1, 0.486275), Color(1, 1, 1, 0.211765), Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CoinPickUp/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
 
 [sub_resource type="Animation" id="Animation_f8kiy"]
 resource_name = "Coin_idle"
@@ -100,6 +125,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 0, 1, 2, 3]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CoinPickUp/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q5c4d"]
 _data = {
@@ -111,6 +160,12 @@ _data = {
 [node name="GoldCoin" type="Node2D"]
 script = ExtResource("1_aa6c6")
 
+[node name="CoinPickUp" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoinPickUp"]
+shape = SubResource("CircleShape2D_fdknv")
+disabled = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.486275)
 scale = Vector2(1.5, 1.5)
@@ -118,15 +173,12 @@ texture = ExtResource("2_mx02c")
 hframes = 4
 frame = 1
 
-[node name="Area2D" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_fdknv")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Coin_idle"
 libraries = {
 "": SubResource("AnimationLibrary_q5c4d")
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="CoinPickUp" to="." method="_on_coin_pick_up_body_entered"]
