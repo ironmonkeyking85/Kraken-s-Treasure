@@ -1,8 +1,19 @@
 extends CharacterBody2D
 
 @export var speed = 500
+@export var health = Globals.enemy_health
 
-func _process(delta):
-	get_parent().set_progress(get_parent().get_progress() * speed * delta)
-	if get_parent().get_progress_ratio() == 1:
+func _process(delta) -> void:
+	
+	move_and_slide()
+
+
+	
+
+
+func _on_hurtbox_area_entered(area):
+	if area.name == "ProjectileCollision":
+		health -= 50
+		printt("hit")
+	if 	health == 0:
 		queue_free()

@@ -1,10 +1,10 @@
-PathFollow2D
-Path2D
+AnimationPlayer
 CollisionShape2D
 Area2D
+PathFollow2D
+Path2D
 Sprite2D
 AudioStreamPlayer2D
-AnimationPlayer
 CanvasLayer
 AnimationTree
 CharacterBody2D
