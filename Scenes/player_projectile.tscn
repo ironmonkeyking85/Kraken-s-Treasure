@@ -12,8 +12,8 @@ script = ExtResource("1_364jn")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3pag6")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ProjectileCollision" type="Area2D" parent="."]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Collision2d" type="CollisionShape2D" parent="ProjectileCollision"]
 shape = SubResource("CapsuleShape2D_tos2i")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=14 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_hiqtc"]
@@ -623,9 +623,16 @@ tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_810jy")
 
+[sub_resource type="Curve2D" id="Curve2D_lgo7m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -8, 24, 0, 0, 0, 0, -8, 80, 0, 0, 0, 0, -56, 120, 0, 0, 0, 0, -88, 168, 0, 0, 0, 0, -8, 200, 0, 0, 0, 0, 40, 208, 0, 0, 0, 0, 96, 248, 0, 0, 0, 0, 96, 296, 0, 0, 0, 0, -152, 304, 0, 0, 0, 0, -256, 304, 0, 0, 0, 0, -248, 152, 0, 0, 0, 0, -296, 120, 0, 0, 0, 0, -376, 112, 0, 0, 0, 0, -440, 128, 0, 0, 0, 0, -464, 296, 0, 0, 0, 0, -584, 304, 0, 0, 0, 0, -568, -24, 0, 0, 0, 0, -552, -192, 0, 0, 0, 0, -552, -304, 0, 0, 0, 0, -352, -296)
+}
+point_count = 20
+
 [node name="Main Scene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 process_callback = 0
 script = ExtResource("1_hiqtc")
 
@@ -643,8 +650,16 @@ layer_0/tile_data = PackedInt32Array(-1114144, 589824, 1, -1048608, 589824, 1, -
 [node name="ParallaxForground" parent="." instance=ExtResource("4_l3rdm")]
 script = ExtResource("5_yx5k5")
 
-[node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_lgo7m")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-8, 24)
+rotation = 1.5708
 scale = Vector2(2, 2)
+loop = false
+
+[node name="Squid" parent="Path2D/PathFollow2D" instance=ExtResource("6_qsyl1")]
 
 [node name="SeaMine" parent="." instance=ExtResource("7_8vm6u")]
 visible = false
