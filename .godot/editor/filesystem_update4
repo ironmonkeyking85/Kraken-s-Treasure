@@ -8,3 +8,4 @@ res://Auto Loads/Singletons/Globals.gd
 res://Scenes/squid.tscn
 res://Scripts/squid.gd
 res://Scenes/player_projectile.tscn
+res://Scripts/player_projectile.gd

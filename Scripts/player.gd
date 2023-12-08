@@ -7,6 +7,9 @@ extends CharacterBody2D
 @export var propulsion: float = 150.0
 @export var health = Globals.player_health
 var treasure_amount: int = 0
+
+@export var max_projectile_count = 1
+@export var current_projectile_count = 0
 # adding "as" and class name allow for auto complete
 #@onready var fsm = $"." as StateMachine
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
@@ -30,8 +33,10 @@ func _process(delta) -> void:
 	if Input.is_action_pressed("Down"):
 		velocity.y += 1	
 		
-	if Input.is_action_pressed("Shoot"):
-		_shoot_projectile()			
+	if Input.is_action_just_pressed("Shoot") and current_projectile_count < max_projectile_count:
+		_shoot_projectile()
+	
+				
 
 	velocity *= propulsion
 	move_and_slide()
@@ -40,6 +45,7 @@ func _shoot_projectile():
 	var projectile = playerprojectile.instantiate()
 	owner.add_child(projectile)
 	projectile.transform = $HarpoonGun.global_transform	
+	
 
 func _physics_process(delta: float)-> void:
 	pass

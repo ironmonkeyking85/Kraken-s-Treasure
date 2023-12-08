@@ -14,7 +14,10 @@ texture = ExtResource("1_3pag6")
 
 [node name="ProjectileCollision" type="Area2D" parent="."]
 collision_layer = 16
-collision_mask = 4
+collision_mask = 5
 
 [node name="Collision2d" type="CollisionShape2D" parent="ProjectileCollision"]
 shape = SubResource("CapsuleShape2D_tos2i")
+
+[connection signal="area_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_area_entered"]
+[connection signal="body_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_body_entered"]

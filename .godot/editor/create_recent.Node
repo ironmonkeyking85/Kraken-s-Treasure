@@ -1,5 +1,6 @@
-AnimationPlayer
 CollisionShape2D
+StaticBody2D
+AnimationPlayer
 Area2D
 PathFollow2D
 Path2D
@@ -18,5 +19,4 @@ TileMap
 RemoteTransform2D
 Camera2D
 Node
-StaticBody2D
 AnimatedSprite2D
