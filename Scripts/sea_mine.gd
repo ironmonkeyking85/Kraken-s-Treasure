@@ -9,3 +9,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+	
+
+
+func _on_hitbox_body_entered(body):
+	if body.name == "Player":
+		Globals.player_health -= 50
+		$AnimationPlayer.play("Detonate")
+		await $AnimationPlayer.animation_finished
+		queue_free()

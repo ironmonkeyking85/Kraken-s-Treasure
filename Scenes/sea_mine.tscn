@@ -1,15 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4jt270msjc1a"]
+[gd_scene load_steps=7 format=3 uid="uid://d4jt270msjc1a"]
 
 [ext_resource type="Script" path="res://Scripts/sea_mine.gd" id="1_1ylcm"]
+[ext_resource type="Texture2D" uid="uid://dh3chd815fd5p" path="res://Assets/Level/Stage one/sea mine.png" id="2_1tmon"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhqix"]
+
+[sub_resource type="Animation" id="Animation_vifcw"]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id="Animation_ql3kn"]
+resource_name = "Detonate"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oo1br"]
+_data = {
+"Detonate": SubResource("Animation_ql3kn"),
+"Idle": SubResource("Animation_vifcw")
+}
 
 [node name="SeaMine" type="Node2D"]
 script = ExtResource("1_1ylcm")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1tmon")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_xhqix")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oo1br")
+}
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

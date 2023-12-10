@@ -1,11 +1,4 @@
-res://Scenes/Main.tscn
+res://Scenes/sea_mine.tscn
 res://Scripts/State Machine/Moving.gd
-res://Scenes/gold_coin.tscn
-res://Scripts/gold_coin.gd
-res://Scripts/player.gd
-res://Scenes/player.tscn
-res://Auto Loads/Singletons/Globals.gd
-res://Scenes/squid.tscn
-res://Scripts/squid.gd
-res://Scenes/player_projectile.tscn
-res://Scripts/player_projectile.gd
+res://Scenes/Main.tscn
+res://Scripts/sea_mine.gd
