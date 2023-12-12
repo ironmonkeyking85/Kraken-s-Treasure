@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=14 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_hiqtc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d4jt270msjc1a" path="res://Scenes/sea_mine.tscn" id="7_8vm6u"]
 [ext_resource type="PackedScene" uid="uid://dfv8d5by4efgo" path="res://Scenes/gold_coin.tscn" id="8_a4lnq"]
 [ext_resource type="PackedScene" uid="uid://bp172cp8agdwt" path="res://Scenes/treasure_chest.tscn" id="9_hcqwk"]
+[ext_resource type="PackedScene" uid="uid://du7b5lb5lhk31" path="res://Scenes/hud.tscn" id="11_1dlnf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_810jy"]
 texture = ExtResource("4_dwla1")
@@ -652,11 +653,20 @@ layer_0/tile_data = PackedInt32Array(-1114144, 589824, 1, -1048608, 589824, 1, -
 script = ExtResource("5_yx5k5")
 
 [node name="SeaMine" parent="." instance=ExtResource("7_8vm6u")]
+position = Vector2(-408, -168)
+
+[node name="SeaMine2" parent="." instance=ExtResource("7_8vm6u")]
+position = Vector2(-560, -264)
 
 [node name="GoldCoin" parent="." instance=ExtResource("8_a4lnq")]
 position = Vector2(-392, -200)
 
-[node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]
-visible = false
+[node name="GoldCoin2" parent="." instance=ExtResource("8_a4lnq")]
+position = Vector2(-304, -216)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="GoldCoin3" parent="." instance=ExtResource("8_a4lnq")]
+position = Vector2(-392, -296)
+
+[node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]
+
+[node name="HUD" parent="." instance=ExtResource("11_1dlnf")]

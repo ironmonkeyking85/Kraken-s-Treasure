@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4jt270msjc1a"]
+[gd_scene load_steps=8 format=3 uid="uid://d4jt270msjc1a"]
 
 [ext_resource type="Script" path="res://Scripts/sea_mine.gd" id="1_1ylcm"]
 [ext_resource type="Texture2D" uid="uid://dh3chd815fd5p" path="res://Assets/Level/Stage one/sea mine.png" id="2_1tmon"]
@@ -17,22 +17,34 @@ _data = {
 "Idle": SubResource("Animation_vifcw")
 }
 
-[node name="SeaMine" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_wpt7f"]
+
+[node name="SeaMine" type="Node2D" groups=["Hazards"]]
 script = ExtResource("1_1ylcm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_1tmon")
-
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." groups=["Hazards"]]
+collision_layer = 32
+collision_mask = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_xhqix")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hitbox"]
+position = Vector2(0, 2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1tmon")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_oo1br")
 }
 
+[node name="Hurtbox" type="Area2D" parent="." groups=["Hazards"]]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_wpt7f")
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

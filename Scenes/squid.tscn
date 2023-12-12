@@ -3,40 +3,46 @@
 [ext_resource type="Script" path="res://Scripts/squid.gd" id="1_c03dy"]
 [ext_resource type="Texture2D" uid="uid://3lppmggxbe1t" path="res://Assets/Enemies/level one/Squid.png" id="1_iasge"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7wpun"]
-radius = 5.38516
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_a37xc"]
-radius = 7.07107
+[sub_resource type="CircleShape2D" id="CircleShape2D_khv7s"]
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2krei"]
 radius = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5266"]
+radius = 8.0
+
 [node name="Squid" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
-collision_mask = 18
+collision_mask = 19
 script = ExtResource("1_c03dy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_khv7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iasge")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_7wpun")
-debug_color = Color(0.596078, 0.545098, 0.0901961, 0.419608)
-
-[node name="Hitbox" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("CircleShape2D_a37xc")
-debug_color = Color(0.905882, 0.113725, 0.686275, 0.419608)
 
 [node name="Hurtbox" type="Area2D" parent="." groups=["Enemy"]]
 collision_layer = 4
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_2krei")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
+[node name="Hitbox" type="Area2D" parent="." groups=["Enemy"]]
+position = Vector2(26, -11)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-26, 10)
+shape = SubResource("CircleShape2D_v5266")
+debug_color = Color(0.8, 0.27451, 0.796078, 0.419608)
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

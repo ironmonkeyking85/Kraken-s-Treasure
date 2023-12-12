@@ -1,6 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://du7b5lb5lhk31"]
+[gd_scene load_steps=4 format=3 uid="uid://du7b5lb5lhk31"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f8gkf"]
+[ext_resource type="Texture2D" uid="uid://ihj0tnj2owws" path="res://Assets/Player/head.png" id="2_5wj1k"]
+[ext_resource type="Texture2D" uid="uid://jvkylmi6uuhe" path="res://Assets/Interactables/scuba tank.png" id="3_re0h5"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_f8gkf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AirTank" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(536, 24)
+scale = Vector2(2, 2)
+texture = ExtResource("3_re0h5")
+hframes = 4
+frame = 3
+
+[node name="Head" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(416, 32)
+texture = ExtResource("2_5wj1k")
+
+[node name="Airlevel" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 519.0
+offset_bottom = 34.0
+size_flags_horizontal = 8
+text = "Air Level:"
+
+[node name="Treasure" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 40.0
+offset_right = 526.0
+offset_bottom = 66.0
+text = "Treasure:"
