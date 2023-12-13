@@ -50,19 +50,16 @@ func _shoot_projectile():
 func _physics_process(delta: float)-> void:
 	pass
 
-
-func _on_hitbox_area_entered(area):
-	if area.is_in_group("Hazards"):
-		health -= 50
-		print(Globals.player_health)
-		
-	if health <= 0:
-		get_tree().reload_current_scene()
-	
-
-
-func _on_hitbox_body_entered(body):
+func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		health -= 25	
+	if health <= 0:
+		get_tree().reload_current_scene()
+
+
+func _on_hazard_area_area_entered(area):
+	if area.is_in_group("Hazards"):
+		health -= 25
+		print(health)	
 	if health <= 0:
 		get_tree().reload_current_scene()

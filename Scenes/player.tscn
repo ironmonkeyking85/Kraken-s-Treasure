@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch4y04wsoqxds"]
+[gd_scene load_steps=11 format=3 uid="uid://ch4y04wsoqxds"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
 [ext_resource type="Texture2D" uid="uid://qxhiqsvwncx0" path="res://Assets/Player/spaceAstronauts_015.png" id="2_3h8k4"]
@@ -42,6 +42,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_rf107"]
 radius = 33.1059
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3gqd3"]
+radius = 32.9848
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
@@ -70,11 +73,19 @@ rotation = 1.5708
 
 [node name="Action_timer" type="Timer" parent="."]
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 44
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_rf107")
 
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[node name="Hazard Area" type="Area2D" parent="." groups=["Hazards"]]
+collision_layer = 2
+collision_mask = 44
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard Area"]
+shape = SubResource("CircleShape2D_3gqd3")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="area_entered" from="Hazard Area" to="." method="_on_hazard_area_area_entered"]

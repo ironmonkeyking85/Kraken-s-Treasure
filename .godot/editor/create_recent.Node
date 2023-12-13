@@ -1,7 +1,7 @@
-Timer
-ProgressBar
 CollisionShape2D
 Area2D
+Timer
+ProgressBar
 Sprite2D
 Label
 VBoxContainer
