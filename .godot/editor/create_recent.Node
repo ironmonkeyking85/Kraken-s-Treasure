@@ -1,3 +1,5 @@
+Timer
+ProgressBar
 CollisionShape2D
 Area2D
 Sprite2D
@@ -14,7 +16,6 @@ CanvasLayer
 AnimationTree
 CharacterBody2D
 AudioStreamPlayer
-Timer
 ParallaxLayer
 Marker2D
 Node2D

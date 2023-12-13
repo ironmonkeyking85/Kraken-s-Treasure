@@ -5,11 +5,11 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhqix"]
 
-[sub_resource type="Animation" id="Animation_vifcw"]
-resource_name = "Idle"
-
 [sub_resource type="Animation" id="Animation_ql3kn"]
 resource_name = "Detonate"
+
+[sub_resource type="Animation" id="Animation_vifcw"]
+resource_name = "Idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oo1br"]
 _data = {
