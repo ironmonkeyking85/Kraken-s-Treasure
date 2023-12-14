@@ -80,7 +80,7 @@ collision_mask = 44
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_rf107")
 
-[node name="Hazard Area" type="Area2D" parent="." groups=["Hazards"]]
+[node name="Hazard Area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 44
 

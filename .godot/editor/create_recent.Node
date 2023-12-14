@@ -1,7 +1,8 @@
+ProgressBar
+CanvasLayer
 CollisionShape2D
 Area2D
 Timer
-ProgressBar
 Sprite2D
 Label
 VBoxContainer
@@ -12,7 +13,6 @@ AnimationPlayer
 PathFollow2D
 Path2D
 AudioStreamPlayer2D
-CanvasLayer
 AnimationTree
 CharacterBody2D
 AudioStreamPlayer

@@ -10,3 +10,5 @@ res://Scripts/hud.gd
 res://Scripts/player.gd
 res://Scripts/sea_mine.gd
 res://Scripts/gold_coin.gd
+res://UI/In-game HUD/ProgressBar.gd
+res://Scripts/squid.gd

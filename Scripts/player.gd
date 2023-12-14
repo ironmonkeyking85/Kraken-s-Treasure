@@ -1,11 +1,14 @@
 class_name Player
 extends CharacterBody2D
 
+signal health_changed
+
 @export var buoyancy: float = 100.0
 @export var gravity: float = 100.0
 @export var pressure: float = 100.0
 @export var propulsion: float = 150.0
-@export var health = Globals.player_health
+@export var max_health = Globals.player_health
+@export var current_health: int = max_health
 var treasure_amount: int = 0
 
 @export var max_projectile_count = 1
@@ -52,14 +55,17 @@ func _physics_process(delta: float)-> void:
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
-		health -= 25	
-	if health <= 0:
+		current_health -= 25	
+		health_changed.emit()
+		print(health_changed)
+	if current_health <= 0:
 		get_tree().reload_current_scene()
+		
 
 
 func _on_hazard_area_area_entered(area):
 	if area.is_in_group("Hazards"):
-		health -= 25
-		print(health)	
-	if health <= 0:
+		current_health -= 25
+		health_changed.emit()	
+	if current_health <= 0:
 		get_tree().reload_current_scene()

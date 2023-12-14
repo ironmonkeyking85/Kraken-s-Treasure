@@ -11,6 +11,8 @@ func _process(delta) -> void:
 
 func _on_hurtbox_area_entered(area):
 	if area.name == "ProjectileCollision":
+		health -= 25
+	if health <= 0:	
 		queue_free()
 	
 

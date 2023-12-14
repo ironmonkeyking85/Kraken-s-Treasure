@@ -11,5 +11,3 @@ func _process(delta):
 	pass
 
 
-func _on_air_depletion_timer_timeout():
-	pass # Replace with function body.

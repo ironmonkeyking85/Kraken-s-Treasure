@@ -637,6 +637,9 @@ script = ExtResource("1_hiqtc")
 position = Vector2(-472, -184)
 up_direction = Vector2(0, -1)
 
+[node name="HUD" parent="Player" instance=ExtResource("11_1dlnf")]
+visible = true
+
 [node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
 position = Vector2(-424, -48)
 rotation = 1.5708
@@ -668,5 +671,3 @@ position = Vector2(-304, -216)
 position = Vector2(-392, -296)
 
 [node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]
-
-[node name="HUD" parent="." instance=ExtResource("11_1dlnf")]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://du7b5lb5lhk31"]
+[gd_scene load_steps=5 format=3 uid="uid://du7b5lb5lhk31"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f8gkf"]
 [ext_resource type="Texture2D" uid="uid://ihj0tnj2owws" path="res://Assets/Player/head.png" id="2_5wj1k"]
 [ext_resource type="Texture2D" uid="uid://jvkylmi6uuhe" path="res://Assets/Interactables/scuba tank.png" id="3_re0h5"]
+[ext_resource type="Script" path="res://UI/In-game HUD/ProgressBar.gd" id="4_no7s8"]
 
 [node name="HUD" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_f8gkf")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -46,9 +48,12 @@ offset_top = 16.0
 offset_right = 848.0
 offset_bottom = 43.0
 scale = Vector2(0.4, 0.4)
+step = 1.0
+show_percentage = false
+script = ExtResource("4_no7s8")
 
 [node name="Air Depletion Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 
-[connection signal="timeout" from="Air Depletion Timer" to="." method="_on_air_depletion_timer_timeout"]
+[connection signal="timeout" from="Air Depletion Timer" to="ProgressBar" method="_on_air_depletion_timer_timeout"]
