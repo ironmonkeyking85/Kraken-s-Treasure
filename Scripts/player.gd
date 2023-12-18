@@ -57,7 +57,7 @@ func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		current_health -= 25	
 		health_changed.emit()
-		print(health_changed)
+		
 	if current_health <= 0:
 		get_tree().reload_current_scene()
 		

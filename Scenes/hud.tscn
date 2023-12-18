@@ -1,59 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://du7b5lb5lhk31"]
+[gd_scene load_steps=2 format=3 uid="uid://du7b5lb5lhk31"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f8gkf"]
-[ext_resource type="Texture2D" uid="uid://ihj0tnj2owws" path="res://Assets/Player/head.png" id="2_5wj1k"]
-[ext_resource type="Texture2D" uid="uid://jvkylmi6uuhe" path="res://Assets/Interactables/scuba tank.png" id="3_re0h5"]
-[ext_resource type="Script" path="res://UI/In-game HUD/ProgressBar.gd" id="4_no7s8"]
 
 [node name="HUD" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_f8gkf")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="AirTank" type="Sprite2D" parent="HBoxContainer"]
-visible = false
-position = Vector2(536, 24)
-scale = Vector2(2, 2)
-texture = ExtResource("3_re0h5")
-hframes = 4
-frame = 3
-
-[node name="Head" type="Sprite2D" parent="HBoxContainer"]
-position = Vector2(400, 16)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_5wj1k")
-
-[node name="Airlevel" type="Label" parent="."]
-offset_left = 416.0
-offset_top = 8.0
-offset_right = 523.0
-offset_bottom = 34.0
-size_flags_horizontal = 8
-text = "Air Level:"
-
 [node name="Treasure" type="Label" parent="."]
-offset_left = 392.0
-offset_top = 24.0
-offset_right = 470.0
-offset_bottom = 50.0
-text = "Treasure:"
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-modulate = Color(0, 0.756863, 0.756863, 1)
-offset_left = 488.0
-offset_top = 16.0
-offset_right = 848.0
-offset_bottom = 43.0
-scale = Vector2(0.4, 0.4)
-step = 1.0
-show_percentage = false
-script = ExtResource("4_no7s8")
-
-[node name="Air Depletion Timer" type="Timer" parent="."]
-wait_time = 5.0
-autostart = true
-
-[connection signal="timeout" from="Air Depletion Timer" to="ProgressBar" method="_on_air_depletion_timer_timeout"]
+offset_left = 545.0
+offset_top = 31.0
+offset_right = 632.0
+offset_bottom = 57.0
+text = "   1"
+vertical_alignment = 1

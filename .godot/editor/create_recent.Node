@@ -1,10 +1,13 @@
+Label
+Node
+Panel
+Sprite2D
+TextureRect
 ProgressBar
 CanvasLayer
 CollisionShape2D
 Area2D
 Timer
-Sprite2D
-Label
 VBoxContainer
 HBoxContainer
 GPUParticles2D
@@ -23,5 +26,4 @@ ParallaxBackground
 TileMap
 RemoteTransform2D
 Camera2D
-Node
 AnimatedSprite2D

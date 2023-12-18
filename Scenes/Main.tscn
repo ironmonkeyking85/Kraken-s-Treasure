@@ -631,14 +631,13 @@ sources/0 = SubResource("TileSetAtlasSource_810jy")
 position = Vector2(0, -1)
 zoom = Vector2(1.4, 1.4)
 process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 script = ExtResource("1_hiqtc")
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
 position = Vector2(-472, -184)
 up_direction = Vector2(0, -1)
-
-[node name="HUD" parent="Player" instance=ExtResource("11_1dlnf")]
-visible = true
 
 [node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
 position = Vector2(-424, -48)
@@ -661,13 +660,17 @@ position = Vector2(-408, -168)
 [node name="SeaMine2" parent="." instance=ExtResource("7_8vm6u")]
 position = Vector2(-560, -264)
 
-[node name="GoldCoin" parent="." instance=ExtResource("8_a4lnq")]
+[node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]
+
+[node name="Collectables" type="Node" parent="."]
+
+[node name="GoldCoin" parent="Collectables" instance=ExtResource("8_a4lnq")]
 position = Vector2(-392, -200)
 
-[node name="GoldCoin2" parent="." instance=ExtResource("8_a4lnq")]
-position = Vector2(-304, -216)
-
-[node name="GoldCoin3" parent="." instance=ExtResource("8_a4lnq")]
+[node name="GoldCoin3" parent="Collectables" instance=ExtResource("8_a4lnq")]
 position = Vector2(-392, -296)
 
-[node name="TreasureChest" parent="." instance=ExtResource("9_hcqwk")]
+[node name="GoldCoin2" parent="Collectables" instance=ExtResource("8_a4lnq")]
+position = Vector2(-304, -216)
+
+[node name="HUD" parent="." instance=ExtResource("11_1dlnf")]
