@@ -55,8 +55,8 @@ func _physics_process(delta: float)-> void:
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
-		current_health -= 25	
-		health_changed.emit()
+		current_health -= 2
+		health_changed.emit(current_health)
 		
 	if current_health <= 0:
 		get_tree().reload_current_scene()
@@ -65,7 +65,7 @@ func _on_hurtbox_body_entered(body):
 
 func _on_hazard_area_area_entered(area):
 	if area.is_in_group("Hazards"):
-		current_health -= 25
-		health_changed.emit()	
+		current_health -= 2
+		health_changed.emit(current_health)	
 	if current_health <= 0:
 		get_tree().reload_current_scene()

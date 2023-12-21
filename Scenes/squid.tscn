@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccp71ywpqse6j"]
+[gd_scene load_steps=7 format=3 uid="uid://ccp71ywpqse6j"]
 
 [ext_resource type="Script" path="res://Scripts/squid.gd" id="1_c03dy"]
 [ext_resource type="Texture2D" uid="uid://3lppmggxbe1t" path="res://Assets/Enemies/level one/Squid.png" id="1_iasge"]
+[ext_resource type="Theme" uid="uid://bs0xanauafhft" path="res://Assets/enemyhealthbar.tres" id="3_6atnm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khv7s"]
 radius = 4.0
@@ -43,6 +44,18 @@ collision_mask = 2
 position = Vector2(-26, 10)
 shape = SubResource("CircleShape2D_v5266")
 debug_color = Color(0.8, 0.27451, 0.796078, 0.419608)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 56.0
+offset_bottom = 16.0
+scale = Vector2(0.2, 0.1)
+theme = ExtResource("3_6atnm")
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+max_value = 4.0
+step = 1.0
+value = 4.0
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

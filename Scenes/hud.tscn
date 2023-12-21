@@ -1,14 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://du7b5lb5lhk31"]
+[gd_scene load_steps=5 format=3 uid="uid://du7b5lb5lhk31"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f8gkf"]
+[ext_resource type="Texture2D" uid="uid://ihj0tnj2owws" path="res://Assets/Player/head.png" id="2_5wj1k"]
+[ext_resource type="PackedScene" uid="uid://ddqxad8knl3ir" path="res://UI/In-game HUD/air_tank.tscn" id="3_c4ahs"]
+[ext_resource type="Texture2D" uid="uid://cgqgve37npbq4" path="res://Assets/Interactables/Treasure chest-sheet.png" id="4_cf3h6"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_f8gkf")
 
+[node name="AirTank" parent="." instance=ExtResource("3_c4ahs")]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
 [node name="Treasure" type="Label" parent="."]
-offset_left = 545.0
-offset_top = 31.0
-offset_right = 632.0
-offset_bottom = 57.0
-text = "   1"
-vertical_alignment = 1
+offset_left = 544.0
+offset_top = 40.0
+offset_right = 584.0
+offset_bottom = 66.0
+scale = Vector2(2, 2)
+
+[node name="Playerhead" type="Sprite2D" parent="."]
+position = Vector2(472, 32)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5wj1k")
+
+[node name="TreasureChest" type="Sprite2D" parent="."]
+position = Vector2(528, 56)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("4_cf3h6")
+hframes = 2

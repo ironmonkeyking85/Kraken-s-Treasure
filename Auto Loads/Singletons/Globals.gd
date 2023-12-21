@@ -5,7 +5,7 @@ extends Node
 
 
 var gold_coins = 0
-var player_health = 100
-var enemy_health = 100
+var player_health = 6
+var enemy_health = 4
 
 

@@ -39,7 +39,7 @@ libraries = {
 "": SubResource("AnimationLibrary_oo1br")
 }
 
-[node name="Hurtbox" type="Area2D" parent="." groups=["Hazards"]]
+[node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 16
 

@@ -14,3 +14,10 @@ res://UI/In-game HUD/ProgressBar.gd
 res://Scripts/squid.gd
 res://UI/In-game HUD/airtankhealth.gd
 res://Auto Loads/Singletons/Globals.gd
+res://Scenes/treasure_chest.tscn
+res://UI/In-game HUD/airtank.gd
+res://UI/In-game HUD/Main.gd
+res://UI/In-game HUD/air_tank.tscn
+res://UI/In-game HUD/air_tank_gui.tscn
+res://UI/In-game HUD/air_tank.gd
+res://UI/In-game HUD/air_tank_gui.gd

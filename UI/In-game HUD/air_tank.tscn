@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddqxad8knl3ir"]
+
+[ext_resource type="Script" path="res://UI/In-game HUD/air_tank.gd" id="1_o1bor"]
+
+[node name="AirTank" type="HBoxContainer"]
+layout_direction = 3
+theme_override_constants/separation = 1
+script = ExtResource("1_o1bor")
