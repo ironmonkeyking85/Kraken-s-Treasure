@@ -8,3 +8,4 @@ res://Scripts/player.gd
 res://Scenes/player.tscn
 res://Scenes/sea_mine.tscn
 res://Scripts/gold_coin.gd
+res://Scenes/player_projectile.tscn
