@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwtbe7p76hd8p"]
+
+[ext_resource type="Script" path="res://Scripts/CoralWall.gd" id="1_jh64c"]
+[ext_resource type="Texture2D" uid="uid://nam61w343dek" path="res://Assets/Level/Stage one/Coral Wall clean.png" id="1_yy86l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejbxh"]
+size = Vector2(1648, 6168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl8pl"]
+size = Vector2(223.752, 6012)
+
+[node name="CoralWall" type="Node2D"]
+script = ExtResource("1_jh64c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yy86l")
+
+[node name="WallCollision" type="Area2D" parent="."]
+position = Vector2(120, 0)
+collision_layer = 32
+collision_mask = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2(-120, 36)
+shape = SubResource("RectangleShape2D_ejbxh")
+debug_color = Color(0.94902, 0.164706, 0.403922, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1832, -104)
+scale = Vector2(7.18653, 1)
+collision_mask = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-32.2826, -54)
+shape = SubResource("RectangleShape2D_bl8pl")
+
+[connection signal="body_entered" from="WallCollision" to="." method="_on_wall_collision_body_entered"]

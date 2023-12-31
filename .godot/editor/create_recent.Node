@@ -1,3 +1,6 @@
+CollisionShape2D
+StaticBody2D
+Area2D
 Sprite2D
 Label
 Panel
@@ -8,11 +11,8 @@ ProgressBar
 Node
 TextureRect
 CanvasLayer
-CollisionShape2D
-Area2D
 Timer
 GPUParticles2D
-StaticBody2D
 PathFollow2D
 Path2D
 AudioStreamPlayer2D

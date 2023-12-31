@@ -1,23 +1,10 @@
-res://Scenes/Main.tscn
-res://Scripts/State Machine/Moving.gd
-res://Scenes/sea_mine.tscn
-res://Scenes/squid.tscn
-res://Scenes/player.tscn
 res://Scenes/gold_coin.tscn
-res://Scenes/hud.tscn
-res://Scenes/player_projectile.tscn
-res://Scripts/hud.gd
+res://Scripts/State Machine/Moving.gd
+res://Assets/enemyhealthbar.tres
+res://Scenes/Main.tscn
+res://Scenes/CoralWall.tscn
+res://Scripts/CoralWall.gd
 res://Scripts/player.gd
-res://Scripts/sea_mine.gd
+res://Scenes/player.tscn
+res://Scenes/sea_mine.tscn
 res://Scripts/gold_coin.gd
-res://UI/In-game HUD/ProgressBar.gd
-res://Scripts/squid.gd
-res://UI/In-game HUD/airtankhealth.gd
-res://Auto Loads/Singletons/Globals.gd
-res://Scenes/treasure_chest.tscn
-res://UI/In-game HUD/airtank.gd
-res://UI/In-game HUD/Main.gd
-res://UI/In-game HUD/air_tank.tscn
-res://UI/In-game HUD/air_tank_gui.tscn
-res://UI/In-game HUD/air_tank.gd
-res://UI/In-game HUD/air_tank_gui.gd
