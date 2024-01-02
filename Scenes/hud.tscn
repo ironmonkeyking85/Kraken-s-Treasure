@@ -11,14 +11,19 @@ script = ExtResource("1_f8gkf")
 [node name="AirTank" parent="." instance=ExtResource("3_c4ahs")]
 anchors_preset = 10
 anchor_right = 1.0
+offset_left = -1776.0
+offset_top = 22.0
+offset_right = -1776.0
+offset_bottom = 22.0
 grow_horizontal = 2
 
 [node name="Treasure" type="Label" parent="."]
 offset_left = 544.0
-offset_top = 40.0
+offset_top = 39.0
 offset_right = 584.0
-offset_bottom = 66.0
+offset_bottom = 65.0
 scale = Vector2(2, 2)
+size_flags_horizontal = 8
 
 [node name="Playerhead" type="Sprite2D" parent="."]
 position = Vector2(472, 32)

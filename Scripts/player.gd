@@ -37,8 +37,10 @@ func _movement(delta: float):
 	velocity.y = 0
 	if Input.is_action_pressed("Right"):
 		velocity.x += 1	
+		$Animation.play("moving right")
 	if Input.is_action_pressed("Left"):
 		velocity.x -= 1
+		$Animation.play("moving left")
 	if Input.is_action_pressed("Up"):
 		velocity.y -= 1
 	if Input.is_action_pressed("Down"):
