@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=18 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://UI/In-game HUD/Main.gd" id="1_bdt2q"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bp172cp8agdwt" path="res://Scenes/treasure_chest.tscn" id="9_hcqwk"]
 [ext_resource type="PackedScene" uid="uid://du7b5lb5lhk31" path="res://Scenes/hud.tscn" id="11_1dlnf"]
 [ext_resource type="PackedScene" uid="uid://bwtbe7p76hd8p" path="res://Scenes/CoralWall.tscn" id="14_vlcms"]
+[ext_resource type="PackedScene" uid="uid://sa6h2j2q3ilb" path="res://Scenes/stage_one_cave.tscn" id="15_s6kmg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_810jy"]
 texture = ExtResource("4_dwla1")
@@ -633,10 +634,15 @@ script = ExtResource("1_bdt2q")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
-zoom = Vector2(2, 2)
+zoom = Vector2(2.2, 2.2)
 process_callback = 0
+limit_left = -1840
+limit_top = -1650
+limit_right = 2800
+limit_bottom = 2160
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+editor_draw_limits = true
 script = ExtResource("1_hiqtc")
 
 [node name="HUD" parent="." instance=ExtResource("11_1dlnf")]
@@ -653,7 +659,7 @@ offset_right = -552.0
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-position = Vector2(-664, -216)
+position = Vector2(656, -1584)
 up_direction = Vector2(0, -1)
 
 [node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
@@ -674,15 +680,35 @@ script = ExtResource("5_yx5k5")
 [node name="Coins" type="Node" parent="."]
 
 [node name="GoldCoin" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(176, -184)
-scale = Vector2(0.02, 0.02)
-
-[node name="GoldCoin3" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(-64, -120)
+position = Vector2(-432, -1280)
 scale = Vector2(0.02, 0.02)
 
 [node name="GoldCoin2" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(120, -24)
+position = Vector2(-1624, -976)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(168, -600)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1840, 88)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin5" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1608, 1976)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin6" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-752, 912)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin7" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1368, -456)
+scale = Vector2(0.02, 0.02)
+
+[node name="GoldCoin8" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-88, 664)
 scale = Vector2(0.02, 0.02)
 
 [node name="SeaMines" type="Node" parent="."]
@@ -699,49 +725,52 @@ position = Vector2(-128, -8)
 
 [node name="GoldBricks" type="Node" parent="."]
 
+[node name="StageOneCave" parent="." instance=ExtResource("15_s6kmg")]
+position = Vector2(520, 320)
+
 [node name="CoralWalls" type="Node2D" parent="."]
 
 [node name="CoralWall" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-848, -136)
+position = Vector2(-184, -1336)
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall2" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-864, 80)
+position = Vector2(-624, -1072)
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall3" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-856, 728)
+position = Vector2(-1112, -728)
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall4" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-656, 1176)
+position = Vector2(64, 80)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall5" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-32, 1176)
+position = Vector2(-272, -512)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall6" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(920, 1168)
+position = Vector2(200, 1584)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall7" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(1512, 1168)
+position = Vector2(1032, 1208)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall8" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(1936, 1168)
+position = Vector2(264, 2136)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
 
 [node name="CoralWall9" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(2008, 64)
+position = Vector2(2008, 336)
 scale = Vector2(-0.04, 0.04)
 
 [node name="CoralWall10" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(2000, -160)
+position = Vector2(1984, 40)
 scale = Vector2(-0.04, 0.04)

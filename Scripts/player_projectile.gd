@@ -1,17 +1,24 @@
 extends Node2D
 
-var speed: float = 180
+var speed: float = 900.0
+var delete_cannonball = 0
+@onready var direction = get_node("Player")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func cannon_direction():
+	pass
+		
+		
 func _process(delta):
-	position += -transform.y * speed * delta
-	
-	
+	var origin = Vector2(1, 0)
+	if origin == Vector2(1, 0):
+		position += transform.y * speed  * delta
+	elif origin == Vector2(-1, 0):
+		position += -transform.y * speed  * delta	
+
+			
 func _on_projectile_collision_body_entered(body):
 	if body.is_in_group("Collidable"):
 		queue_free()

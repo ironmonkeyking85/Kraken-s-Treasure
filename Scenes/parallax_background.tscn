@@ -1,14 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlxh66t4kw6q3"]
+[gd_scene load_steps=6 format=3 uid="uid://dlxh66t4kw6q3"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_43x5u"]
 [ext_resource type="Texture2D" uid="uid://bkya68kkqqgxo" path="res://Assets/Level/Stage one/background water stage one.png" id="2_4j8ai"]
+[ext_resource type="Shader" path="res://Shaders/parallax_background.gdshader" id="2_gu5ia"]
+[ext_resource type="Texture2D" uid="uid://bm6um676xsyr4" path="res://Assets/Level/Stage one/water ripples.png" id="4_d4xgn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k020o"]
+shader = ExtResource("2_gu5ia")
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_43x5u")
 
 [node name="Static background" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_k020o")
 position = Vector2(555.5, 333.5)
-scale = Vector2(1.57865, 1.61759)
+scale = Vector2(1, 1.025)
 texture = ExtResource("2_4j8ai")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="ripples" type="Sprite2D" parent="ParallaxLayer"]
+self_modulate = Color(1, 1, 1, 0.0823529)
+position = Vector2(551, 305)
+texture = ExtResource("4_d4xgn")
+offset = Vector2(0, -1000)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+modulate = Color(1, 1, 1, 0.596078)
+self_modulate = Color(0.980392, 0.878431, 0.878431, 0.52549)
+scale = Vector2(0.8, 0.8)
+motion_scale = Vector2(2, 2)
+
+[node name="ripples" type="Sprite2D" parent="ParallaxLayer2"]
+self_modulate = Color(1, 1, 1, 0.0823529)
+position = Vector2(551, 305)
+scale = Vector2(2, 2)
+texture = ExtResource("4_d4xgn")
+offset = Vector2(0, -1000)

@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dc77727y81ovu" path="res://Assets/Interactables/Canonball.png" id="2_qmjwx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3h1mo"]
-radius = 13.0384
+radius = 24.9098
 
 [node name="PlayerProjectile" type="Node2D"]
 rotation = 1.5708
 script = ExtResource("1_364jn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.02, 0.02)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("2_qmjwx")
 
 [node name="ProjectileCollision" type="Area2D" parent="."]
@@ -19,7 +19,7 @@ collision_layer = 16
 collision_mask = 37
 
 [node name="Collision2d" type="CollisionShape2D" parent="ProjectileCollision"]
-position = Vector2(3.00001, 1.99999)
+position = Vector2(6.50002, 4.99998)
 shape = SubResource("CircleShape2D_3h1mo")
 
 [connection signal="area_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_area_entered"]
