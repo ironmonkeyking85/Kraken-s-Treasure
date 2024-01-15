@@ -659,7 +659,7 @@ offset_right = -552.0
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-position = Vector2(656, -1584)
+position = Vector2(640, -1464)
 up_direction = Vector2(0, -1)
 
 [node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
@@ -714,7 +714,13 @@ scale = Vector2(0.02, 0.02)
 [node name="SeaMines" type="Node" parent="."]
 
 [node name="SeaMine" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(-240, 104)
+position = Vector2(96, -1264)
+
+[node name="SeaMine3" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(-136, -1080)
+
+[node name="SeaMine4" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(160, -1160)
 
 [node name="SeaMine2" parent="SeaMines" instance=ExtResource("7_8vm6u")]
 position = Vector2(-128, -8)

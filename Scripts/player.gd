@@ -7,73 +7,66 @@ enum PLAYERSTATES {MOVEMENT, ATTACK, HURT, DEAD, GAMEOVER}
 
 @export var buoyancy: float = 25.0
 @export var gravity: float = 100.0
-@export var pressure: float = 100.0
 @export var propulsion: float = 100.0
 @export var max_health = Globals.player_health
 @export var current_health: int = max_health
-var treasure_amount: int = 0
-var current_stataes = PLAYERSTATES.MOVEMENT
-
- 
-
+@export var player_rotation_speed = 10.0
 @export var max_projectile_count = 1
 @export var current_projectile_count = 0
+@export var attack_rate = 0.25
+var treasure_amount: int = 0
+var current_states = PLAYERSTATES.MOVEMENT
+var can_attack = true
 # adding "as" and class name allow for auto complete
-#@onready var fsm = $"." as StateMachine
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-		
-	
 
+func _ready():
+	$AttackCoolDown.wait_time = attack_rate
+		
 func _physics_process(delta: float)-> void:
-	match current_stataes:
+	match current_states:
 		PLAYERSTATES.MOVEMENT:
 			_movement(delta)
 		PLAYERSTATES.ATTACK:
-			_attack_one()
-			_attack_two()	
-			
-	velocity.y += buoyancy
-	move_and_slide()	
-			
-func _movement(delta: float):
+			_attack()
+	move_and_slide()
+		
+func _movement(delta: float):	
 	velocity.x = 0
 	velocity.y = 0
-	
-	if Input.is_action_pressed("Right"):
-		velocity.x += 1	
-		$Animation.play("moving right")
 	if Input.is_action_pressed("Left"):
 		velocity.x -= 1
 		$Animation.play("moving left")
+	if Input.is_action_pressed("Right"):
+		velocity.x += 1 
+		$Animation.play("moving right")
 	if Input.is_action_pressed("Up"):
-		velocity.y -= 1
+		velocity.y -= .5	
 	if Input.is_action_pressed("Down"):
-		velocity.y += 1			
-	if Input.is_action_just_pressed("Shoot") and current_projectile_count < max_projectile_count and Input.is_action_pressed("Right"):
-		_attack_one()
-	elif Input.is_action_just_pressed("Shoot") and current_projectile_count < max_projectile_count and Input.is_action_pressed("Left"):	
-		_attack_two()
-				
+		velocity.y += .5			
 	if velocity.x == 0:
-		$Animation.play("idel")
-		
+		$Animation.play("idle")
+	
+	var direction = Vector2(0, 0)
+	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:
+		direction.x -= 1
+		_attack()
+	elif Input.is_action_pressed("Right") and Input.is_action_just_pressed("Shoot") and  can_attack:
+		direction.x += 1	
+		_attack()
 	velocity *= propulsion
 	move_and_slide()
 	
-func _attack_one():
+func _attack():
+	can_attack = false
+	$AttackCoolDown.start()
 	var projectile = playerprojectile.instantiate()
-	owner.add_child(projectile)
-	projectile.transform = $HarpoonGun.global_transform	
-	
-func _attack_two():
-	var projectile = playerprojectile.instantiate()
-	owner.add_child(projectile)
-	projectile.transform = $HarpoonGun2.global_transform		
+	get_tree().root.add_child(projectile)
+	projectile.start($CannonBall.global_transform)
 		
-	
+func _on_attack_cool_down_timeout():
+	can_attack = true
+		
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		current_health -= 2
@@ -81,8 +74,6 @@ func _on_hurtbox_body_entered(body):
 	if current_health <= 0:
 		get_tree().reload_current_scene()
 		
-
-
 func _on_hazard_area_area_entered(area):
 	if area.is_in_group("Hazards"):
 		current_health -= 2
@@ -92,3 +83,4 @@ func _on_hazard_area_area_entered(area):
 		health_changed.emit(current_health)				
 	if current_health <= 0:
 		get_tree().reload_current_scene()
+

@@ -3,6 +3,5 @@ res://Scripts/State Machine/Moving.gd
 res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
-res://Scenes/stage_one_cave.tscn
-res://Scripts/player_projectile.gd
-res://Scripts/player.gd
+res://Scenes/player_projectile.tscn
+res://Scenes/hud.tscn
