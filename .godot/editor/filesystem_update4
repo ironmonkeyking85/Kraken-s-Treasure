@@ -8,6 +8,3 @@ res://Scenes/hud.tscn
 res://Scenes/stage_one_cave.tscn
 res://UI/In-game HUD/air_tank.tscn
 res://UI/In-game HUD/air_tank_gui.tscn
-res://UI/In-game HUD/air_tank.gd
-res://UI/In-game HUD/air_tank_gui.gd
-res://Scripts/player.gd

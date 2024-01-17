@@ -7,6 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://d137vobmd5y8j" path="res://Assets/Interactables/Gold coin animation .png" id="5_27x7x"]
 [ext_resource type="Texture2D" uid="uid://uk6c7u2365w2" path="res://Assets/Interactables/Health bar background copy.png" id="5_dub3h"]
 
+[sub_resource type="Animation" id="Animation_qmktd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Coin:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_vfe1u"]
 resource_name = "coin rotation"
 length = 2.4
@@ -22,21 +37,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(4, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qmktd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Coin:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vf724"]
@@ -66,9 +66,17 @@ offset_bottom = 71.0
 size_flags_horizontal = 8
 theme_override_fonts/font = ExtResource("3_gmn21")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.513726)
+offset_left = 399.0
+offset_top = 11.0
+offset_right = 463.0
+offset_bottom = 67.0
+color = Color(0.666667, 0.968627, 0.909804, 1)
+
 [node name="Playerhead" type="Sprite2D" parent="."]
 position = Vector2(432, 38)
-scale = Vector2(0.016, 0.016)
+scale = Vector2(0.012, 0.012)
 texture = ExtResource("4_03tc6")
 
 [node name="Coin" type="Sprite2D" parent="."]
