@@ -8,3 +8,6 @@ res://Scenes/hud.tscn
 res://Scenes/stage_one_cave.tscn
 res://UI/In-game HUD/air_tank.tscn
 res://UI/In-game HUD/air_tank_gui.tscn
+res://Scenes/parallax_background.tscn
+res://Scripts/player.gd
+res://Scripts/parallax_background.gd

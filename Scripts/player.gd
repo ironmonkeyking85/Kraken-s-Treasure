@@ -41,10 +41,11 @@ func _movement(_delta: float):
 		velocity.x += 1 
 		$Animation.play("moving right")
 	if Input.is_action_pressed("Up"):
-		velocity.y -= .5	
+		velocity.y -= 1	
 	if Input.is_action_pressed("Down"):
-		velocity.y += .5			
-	if velocity.x == 0:
+		velocity.y += 1			
+	elif  velocity.x == 0:
+		can_attack == false
 		$Animation.play("idle")
 	
 	var direction = Vector2(0, 0)

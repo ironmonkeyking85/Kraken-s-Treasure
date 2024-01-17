@@ -1,5 +1,6 @@
-ColorRect
+ParallaxLayer
 AnimationPlayer
+ColorRect
 MarginContainer
 Sprite2D
 Timer
@@ -12,4 +13,3 @@ Node2D
 CollisionShape2D
 GPUParticles2D
 CPUParticles2D
-Area2D
