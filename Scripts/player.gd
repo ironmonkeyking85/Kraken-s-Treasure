@@ -31,7 +31,7 @@ func _physics_process(delta: float)-> void:
 			_attack()
 	move_and_slide()
 		
-func _movement(delta: float):	
+func _movement(_delta: float):	
 	velocity.x = 0
 	velocity.y = 0
 	if Input.is_action_pressed("Left"):

@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	
 	
@@ -23,4 +23,6 @@ func updateTanks(currentTanks: int):
 		tanks[i].update(true)
 		
 	for i in range(currentTanks, tanks.size()):
-		tanks[i].update(false)				
+		tanks[i].update(false)	
+		
+	

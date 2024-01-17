@@ -1,9 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://du7b5lb5lhk31"]
+[gd_scene load_steps=10 format=3 uid="uid://du7b5lb5lhk31"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f8gkf"]
-[ext_resource type="Texture2D" uid="uid://ihj0tnj2owws" path="res://Assets/Player/head.png" id="2_5wj1k"]
 [ext_resource type="PackedScene" uid="uid://ddqxad8knl3ir" path="res://UI/In-game HUD/air_tank.tscn" id="3_c4ahs"]
-[ext_resource type="Texture2D" uid="uid://cgqgve37npbq4" path="res://Assets/Interactables/Treasure chest-sheet.png" id="4_cf3h6"]
+[ext_resource type="FontFile" uid="uid://crspnax2duhu7" path="res://UI/In-game HUD/Kenney Bold.ttf" id="3_gmn21"]
+[ext_resource type="Texture2D" uid="uid://kg0kjvxh4fus" path="res://Assets/Player/Player icon copy.png" id="4_03tc6"]
+[ext_resource type="Texture2D" uid="uid://d137vobmd5y8j" path="res://Assets/Interactables/Gold coin animation .png" id="5_27x7x"]
+[ext_resource type="Texture2D" uid="uid://uk6c7u2365w2" path="res://Assets/Interactables/Health bar background copy.png" id="5_dub3h"]
+
+[sub_resource type="Animation" id="Animation_vfe1u"]
+resource_name = "coin rotation"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Coin:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(4, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qmktd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Coin:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vf724"]
+_data = {
+"RESET": SubResource("Animation_qmktd"),
+"coin rotation": SubResource("Animation_vfe1u")
+}
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_f8gkf")
@@ -16,22 +56,37 @@ offset_top = 22.0
 offset_right = -1776.0
 offset_bottom = 22.0
 grow_horizontal = 2
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Treasure" type="Label" parent="."]
-offset_left = 544.0
-offset_top = 39.0
-offset_right = 584.0
-offset_bottom = 65.0
-scale = Vector2(2, 2)
+offset_left = 492.0
+offset_top = 45.0
+offset_right = 532.0
+offset_bottom = 71.0
 size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("3_gmn21")
 
 [node name="Playerhead" type="Sprite2D" parent="."]
-position = Vector2(472, 32)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("2_5wj1k")
+position = Vector2(432, 38)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("4_03tc6")
 
-[node name="TreasureChest" type="Sprite2D" parent="."]
-position = Vector2(528, 56)
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("4_cf3h6")
-hframes = 2
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(477, 57)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("5_27x7x")
+hframes = 5
+frame = 1
+
+[node name="LifeBarbackplate" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(536, 40)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("5_dub3h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Treasure")
+libraries = {
+"": SubResource("AnimationLibrary_vf724")
+}
+autoplay = "coin rotation"

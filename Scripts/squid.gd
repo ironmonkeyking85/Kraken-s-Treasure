@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var health = Globals.enemy_health
 
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	
 	move_and_slide()
 

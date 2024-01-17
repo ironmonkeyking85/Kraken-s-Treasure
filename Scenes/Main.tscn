@@ -639,7 +639,7 @@ process_callback = 0
 limit_left = -1840
 limit_top = -1650
 limit_right = 2800
-limit_bottom = 2160
+limit_bottom = 2260
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 editor_draw_limits = true
@@ -654,8 +654,10 @@ transform = Transform2D(2, 0, 0, 2, 600, 40)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -552.0
-offset_right = -552.0
+offset_left = -477.5
+offset_top = 25.5
+offset_right = -477.5
+offset_bottom = 25.5
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]

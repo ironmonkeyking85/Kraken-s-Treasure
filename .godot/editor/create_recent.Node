@@ -1,7 +1,9 @@
+AnimationPlayer
+MarginContainer
+Sprite2D
 Timer
 VisibleOnScreenNotifier2D
 Marker2D
-Sprite2D
 CollisionPolygon2D
 Polygon2D
 StaticBody2D
@@ -10,6 +12,3 @@ CollisionShape2D
 GPUParticles2D
 CPUParticles2D
 Area2D
-Label
-Panel
-HBoxContainer

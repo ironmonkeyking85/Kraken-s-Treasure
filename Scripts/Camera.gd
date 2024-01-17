@@ -6,7 +6,7 @@ extends Camera2D
 func _ready():
 	pass 
 
-func _process(delta):
+func _process(_delta):
 	#camera zoom needs to be less than 0.7 to work properly and follow the player
 	position = player.global_position
 	
