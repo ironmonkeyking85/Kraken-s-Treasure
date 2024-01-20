@@ -672,6 +672,7 @@ shape = SubResource("RectangleShape2D_87sca")
 
 [node name="AttackCoolDown" type="Timer" parent="."]
 
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="area_entered" from="Hazard Area" to="." method="_on_hazard_area_area_entered"]
 [connection signal="timeout" from="AttackCoolDown" to="." method="_on_attack_cool_down_timeout"]

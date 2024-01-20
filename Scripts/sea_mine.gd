@@ -11,4 +11,5 @@ func _on_hitbox_body_entered(body):
 		
 func _on_hurtbox_area_entered(area):
 	if area.name == "ProjectileCollision":
+		
 		queue_free()

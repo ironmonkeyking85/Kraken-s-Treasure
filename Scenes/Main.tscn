@@ -50,10 +50,27 @@ grow_horizontal = 0
 position = Vector2(425, -1729)
 up_direction = Vector2(0, -1)
 
-[node name="Squid" parent="." instance=ExtResource("6_qsyl1")]
-position = Vector2(-424, -48)
-rotation = 1.5708
+[node name="Squid enemies" type="Node2D" parent="."]
+
+[node name="Squid" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(-1332, 1362)
+rotation = -0.915402
 scale = Vector2(2, 2)
+
+[node name="Squid2" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(1285, 1725)
+rotation = 0.884804
+scale = Vector2(2, 2)
+
+[node name="Squid3" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(724, -523)
+rotation = -0.9943
+scale = Vector2(2, 2)
+
+[node name="Squid4" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(-1468, -1274)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_sg3t2")]
 

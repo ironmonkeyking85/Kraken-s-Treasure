@@ -44,8 +44,8 @@ func _movement(_delta: float):
 		velocity.y -= 1	
 	if Input.is_action_pressed("Down"):
 		velocity.y += 1			
-	elif  velocity.x == 0:
-		can_attack == false
+	elif  velocity.x == 0 and Input.is_action_just_pressed("Shoot"):
+		_attack()
 		$Animation.play("idle")
 	
 	var direction = Vector2(0, 0)
@@ -68,12 +68,13 @@ func _attack():
 func _on_attack_cool_down_timeout():
 	can_attack = true
 		
-func _on_hurtbox_body_entered(body):
-	if body.is_in_group("Enemy"):
-		current_health -= 2
-		health_changed.emit(current_health)
-	if current_health <= 0:
-		get_tree().reload_current_scene()
+#func _on_hurtbox_body_entered(body):
+#	if body.is_in_group("Enemy"):
+#		current_health -= 2
+#		health_changed.emit(current_health)
+#	if current_health <= 0:
+#		pass
+		#get_tree().reload_current_scene()
 		
 func _on_hazard_area_area_entered(area):
 	if area.is_in_group("Hazards"):
@@ -85,3 +86,11 @@ func _on_hazard_area_area_entered(area):
 	if current_health <= 0:
 		get_tree().reload_current_scene()
 
+
+
+func _on_hurtbox_area_entered(area):
+	if area.is_in_group("Enemy"):
+		current_health -= 2
+		health_changed.emit(current_health)
+	if current_health <= 0:
+		get_tree().reload_current_scene()

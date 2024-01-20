@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciat2snlp3xdv"
-path="res://.godot/imported/particles_flipbook_example.webp-d6ebd40627de7d30a4a0fe3818f2e990.ctex"
+path="res://.godot/imported/particles_flipbook_example.webp-8af3afe3f749acba068287bbc6117678.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SFX/particles_flipbook_example.webp"
-dest_files=["res://.godot/imported/particles_flipbook_example.webp-d6ebd40627de7d30a4a0fe3818f2e990.ctex"]
+source_file="res://Assets/VFX/particles_flipbook_example.webp"
+dest_files=["res://.godot/imported/particles_flipbook_example.webp-8af3afe3f749acba068287bbc6117678.ctex"]
 
 [params]
 
