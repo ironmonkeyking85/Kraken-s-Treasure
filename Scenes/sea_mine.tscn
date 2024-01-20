@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4jt270msjc1a"]
+[gd_scene load_steps=9 format=3 uid="uid://d4jt270msjc1a"]
 
 [ext_resource type="Script" path="res://Scripts/sea_mine.gd" id="1_1ylcm"]
 [ext_resource type="Texture2D" uid="uid://dh3chd815fd5p" path="res://Assets/Level/Stage one/sea mine.png" id="2_1tmon"]
@@ -10,11 +10,113 @@ resource_name = "Detonate"
 
 [sub_resource type="Animation" id="Animation_vifcw"]
 resource_name = "Idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -21), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hurtbox/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -23), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -23), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iw134"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -21)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hurtbox/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -23)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -23)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oo1br"]
 _data = {
 "Detonate": SubResource("Animation_ql3kn"),
-"Idle": SubResource("Animation_vifcw")
+"Idle": SubResource("Animation_vifcw"),
+"RESET": SubResource("Animation_iw134")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wpt7f"]
@@ -27,10 +129,11 @@ collision_layer = 32
 collision_mask = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -23)
 shape = SubResource("CircleShape2D_xhqix")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hitbox"]
-position = Vector2(0, 2)
+position = Vector2(0, -21)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_1tmon")
 
@@ -38,12 +141,14 @@ texture = ExtResource("2_1tmon")
 libraries = {
 "": SubResource("AnimationLibrary_oo1br")
 }
+autoplay = "Idle"
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -23)
 shape = SubResource("CircleShape2D_wpt7f")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

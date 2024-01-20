@@ -9,6 +9,33 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k020o"]
 shader = ExtResource("2_gu5ia")
 
+[sub_resource type="Animation" id="Animation_40tvc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ripples:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ripples:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1338.44, 1432.5)]
+}
+
 [sub_resource type="Animation" id="Animation_6lym2"]
 resource_name = "water ripple"
 length = 4.0
@@ -38,33 +65,6 @@ tracks/1/keys = {
 "values": [Vector2(1229.37, 1433.06), Vector2(1338.44, 1432.5), Vector2(1208.75, 1432.5)]
 }
 
-[sub_resource type="Animation" id="Animation_40tvc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ripples:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ripples:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1338.44, 1432.5)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0wbv"]
 _data = {
 "RESET": SubResource("Animation_40tvc"),
@@ -82,8 +82,8 @@ motion_offset = Vector2(0, -100)
 self_modulate = Color(0, 0.560784, 0.564706, 1)
 texture_filter = 1
 material = SubResource("ShaderMaterial_k020o")
-position = Vector2(-1426, -1072.73)
-scale = Vector2(1.346, 1.79265)
+position = Vector2(-1405, -1216.76)
+scale = Vector2(1.29633, 2.17239)
 texture = ExtResource("3_x8ol4")
 centered = false
 offset = Vector2(0, -100)
@@ -124,7 +124,7 @@ scale = Vector2(0.8, 0.8)
 self_modulate = Color(1, 1, 1, 0.0823529)
 texture_filter = 1
 position = Vector2(1338.44, 1432.5)
-scale = Vector2(2.5, 2.402)
+scale = Vector2(3.43555, 3.54514)
 texture = ExtResource("4_d4xgn")
 centered = false
 offset = Vector2(-2000, -1500)

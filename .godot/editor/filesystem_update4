@@ -3,11 +3,8 @@ res://Scripts/State Machine/Moving.gd
 res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
-res://Scenes/player_projectile.tscn
-res://Scenes/hud.tscn
 res://Scenes/stage_one_cave.tscn
-res://UI/In-game HUD/air_tank.tscn
-res://UI/In-game HUD/air_tank_gui.tscn
 res://Scenes/parallax_background.tscn
-res://Scripts/player.gd
-res://Scripts/parallax_background.gd
+res://Scripts/stage_one_cave.gd
+res://Scenes/CoralWall.tscn
+res://Scenes/sea_mine.tscn

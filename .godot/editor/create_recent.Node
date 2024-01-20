@@ -1,3 +1,10 @@
+CollisionShape2D
+StaticBody2D
+Node2D
+CollisionPolygon2D
+Polygon2D
+RigidBody2D
+TileMap
 ParallaxLayer
 AnimationPlayer
 ColorRect
@@ -5,11 +12,3 @@ MarginContainer
 Sprite2D
 Timer
 VisibleOnScreenNotifier2D
-Marker2D
-CollisionPolygon2D
-Polygon2D
-StaticBody2D
-Node2D
-CollisionShape2D
-GPUParticles2D
-CPUParticles2D

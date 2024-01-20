@@ -10,7 +10,7 @@ size = Vector2(1648, 6168)
 size = Vector2(223.752, 6012)
 
 [node name="CoralWall" type="Node2D"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_jh64c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

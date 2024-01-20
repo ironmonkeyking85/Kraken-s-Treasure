@@ -5,3 +5,4 @@ extends StaticBody2D
 
 func _ready():
 	collision_polygon_2d.polygon = polygon_2d.polygon
+	
