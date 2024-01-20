@@ -14,6 +14,7 @@ scale = Vector2(0.6, 0.6)
 script = ExtResource("1_jh64c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.521569, 1, 1, 1)
 texture = ExtResource("1_yy86l")
 
 [node name="WallCollision" type="Area2D" parent="."]

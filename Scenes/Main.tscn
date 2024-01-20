@@ -97,7 +97,7 @@ scale = Vector2(0.04, 0.04)
 [node name="SeaMines" type="Node" parent="."]
 
 [node name="SeaMine" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(-336, -1096)
+position = Vector2(-257, -1017)
 scale = Vector2(4, 4)
 
 [node name="SeaMine3" parent="SeaMines" instance=ExtResource("7_8vm6u")]
@@ -105,11 +105,27 @@ position = Vector2(-665, -682)
 scale = Vector2(4, 4)
 
 [node name="SeaMine4" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(1235, 956)
+position = Vector2(989, 1061)
+scale = Vector2(4, 4)
+
+[node name="SeaMine5" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(2421, 764)
+scale = Vector2(4, 4)
+
+[node name="SeaMine6" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(-452, 374)
+scale = Vector2(4, 4)
+
+[node name="SeaMine7" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(413, 26)
+scale = Vector2(4, 4)
+
+[node name="SeaMine8" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(1286, 60)
 scale = Vector2(4, 4)
 
 [node name="SeaMine2" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(1343, -380)
+position = Vector2(1182, -333)
 scale = Vector2(4, 4)
 
 [node name="Chest" type="Node" parent="."]
@@ -128,6 +144,21 @@ position = Vector2(520, 320)
 position = Vector2(-178, -1440)
 scale = Vector2(0.08, 0.08)
 
+[node name="CoralWall26" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(1223, -1503)
+rotation = 1.55732
+scale = Vector2(0.08, 0.08)
+
+[node name="CoralWall27" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(1673, -1495)
+rotation = 1.55732
+scale = Vector2(0.08, 0.08)
+
+[node name="CoralWall28" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(2111, -1487)
+rotation = 1.55732
+scale = Vector2(-0.08, -0.08)
+
 [node name="CoralWall2" parent="CoralWalls" instance=ExtResource("14_vlcms")]
 position = Vector2(-577, -1128)
 scale = Vector2(0.06, 0.06)
@@ -138,34 +169,49 @@ rotation = -1.65086
 scale = Vector2(0.06, 0.06)
 
 [node name="CoralWall3" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-1112, -728)
-scale = Vector2(0.04, 0.04)
+position = Vector2(-1098, -741)
+scale = Vector2(0.06, 0.06)
 
 [node name="CoralWall4" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(107, 31)
+position = Vector2(147, 20)
 rotation = -1.5708
-scale = Vector2(0.06, 0.06)
+scale = Vector2(0.08, 0.08)
 
 [node name="CoralWall12" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(464, 50)
+position = Vector2(576, 50)
 rotation = -1.5708
-scale = Vector2(0.06, 0.06)
+scale = Vector2(0.08, 0.08)
 
 [node name="CoralWall5" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-1244, -886)
+position = Vector2(-1336, -934)
+rotation = -1.5708
+scale = Vector2(-0.08, -0.08)
+
+[node name="CoralWall23" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(-924, -564)
 rotation = -1.5708
 scale = Vector2(0.06, 0.06)
 
+[node name="CoralWall24" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(-579, -550)
+rotation = -1.5708
+scale = Vector2(0.06, 0.06)
+
+[node name="CoralWall25" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(-302, -533)
+rotation = -1.5708
+scale = Vector2(-0.06, -0.06)
+
 [node name="CoralWall6" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(301, 1575)
+position = Vector2(305, 1550)
 rotation = -1.5708
 scale = Vector2(0.08, 0.08)
 skew = -0.0575959
 
 [node name="CoralWall7" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(283, -399)
+position = Vector2(278, -442)
 rotation = -0.0855211
-scale = Vector2(0.07, 0.07)
+scale = Vector2(0.09, 0.09)
 
 [node name="CoralWall8" parent="CoralWalls" instance=ExtResource("14_vlcms")]
 position = Vector2(847, 1334)
@@ -173,9 +219,64 @@ rotation = 0.0389108
 scale = Vector2(-0.08, -0.08)
 
 [node name="CoralWall9" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(1963, 367)
-scale = Vector2(0.06, -0.06)
+position = Vector2(1917, 319)
+scale = Vector2(0.08, -0.08)
 
 [node name="CoralWall10" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(1951, 132)
-scale = Vector2(-0.06, 0.06)
+position = Vector2(1927, 144)
+scale = Vector2(-0.08, 0.08)
+
+[node name="CoralWall13" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(2949, -581)
+scale = Vector2(-0.15, 0.15)
+
+[node name="CoralWall14" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(2943, 294)
+scale = Vector2(-0.15, 0.15)
+
+[node name="CoralWall15" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(1189, 2085)
+rotation = 1.55036
+scale = Vector2(-0.15, 0.15)
+
+[node name="CoralWall16" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(-49.0001, 2123)
+rotation = 1.55036
+scale = Vector2(-0.15, 0.15)
+
+[node name="CoralWall17" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(-649, 2104)
+rotation = 1.55036
+scale = Vector2(0.12, -0.12)
+
+[node name="CoralWall18" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(-1669, 1730)
+rotation = 3.14991
+scale = Vector2(0.14, -0.14)
+
+[node name="CoralWall19" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+modulate = Color(0.478431, 0.67451, 1, 1)
+position = Vector2(-1669, 929)
+rotation = 3.14991
+scale = Vector2(-0.14, 0.14)
+
+[node name="CoralWall20" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(2287, 2115)
+rotation = -1.55967
+scale = Vector2(0.08, 0.08)
+
+[node name="CoralWall21" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(2641, 2121)
+rotation = -1.55967
+scale = Vector2(0.08, 0.08)
+
+[node name="CoralWall22" parent="CoralWalls" instance=ExtResource("14_vlcms")]
+position = Vector2(1420, 1168)
+rotation = -1.55967
+scale = Vector2(0.1, 0.1)

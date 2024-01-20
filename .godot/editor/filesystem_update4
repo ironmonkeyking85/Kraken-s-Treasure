@@ -1,10 +1,7 @@
-res://Scenes/Main.tscn
+res://Scenes/CoralWall.tscn
 res://Scripts/State Machine/Moving.gd
 res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
+res://Scenes/Main.tscn
 res://Scenes/player.tscn
-res://Scenes/stage_one_cave.tscn
-res://Scenes/parallax_background.tscn
-res://Scripts/stage_one_cave.gd
-res://Scenes/CoralWall.tscn
 res://Scenes/sea_mine.tscn
