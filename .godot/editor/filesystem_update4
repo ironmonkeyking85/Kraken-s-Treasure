@@ -11,3 +11,4 @@ res://Scripts/player.gd
 res://Scripts/sea_mine.gd
 res://Scenes/gold_coin.tscn
 res://Assets/VFX/canon_bubbles.tscn
+res://Scripts/canon_bubbles.gd

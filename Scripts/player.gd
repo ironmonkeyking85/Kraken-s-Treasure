@@ -17,9 +17,10 @@ enum PLAYERSTATES {MOVEMENT, ATTACK, HURT, DEAD, GAMEOVER}
 var treasure_amount: int = 0
 var current_states = PLAYERSTATES.MOVEMENT
 var can_attack = true
+var vfx_active = true
 # adding "as" and class name allow for auto complete
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
-
+var canon_bubbles = preload("res://Scenes/canon_bubbles.tscn")
 func _ready():
 	$AttackCoolDown.wait_time = attack_rate
 		
@@ -46,15 +47,18 @@ func _movement(_delta: float):
 		velocity.y += 1			
 	elif  velocity.x == 0 and Input.is_action_just_pressed("Shoot"):
 		_attack()
+		_canon_vfx()
 		$Animation.play("idle")
 	
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:
 		direction.x -= 1
 		_attack()
+		_canon_vfx()
 	elif Input.is_action_pressed("Right") and Input.is_action_just_pressed("Shoot") and  can_attack:
 		direction.x += 1	
 		_attack()
+		_canon_vfx()
 	velocity *= propulsion
 	move_and_slide()
 	
@@ -67,6 +71,19 @@ func _attack():
 		
 func _on_attack_cool_down_timeout():
 	can_attack = true
+	
+func _canon_vfx():
+	vfx_active = false
+	$Action_timer.start()
+	var muzzle_bubbles = canon_bubbles.instantiate()
+	get_tree().root.add_child(muzzle_bubbles)
+	muzzle_bubbles.start($CannonBall.global_transform)
+	
+	
+func _on_action_timer_timeout():
+	queue_free()
+	vfx_active = true
+		
 		
 #func _on_hurtbox_body_entered(body):
 #	if body.is_in_group("Enemy"):
@@ -94,3 +111,4 @@ func _on_hurtbox_area_entered(area):
 		health_changed.emit(current_health)
 	if current_health <= 0:
 		get_tree().reload_current_scene()
+

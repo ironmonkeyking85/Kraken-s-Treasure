@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://6tluotk3h8es"]
+[gd_scene load_steps=7 format=3 uid="uid://ctamefust2ctl"]
 
 [ext_resource type="Script" path="res://Scripts/canon_bubbles.gd" id="1_4gliw"]
 [ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_7byfq"]
