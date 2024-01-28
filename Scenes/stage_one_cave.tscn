@@ -184,6 +184,7 @@ size = Vector2(416, 138.098)
 [node name="maze" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.294118, 0.294118, 0.294118, 1)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_pn21j")
 

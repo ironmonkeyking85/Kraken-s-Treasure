@@ -1,8 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckfxsixisvipn"]
+[gd_scene load_steps=6 format=3 uid="uid://ckfxsixisvipn"]
+
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_vntpn"]
+[ext_resource type="Script" path="res://Scripts/canon_muzzle.gd" id="2_6lv11"]
+
+[sub_resource type="Curve" id="Curve_leneq"]
+_data = [Vector2(0.015625, 0.364821), 0.0, 0.0, 0, 0, Vector2(0.550781, 0.88355), 0.0, 0.0, 0, 0, Vector2(0.992187, 0.290717), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ckbgb"]
+curve = SubResource("Curve_leneq")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3go3c"]
 particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
+emission_shape = 1
+emission_sphere_radius = 87.53
+spread = 86.831
+initial_velocity_min = 77.46
+initial_velocity_max = 267.61
+gravity = Vector3(0, -50, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_ckbgb")
 
 [node name="CanonMuzzle" type="GPUParticles2D"]
+scale = Vector2(0.4, 0.4)
+emitting = false
+amount = 100
 process_material = SubResource("ParticleProcessMaterial_3go3c")
+texture = ExtResource("1_vntpn")
+lifetime = 2.0
+one_shot = true
+script = ExtResource("2_6lv11")
