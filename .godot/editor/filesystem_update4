@@ -1,14 +1,11 @@
-res://Scenes/CoralWall.tscn
+res://Assets/VFX/player_breathing_bubbles.tscn
 res://Scripts/State Machine/Moving.gd
 res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
-res://Scenes/Main.tscn
 res://Scenes/player.tscn
-res://Scenes/sea_mine.tscn
-res://Scenes/squid.tscn
-res://Scripts/squid.gd
-res://Scripts/player.gd
-res://Scripts/sea_mine.gd
-res://Scenes/gold_coin.tscn
-res://Assets/VFX/canon_bubbles.tscn
+res://Scenes/Main.tscn
+res://Scenes/bubbles_particles_2d.tscn
 res://Scripts/canon_bubbles.gd
+res://Scripts/player.gd
+res://Assets/VFX/breathing_bubbles.tscn
+res://Assets/VFX/canon_muzzle.tscn

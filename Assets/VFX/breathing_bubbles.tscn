@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6a0hj54uk8p5"]
+
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_78xnu"]
+
+[sub_resource type="Gradient" id="Gradient_o8axq"]
+offsets = PackedFloat32Array(0.429825, 0.824561)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0.266667)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l0yy6"]
+gradient = SubResource("Gradient_o8axq")
+
+[sub_resource type="Curve" id="Curve_35ntx"]
+_data = [Vector2(0.00390625, 0.258958), 0.0, 0.0, 0, 0, Vector2(0.503906, 0.79886), 0.0, 0.0, 0, 0, Vector2(0.964844, 0.650651), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ken7q"]
+curve = SubResource("Curve_35ntx")
+
+[sub_resource type="Curve" id="Curve_w6exi"]
+max_value = 3.0
+_data = [Vector2(0.335938, 0.649837), 0.0, 0.0, 0, 0, Vector2(0.761719, 0.999186), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_bqp3l"]
+curve = SubResource("Curve_w6exi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n8j41"]
+particle_flag_disable_z = true
+initial_velocity_min = 14.08
+initial_velocity_max = 70.42
+gravity = Vector3(0, -98, 0)
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_ken7q")
+scale_over_velocity_curve = SubResource("CurveTexture_bqp3l")
+color_ramp = SubResource("GradientTexture1D_l0yy6")
+
+[node name="BreathingBubbles" type="GPUParticles2D"]
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_n8j41")
+texture = ExtResource("1_78xnu")
+lifetime = 2.0

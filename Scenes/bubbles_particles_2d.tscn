@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://beijmhlyiylcq"]
+
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_54dj0"]
+[ext_resource type="Script" path="res://Scripts/canon_bubbles.gd" id="2_8emuj"]
+
+[sub_resource type="Curve" id="Curve_35s4l"]
+_data = [Vector2(0.015625, 1), 0.0, 0.0, 0, 0, Vector2(0.980469, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_f1mpm"]
+curve = SubResource("Curve_35s4l")
+
+[sub_resource type="Curve" id="Curve_37h47"]
+max_value = 3.0
+_data = [Vector2(0.0273438, 2.33306), 0.0, 0.0, 0, 0, Vector2(1, 1.18974), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_mgatq"]
+curve = SubResource("Curve_37h47")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uvctw"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 2.1
+initial_velocity_min = 253.52
+initial_velocity_max = 619.72
+gravity = Vector3(0, 0, 0)
+scale_max = 4.0
+scale_curve = SubResource("CurveTexture_f1mpm")
+scale_over_velocity_curve = SubResource("CurveTexture_mgatq")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+amount = 29
+process_material = SubResource("ParticleProcessMaterial_uvctw")
+texture = ExtResource("1_54dj0")
+script = ExtResource("2_8emuj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

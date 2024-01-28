@@ -10,8 +10,8 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="Gradient" id="Gradient_mojq8"]
-offsets = PackedFloat32Array(0.174672, 0.764192, 0.982533)
-colors = PackedColorArray(0.40917, 0.90462, 0.937888, 0.835294, 0.580392, 0.917647, 0.94902, 0.835294, 0, 0, 0, 0.00392157)
+offsets = PackedFloat32Array(0.200873, 0.58952, 0.995633)
+colors = PackedColorArray(0.721568, 0.963336, 0.991159, 0.835294, 0.580392, 0.917647, 0.94902, 0.835294, 0, 0, 0, 0.00392157)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_05uf2"]
 gradient = SubResource("Gradient_mojq8")
@@ -19,10 +19,9 @@ gradient = SubResource("Gradient_mojq8")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c8fhl"]
 lifetime_randomness = 0.24
 particle_flag_disable_z = true
-emission_shape_offset = Vector3(90, 0, 0)
-emission_shape_scale = Vector3(90, 1, 1)
+emission_shape_offset = Vector3(-20, 0, 0)
 emission_shape = 1
-emission_sphere_radius = 0.01
+emission_sphere_radius = 28.92
 direction = Vector3(-60, 0, 0)
 spread = 70.257
 flatness = 0.366
@@ -31,8 +30,10 @@ initial_velocity_max = 178.06
 gravity = Vector3(-60, -60, 0)
 damping_min = 9.859
 damping_max = 35.915
-scale_max = 6.0
+scale_min = 0.0
+scale_max = 10.0
 color_ramp = SubResource("GradientTexture1D_05uf2")
+anim_offset_max = 0.0775
 turbulence_noise_strength = 15.05
 turbulence_noise_scale = 1.771
 
@@ -41,10 +42,18 @@ script = ExtResource("1_4gliw")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_17vp3")
-position = Vector2(9, -4)
-amount = 24
+position = Vector2(10, -4)
+emitting = false
+amount = 10
 process_material = SubResource("ParticleProcessMaterial_c8fhl")
 texture = ExtResource("1_7byfq")
-lifetime = 1.6
+lifetime = 3.0
+one_shot = true
 speed_scale = 3.0
 explosiveness = 0.71
+randomness = 0.14
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

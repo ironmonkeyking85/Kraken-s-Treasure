@@ -319,7 +319,6 @@ shape = SubResource("RectangleShape2D_3n0kv")
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Maze/StaticBody2D"]
 position = Vector2(720.81, -515.947)
 rotation = 0.0405606
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_88dob")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
@@ -385,13 +384,11 @@ shape = SubResource("RectangleShape2D_4alo5")
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 position = Vector2(280.436, 516.357)
 rotation = -0.0997456
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rtj42")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 position = Vector2(-368.93, 851.667)
 rotation = 0.0795079
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wbbh2")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
@@ -409,7 +406,6 @@ shape = SubResource("RectangleShape2D_iyvqo")
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 position = Vector2(-972.069, 1288)
 rotation = 0.0689821
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_h48xl")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
@@ -425,7 +421,6 @@ shape = SubResource("RectangleShape2D_vfcwj")
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 position = Vector2(-1519.14, 668.01)
 rotation = 0.104241
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0qgho")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
@@ -443,7 +438,6 @@ shape = SubResource("RectangleShape2D_o0l52")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
 position = Vector2(1296.36, 932.341)
 rotation = 0.0312698
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xqiq0")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
@@ -466,13 +460,11 @@ shape = SubResource("RectangleShape2D_6iw7x")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
 position = Vector2(1229.3, 1388.25)
 rotation = -0.131545
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_01d8l")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
 position = Vector2(-1534.51, 1599.33)
 rotation = 0.102935
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0t8ye")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Maze/StaticBody2D3"]

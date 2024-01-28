@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://dr57lrb457sxs"]
+
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_216de"]
+[ext_resource type="Script" path="res://Scripts/player_breathing_bubbles.gd" id="2_uml18"]
+
+[sub_resource type="Curve" id="Curve_viqw0"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3ts1l"]
+curve = SubResource("Curve_viqw0")
+
+[sub_resource type="CurveTexture" id="CurveTexture_pchde"]
+
+[sub_resource type="Curve" id="Curve_s2heg"]
+_data = [Vector2(0.0078125, 0.248371), 0.0, 0.0, 0, 0, Vector2(0.976562, 0.904723), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yi6gb"]
+curve = SubResource("Curve_s2heg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xma4x"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(6, -20, 0)
+angular_velocity_curve = SubResource("CurveTexture_3ts1l")
+radial_velocity_min = 10.0
+radial_velocity_max = 211.27
+radial_velocity_curve = SubResource("CurveTexture_pchde")
+gravity = Vector3(0, -98, 0)
+scale_max = 4.0
+scale_curve = SubResource("CurveTexture_yi6gb")
+
+[node name="breathingbubbles" type="GPUParticles2D"]
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_xma4x")
+texture = ExtResource("1_216de")
+lifetime = 5.0
+script = ExtResource("2_uml18")
