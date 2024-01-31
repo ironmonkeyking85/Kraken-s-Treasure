@@ -11,6 +11,7 @@ point_count = 3
 curve = SubResource("Curve_leneq")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3go3c"]
+lifetime_randomness = 0.3
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 87.53
@@ -24,7 +25,7 @@ scale_curve = SubResource("CurveTexture_ckbgb")
 [node name="CanonMuzzle" type="GPUParticles2D"]
 scale = Vector2(0.4, 0.4)
 emitting = false
-amount = 100
+amount = 500
 process_material = SubResource("ParticleProcessMaterial_3go3c")
 texture = ExtResource("1_vntpn")
 lifetime = 2.0

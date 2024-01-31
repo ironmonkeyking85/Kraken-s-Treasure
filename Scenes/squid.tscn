@@ -10,6 +10,9 @@ radius = 50.01
 [sub_resource type="CircleShape2D" id="CircleShape2D_2krei"]
 radius = 90.7619
 
+[sub_resource type="Animation" id="Animation_plyrd"]
+resource_name = "Attack"
+
 [sub_resource type="Animation" id="Animation_am32x"]
 resource_name = "Idle"
 length = 2.2
@@ -73,9 +76,6 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(-26, 10), Vector2(-20, -23)]
 }
-
-[sub_resource type="Animation" id="Animation_plyrd"]
-resource_name = "Attack"
 
 [sub_resource type="Animation" id="Animation_1orx2"]
 length = 0.001

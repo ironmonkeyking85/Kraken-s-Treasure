@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
-@export var speed = 500
+@export var speed = 500.0
+@export var buoyancy = 25.0
 @export var health = Globals.enemy_health
 
 
 func _process(_delta) -> void:
-	
+	$AnimationPlayer.play("Idle")
 	move_and_slide()
 
 

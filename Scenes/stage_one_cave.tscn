@@ -191,56 +191,56 @@ texture = ExtResource("1_pn21j")
 [node name="stage border" type="Node2D" parent="."]
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D9"]
 position = Vector2(-1460, -2013.5)
 shape = SubResource("RectangleShape2D_7q665")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D8"]
 position = Vector2(1328, -2001.5)
 shape = SubResource("RectangleShape2D_hedx1")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D7"]
 position = Vector2(1348, 2160.5)
 shape = SubResource("RectangleShape2D_xuje1")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D6"]
 position = Vector2(-1225.5, 2130.5)
 shape = SubResource("RectangleShape2D_3xgfi")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D5"]
 position = Vector2(2653, 4)
 shape = SubResource("RectangleShape2D_5x55r")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D4"]
 position = Vector2(232, 2352.5)
 shape = SubResource("RectangleShape2D_6brrx")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D3"]
 position = Vector2(-2648, 152)
 shape = SubResource("RectangleShape2D_f37jy")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stage border"]
-collision_mask = 3
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D2"]
 position = Vector2(-68, -2388)
@@ -248,8 +248,8 @@ shape = SubResource("RectangleShape2D_3nq74")
 
 [node name="Maze" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Maze"]
-collision_mask = 3
+[node name="StaticBody2D" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D"]
 position = Vector2(-676, -1240)
@@ -335,8 +335,8 @@ shape = SubResource("RectangleShape2D_dvfdu")
 position = Vector2(1884, -32)
 shape = SubResource("RectangleShape2D_x06we")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Maze"]
-collision_mask = 3
+[node name="StaticBody2D2" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 position = Vector2(-1952, -1156)
@@ -426,7 +426,8 @@ shape = SubResource("RectangleShape2D_0qgho")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Maze"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
+collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
 position = Vector2(1818.5, 530.5)

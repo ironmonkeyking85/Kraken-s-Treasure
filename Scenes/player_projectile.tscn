@@ -1,10 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://tgmdcnkiwank"]
+[gd_scene load_steps=12 format=3 uid="uid://tgmdcnkiwank"]
 
 [ext_resource type="Script" path="res://Scripts/player_projectile.gd" id="1_364jn"]
 [ext_resource type="Texture2D" uid="uid://dc77727y81ovu" path="res://Assets/Interactables/Canonball.png" id="2_qmjwx"]
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="3_n45e3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3h1mo"]
 radius = 24.9098
+
+[sub_resource type="Gradient" id="Gradient_bxbfd"]
+offsets = PackedFloat32Array(0.25, 0.815789)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5l63e"]
+gradient = SubResource("Gradient_bxbfd")
+
+[sub_resource type="Curve" id="Curve_scvws"]
+_data = [Vector2(0, 0.756515), 0.0, 0.0, 0, 0, Vector2(0.457031, 0.417752), -1.17438, -1.17438, 0, 0, Vector2(0.980469, 0.00488591), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_t8x3l"]
+curve = SubResource("Curve_scvws")
+
+[sub_resource type="Curve" id="Curve_b5pr4"]
+max_value = 3.0
+_data = [Vector2(0, 2.4601), 0.0, 0.0, 0, 0, Vector2(0.535156, 1.44381), -1.83587, -1.83587, 0, 0, Vector2(0.976563, 0.586319), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_p0jib"]
+curve = SubResource("Curve_b5pr4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_87ay7"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 22.0
+emission_ring_inner_radius = 0.0
+initial_velocity_max = 91.55
+gravity = Vector3(0, -150, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_t8x3l")
+scale_over_velocity_max = 0.5
+scale_over_velocity_curve = SubResource("CurveTexture_p0jib")
+color_ramp = SubResource("GradientTexture1D_5l63e")
 
 [node name="PlayerProjectile" type="Node2D"]
 rotation = 1.5708
@@ -23,6 +61,11 @@ position = Vector2(6.50002, 4.99998)
 shape = SubResource("CircleShape2D_3h1mo")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_87ay7")
+texture = ExtResource("3_n45e3")
 
 [connection signal="area_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_area_entered"]
 [connection signal="body_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_body_entered"]

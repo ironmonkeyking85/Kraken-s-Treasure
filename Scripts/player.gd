@@ -20,6 +20,7 @@ var current_states = PLAYERSTATES.MOVEMENT
 var can_attack = true
 # adding "as" and class name allow for better auto complete
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
+
 @onready var canon_bubbles = $CanonMuzzle
 @onready var breathing = $BreathingBubbles
 
@@ -33,22 +34,42 @@ func _physics_process(delta: float)-> void:
 			_movement(delta)
 		PLAYERSTATES.ATTACK:
 			_attack()
+		PLAYERSTATES.DEAD:
+			_death()	
 # Player movement and actions area##############		
 func _movement(_delta: float):	
 	velocity.x = 0
 	velocity.y = 0
-	if Input.is_action_pressed("Left"):
+	
+	if Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
+		velocity.y += 0.6
+		velocity.x += 0.6
+		$Animation.play("down&right")
+	elif  Input.is_action_pressed("Down") and Input.is_action_pressed("Left"):
+		velocity.y += 0.6
+		velocity.x -= 0.6
+		$Animation.play("down&left")
+	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Left"):
+		velocity.y -= 0.6
+		velocity.x -= 0.6
+		$Animation.play("up&left")
+	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Right"):
+		velocity.y -= 0.6
+		velocity.x += 0.6
+		$Animation.play("up&right")		
+		
+	elif  Input.is_action_pressed("Left"):
 		velocity.x -= 1
 		$Animation.play("moving left")
-	if Input.is_action_pressed("Right"):
+	elif  Input.is_action_pressed("Right"):
 		velocity.x += 1 
 		$Animation.play("moving right")
-	if Input.is_action_pressed("Up"):
+	elif  Input.is_action_pressed("Up"):
 		velocity.y -= 1	
-	if Input.is_action_pressed("Down"):
-		velocity.y += 1			
-	elif  velocity.x == 0 and Input.is_action_just_pressed("Shoot"):
-		_attack()
+	elif  Input.is_action_pressed("Down"):
+		velocity.y += 1
+		
+	elif  velocity.x == 0:
 		$Animation.play("idle")		
 #Controller input for shooting
 	var direction = Vector2(0, 0)
@@ -70,9 +91,7 @@ func _attack():
 	get_tree().root.add_child(projectile)
 	projectile.start($CannonBall.global_transform)		
 func _on_attack_cool_down_timeout():
-	can_attack = true
-func _on_action_timer_timeout():
-	pass # Replace with function body.
+	can_attack = true	
 ##############################################	
 # Collision, hazards, and stage interactions area############
 func _on_hazard_area_area_entered(area):
@@ -83,17 +102,19 @@ func _on_hazard_area_area_entered(area):
 		current_health -= 1
 		health_changed.emit(current_health)				
 	if current_health <= 0:
-		get_tree().reload_current_scene()
+		_death()
 
 func _on_hurtbox_area_entered(area):
 	if area.is_in_group("Enemy"):
 		current_health -= 2
 		health_changed.emit(current_health)
 	if current_health <= 0:
-		get_tree().reload_current_scene()
+		_death()
 ###############################################	
 #Player death and respawn area###############
-
+func _death():
+	$Animation.play("dead")
+	get_tree().reload_current_scene()
 #############################################	
 		
 

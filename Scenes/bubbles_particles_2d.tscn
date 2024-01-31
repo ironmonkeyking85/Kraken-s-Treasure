@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://beijmhlyiylcq"]
 
 [ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="1_54dj0"]
-[ext_resource type="Script" path="res://Scripts/canon_bubbles.gd" id="2_8emuj"]
+[ext_resource type="Script" path="res://Scripts/canon_ball_bubbles.gd" id="2_8emuj"]
 
 [sub_resource type="Curve" id="Curve_35s4l"]
 _data = [Vector2(0.015625, 1), 0.0, 0.0, 0, 0, Vector2(0.980469, 0), 0.0, 0.0, 0, 0]
