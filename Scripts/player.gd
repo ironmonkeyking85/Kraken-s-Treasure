@@ -18,9 +18,9 @@ enum PLAYERSTATES {MOVEMENT, ATTACK, HURT, DEAD, GAMEOVER}
 var treasure_amount: int = 0
 var current_states = PLAYERSTATES.MOVEMENT
 var can_attack = true
+
 # adding "as" and class name allow for better auto complete
 var playerprojectile = preload("res://Scenes/player_projectile.tscn")
-
 @onready var canon_bubbles = $CanonMuzzle
 @onready var breathing = $BreathingBubbles
 
@@ -70,7 +70,9 @@ func _movement(_delta: float):
 		velocity.y += 1
 		
 	elif  velocity.x == 0:
-		$Animation.play("idle")		
+		
+		$Animation.play("idle")
+				
 #Controller input for shooting
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:

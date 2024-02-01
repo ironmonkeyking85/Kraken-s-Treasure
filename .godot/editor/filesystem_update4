@@ -3,8 +3,8 @@ res://Scripts/State Machine/Moving.gd
 res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
-res://Scripts/player.gd
-res://Scenes/player_projectile.tscn
-res://Scenes/stage_one_cave.tscn
 res://Scenes/squid.tscn
-res://Scripts/squid.gd
+res://Scripts/canon_muzzle.gd
+res://Scripts/gold_coin.gd
+res://Scripts/hud.gd
+res://Scripts/player.gd
