@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nam61w343dek" path="res://Assets/Level/Stage one/Coral Wall clean.png" id="1_yy86l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejbxh"]
-size = Vector2(1648, 6168)
+size = Vector2(1268.33, 5395)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl8pl"]
 size = Vector2(123.611, 6012)
@@ -23,7 +23,7 @@ collision_layer = 32
 collision_mask = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
-position = Vector2(-120, 36)
+position = Vector2(-37.5, -2.49999)
 shape = SubResource("RectangleShape2D_ejbxh")
 debug_color = Color(0.94902, 0.164706, 0.403922, 0.419608)
 

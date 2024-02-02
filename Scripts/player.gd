@@ -41,7 +41,7 @@ func _movement(_delta: float):
 	velocity.x = 0
 	velocity.y = 0
 	
-	if Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
+	if  Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
 		velocity.y += 0.6
 		velocity.x += 0.6
 		$Animation.play("down&right")
@@ -69,8 +69,7 @@ func _movement(_delta: float):
 	elif  Input.is_action_pressed("Down"):
 		velocity.y += 1
 		
-	elif  velocity.x == 0:
-		
+	if  velocity.x == 0 :
 		$Animation.play("idle")
 				
 #Controller input for shooting

@@ -1,12 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4jt270msjc1a"]
+[gd_scene load_steps=10 format=3 uid="uid://d4jt270msjc1a"]
 
 [ext_resource type="Script" path="res://Scripts/sea_mine.gd" id="1_1ylcm"]
-[ext_resource type="Texture2D" uid="uid://dh3chd815fd5p" path="res://Assets/Level/Stage one/sea mine.png" id="2_1tmon"]
+[ext_resource type="Texture2D" uid="uid://0cqijj6en2jv" path="res://Assets/Level/Stage one/SeaMine .png" id="2_gtdk8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhqix"]
+radius = 29.4279
 
 [sub_resource type="Animation" id="Animation_ql3kn"]
 resource_name = "Detonate"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_vifcw"]
 resource_name = "Idle"
@@ -19,7 +33,7 @@ tracks/0/path = NodePath("Hitbox/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.7, 3.6),
+"times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 0, 0]
@@ -31,10 +45,10 @@ tracks/1/path = NodePath("Hitbox/Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.1, 4),
+"times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -40), Vector2(0, 0)]
+"values": [Vector2(-2, 1), Vector2(-2, -40), Vector2(-2, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -43,7 +57,7 @@ tracks/2/path = NodePath("Hurtbox/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.1, 4),
+"times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -41), Vector2(0, 0)]
@@ -55,7 +69,7 @@ tracks/3/path = NodePath("Hitbox/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.1, 4),
+"times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -41), Vector2(0, 0)]
@@ -112,30 +126,49 @@ tracks/3/keys = {
 "values": [Vector2(0, -23)]
 }
 
+[sub_resource type="Animation" id="Animation_yh64x"]
+resource_name = "Armed"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oo1br"]
 _data = {
+"Armed": SubResource("Animation_yh64x"),
 "Detonate": SubResource("Animation_ql3kn"),
 "Idle": SubResource("Animation_vifcw"),
 "RESET": SubResource("Animation_iw134")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wpt7f"]
+radius = 11.0
 
 [node name="SeaMine" type="Node2D" groups=["Hazards"]]
 script = ExtResource("1_1ylcm")
 
 [node name="Hitbox" type="Area2D" parent="." groups=["Hazards"]]
 collision_layer = 32
-collision_mask = 18
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" groups=["Hazards"]]
 position = Vector2(0, -23)
 shape = SubResource("CircleShape2D_xhqix")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hitbox"]
 position = Vector2(0, -21)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_1tmon")
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_gtdk8")
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -143,8 +176,8 @@ libraries = {
 }
 autoplay = "Idle"
 
-[node name="Hurtbox" type="Area2D" parent="."]
-collision_layer = 32
+[node name="Hurtbox" type="Area2D" parent="." groups=["Interactable_Hazards"]]
+collision_layer = 64
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
