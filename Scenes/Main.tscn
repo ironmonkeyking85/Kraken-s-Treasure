@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=21 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://UI/In-game HUD/Main.gd" id="1_bdt2q"]
@@ -13,7 +13,34 @@
 [ext_resource type="PackedScene" uid="uid://bp172cp8agdwt" path="res://Scenes/treasure_chest.tscn" id="9_hcqwk"]
 [ext_resource type="PackedScene" uid="uid://du7b5lb5lhk31" path="res://Scenes/hud.tscn" id="11_1dlnf"]
 [ext_resource type="PackedScene" uid="uid://bwtbe7p76hd8p" path="res://Scenes/CoralWall.tscn" id="14_vlcms"]
+[ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="15_nj5sh"]
 [ext_resource type="PackedScene" uid="uid://sa6h2j2q3ilb" path="res://Scenes/stage_one_cave.tscn" id="15_s6kmg"]
+
+[sub_resource type="Curve" id="Curve_tqd0r"]
+_data = [Vector2(0.03125, 0.206026), 0.0, 0.0, 0, 0, Vector2(0.992187, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ru6ls"]
+curve = SubResource("Curve_tqd0r")
+
+[sub_resource type="Curve" id="Curve_w0767"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h1ixl"]
+curve = SubResource("Curve_w0767")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cgh5p"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(-100, 10, 1)
+emission_shape = 3
+emission_box_extents = Vector3(30, 300, 1)
+gravity = Vector3(0, -98, 0)
+scale_min = 0.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_ru6ls")
+scale_over_velocity_curve = SubResource("CurveTexture_h1ixl")
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_bdt2q")
@@ -30,6 +57,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 editor_draw_limits = true
 script = ExtResource("1_hiqtc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Camera2D"]
+position = Vector2(449, 452)
+amount = 2000
+process_material = SubResource("ParticleProcessMaterial_cgh5p")
+texture = ExtResource("15_nj5sh")
+lifetime = 4.95
 
 [node name="HUD" parent="." instance=ExtResource("11_1dlnf")]
 offset = Vector2(600, 40)

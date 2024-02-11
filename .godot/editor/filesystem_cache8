@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706815175
+::res://::1707495869
 icon.svg::CompressedTexture2D::5023676984038024171::1699041222::1699041232::1::::<><>::
 ::res://Addons/::1705796600
 ::res://Assets/::1706815205
@@ -33,7 +33,7 @@ spaceMissiles_001.png::CompressedTexture2D::6695487331868987681::1550445229::169
 Treasure chest-sheet.png::CompressedTexture2D::5227406531727775881::1701819719::1701913434::1::::<><>::
 Treasure chest.json::JSON::-1::1701819632::0::1::::<><>::
 ::res://Assets/Level/::1699557378
-::res://Assets/Level/Stage one/::1706819774
+::res://Assets/Level/Stage one/::1706819779
 background wall.png::CompressedTexture2D::7857177918585439674::1705528330::1705528333::1::::<><>::
 background water stage one.png::CompressedTexture2D::3137911294976882420::1704761935::1704761938::1::::<><>::
 Cave tilemap.png::CompressedTexture2D::5667078075704602285::1705626702::1705626705::1::::<><>::
@@ -82,22 +82,22 @@ swimingbubbles.tscn::PackedScene::2712075206443832705::1706471529::0::1::::<><>:
 ::res://Auto Loads/Singletons/::1703165042
 Globals.gd::GDScript::-1::1703165042::0::1::::Global_Singeltons<>Node<>::
 ::res://Resources/::1699887031
-::res://Scenes/::1706817764
+::res://Scenes/::1707003730
 bubbles_particles_2d.tscn::PackedScene::2684259348497862272::1706472824::0::1::::<><>::uid://dnxgixs66yj78::::res://Assets/VFX/Bubbles.png<>res://Scripts/canon_ball_bubbles.gd
-CoralWall.tscn::PackedScene::3969867986640245861::1706816112::0::1::::<><>::res://Scripts/CoralWall.gd<>uid://nam61w343dek::::res://Assets/Level/Stage one/Coral Wall clean.png
+CoralWall.tscn::PackedScene::3969867986640245861::1706836465::0::1::::<><>::res://Scripts/CoralWall.gd<>uid://nam61w343dek::::res://Assets/Level/Stage one/Coral Wall clean.png
 gold_coin.tscn::PackedScene::7555568798622404254::1705784280::0::1::::<><>::res://Scripts/gold_coin.gd<>uid://d137vobmd5y8j::::res://Assets/Interactables/Gold coin animation .png
 hud.tscn::PackedScene::8629213883459483106::1705507479::0::1::::<><>::res://Scripts/hud.gd<>uid://ddqxad8knl3ir::::res://UI/In-game HUD/air_tank.tscn<>uid://crspnax2duhu7::::res://UI/In-game HUD/Kenney Bold.ttf<>uid://kg0kjvxh4fus::::res://Assets/Player/Player icon copy.png<>uid://d137vobmd5y8j::::res://Assets/Interactables/Gold coin animation .png<>uid://uk6c7u2365w2::::res://Assets/Interactables/Health bar background copy.png
 LevelTwo.tscn::PackedScene::4670417189576441440::1703203166::0::1::::<><>::res://UI/In-game HUD/Main.gd<>res://Scripts/Camera.gd<>uid://du7b5lb5lhk31
-Main.tscn::PackedScene::8448330927533625053::1706817763::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn<>res://UI/In-game HUD/Main.gd<>res://Scripts/Camera.gd<>uid://dlxh66t4kw6q3::::res://Scenes/parallax_background.tscn<>uid://ddqxad8knl3ir::::res://UI/In-game HUD/air_tank.tscn<>uid://bivmq5hf13nop::::res://Scenes/parallax_forground.tscn<>res://Scripts/parallax_forground.gd<>uid://ccp71ywpqse6j::::res://Scenes/squid.tscn<>uid://d4jt270msjc1a::::res://Scenes/sea_mine.tscn<>uid://dfv8d5by4efgo::::res://Scenes/gold_coin.tscn<>uid://bp172cp8agdwt::::res://Scenes/treasure_chest.tscn<>uid://du7b5lb5lhk31::::res://Scenes/hud.tscn<>uid://bwtbe7p76hd8p::::res://Scenes/CoralWall.tscn<>uid://sa6h2j2q3ilb::::res://Scenes/stage_one_cave.tscn
+Main.tscn::PackedScene::8448330927533625053::1706836464::0::1::::<><>::uid://ch4y04wsoqxds::::res://Scenes/player.tscn<>res://UI/In-game HUD/Main.gd<>res://Scripts/Camera.gd<>uid://dlxh66t4kw6q3::::res://Scenes/parallax_background.tscn<>uid://ddqxad8knl3ir::::res://UI/In-game HUD/air_tank.tscn<>uid://bivmq5hf13nop::::res://Scenes/parallax_forground.tscn<>res://Scripts/parallax_forground.gd<>uid://ccp71ywpqse6j::::res://Scenes/squid.tscn<>uid://d4jt270msjc1a::::res://Scenes/sea_mine.tscn<>uid://dfv8d5by4efgo::::res://Scenes/gold_coin.tscn<>uid://bp172cp8agdwt::::res://Scenes/treasure_chest.tscn<>uid://du7b5lb5lhk31::::res://Scenes/hud.tscn<>uid://bwtbe7p76hd8p::::res://Scenes/CoralWall.tscn<>uid://sa6h2j2q3ilb::::res://Scenes/stage_one_cave.tscn
 parallax_background.tscn::PackedScene::7979302056908481384::1706462764::0::1::::<><>::res://Scripts/parallax_background.gd<>res://Shaders/parallax_background.gdshader<>uid://dt2p753sk8uc7::::res://Assets/Level/Stage one/wavy ocean background.png<>uid://bm6um676xsyr4::::res://Assets/Level/Stage one/water ripples.png<>uid://dj7ctpwqa73cg::::res://Assets/Level/Stage one/background wall.png
 parallax_forground.tscn::PackedScene::2992042129025464447::1700607352::0::1::::<><>::
-player.tscn::PackedScene::5325533638394233076::1706817763::0::1::::<><>::res://Scripts/player.gd<>uid://bacmq4n73pdjl::::res://Assets/Player/Player animation sheet.png<>uid://ckfxsixisvipn::::res://Assets/VFX/canon_muzzle.tscn<>uid://b6a0hj54uk8p5::::res://Assets/VFX/breathing_bubbles.tscn<>uid://bev0qnwxftmw4::::res://Assets/VFX/swimingbubbles.tscn
-player_projectile.tscn::PackedScene::1346708382536953972::1706478090::0::1::::<><>::res://Scripts/player_projectile.gd<>uid://dc77727y81ovu::::res://Assets/Interactables/Canonball.png<>uid://dnxgixs66yj78::::res://Assets/VFX/Bubbles.png
-sea_mine.tscn::PackedScene::9214521475603726372::1706817764::0::1::::<><>::res://Scripts/sea_mine.gd<>uid://0cqijj6en2jv::::res://Assets/Level/Stage one/SeaMine .png
-squid.tscn::PackedScene::4946175390632944167::1706817764::0::1::::<><>::res://Scripts/squid.gd<>uid://b2r223hrllemb::::res://Assets/Enemies/level one/Squid Enemy.png<>uid://bs0xanauafhft::::res://Assets/enemyhealthbar.tres
+player.tscn::PackedScene::5325533638394233076::1706836465::0::1::::<><>::res://Scripts/player.gd<>uid://bacmq4n73pdjl::::res://Assets/Player/Player animation sheet.png<>uid://ckfxsixisvipn::::res://Assets/VFX/canon_muzzle.tscn<>uid://b6a0hj54uk8p5::::res://Assets/VFX/breathing_bubbles.tscn<>uid://bev0qnwxftmw4::::res://Assets/VFX/swimingbubbles.tscn
+player_projectile.tscn::PackedScene::1346708382536953972::1707003730::0::1::::<><>::res://Scripts/player_projectile.gd<>uid://dc77727y81ovu::::res://Assets/Interactables/Canonball.png<>uid://dnxgixs66yj78::::res://Assets/VFX/Bubbles.png
+sea_mine.tscn::PackedScene::9214521475603726372::1706836465::0::1::::<><>::res://Scripts/sea_mine.gd<>uid://0cqijj6en2jv::::res://Assets/Level/Stage one/SeaMine .png
+squid.tscn::PackedScene::4946175390632944167::1706836465::0::1::::<><>::res://Scripts/squid.gd<>uid://b2r223hrllemb::::res://Assets/Enemies/level one/Squid Enemy.png<>uid://bs0xanauafhft::::res://Assets/enemyhealthbar.tres
 stage_one_cave.tscn::PackedScene::1265295346100619159::1706476276::0::1::::<><>::uid://b4npjk6nikqbv::::res://Assets/Level/Stage one/Stage one  Cave.png
 treasure_chest.tscn::PackedScene::3494918449791475611::1703032596::0::1::::<><>::res://Scripts/treasure_chest.gd<>uid://cgqgve37npbq4
-::res://Scripts/::1706748504
+::res://Scripts/::1706836464
 Camera.gd::GDScript::-1::1705328665::0::1::::Camera<>Camera2D<>::
 canon_muzzle.gd::GDScript::-1::1706746664::0::1::::<>GPUParticles2D<>::
 CoralWall.gd::GDScript::-1::1705180030::0::1::::<>Node2D<>::
@@ -107,8 +107,8 @@ parallax_background.gd::GDScript::-1::1705511567::0::1::::<>ParallaxBackground<>
 parallax_forground.gd::GDScript::-1::1705328665::0::1::::<>ParallaxBackground<>::
 player.gd::GDScript::-1::1706748504::0::1::::Player<>CharacterBody2D<>::
 player_breathing_bubbles.gd::GDScript::-1::1706364687::0::1::::<>GPUParticles2D<>::
-player_projectile.gd::GDScript::-1::1705270640::0::1::::<>Node2D<>::
-sea_mine.gd::GDScript::-1::1705784094::0::1::::<>Node2D<>::
+player_projectile.gd::GDScript::-1::1706836301::0::1::::<>Node2D<>::
+sea_mine.gd::GDScript::-1::1706836464::0::1::::<>Node2D<>::
 squid.gd::GDScript::-1::1706485082::0::1::::<>CharacterBody2D<>::
 stage_one_cave.gd::GDScript::-1::1705703146::0::1::::<>StaticBody2D<>::
 swimingbubbles.gd::GDScript::-1::1706471225::0::1::::<>GPUParticles2D<>::
@@ -120,8 +120,8 @@ Moving.gd::GDScript::-1::1706815205::0::1::::Moving_State<>State<>::
 Shooting.gd::GDScript::-1::1700879062::0::1::::Shooting_state<>State<>::
 state.gd::GDScript::-1::1701115792::0::1::::State<>Node<>::
 StateMechine.gd::GDScript::-1::1700954665::0::1::::StateMachine<>Node<>::
-::res://Shaders/::1706817764
-Mainwater.gdshader::Shader::-1::1706817764::0::1::::<><>::
+::res://Shaders/::1707179455
+Mainwater.gdshader::Shader::-1::1707179455::0::1::::<><>::
 parallax_background.gdshader::Shader::-1::1704391069::0::1::::<><>::
 ::res://UI/::1699042010
 ::res://UI/In-game GUI/::1699042010

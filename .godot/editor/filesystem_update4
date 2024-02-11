@@ -4,8 +4,9 @@ res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
 res://Scenes/squid.tscn
-res://Scenes/CoralWall.tscn
 res://Scenes/sea_mine.tscn
 res://Scenes/player_projectile.tscn
-res://Scripts/player_projectile.gd
+res://Scenes/CoralWall.tscn
 res://Scripts/sea_mine.gd
+res://Scripts/player.gd
+res://Scenes/gold_coin.tscn

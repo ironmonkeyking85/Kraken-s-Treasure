@@ -42,20 +42,20 @@ func _movement(_delta: float):
 	velocity.y = 0
 	
 	if  Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
-		velocity.y += 0.6
-		velocity.x += 0.6
+		velocity.y += 0.8
+		velocity.x += 0.8
 		$Animation.play("down&right")
 	elif  Input.is_action_pressed("Down") and Input.is_action_pressed("Left"):
-		velocity.y += 0.6
-		velocity.x -= 0.6
+		velocity.y += 0.8
+		velocity.x -= 0.8
 		$Animation.play("down&left")
 	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Left"):
-		velocity.y -= 0.6
-		velocity.x -= 0.6
+		velocity.y -= 0.8
+		velocity.x -= 0.8
 		$Animation.play("up&left")
 	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Right"):
-		velocity.y -= 0.6
-		velocity.x += 0.6
+		velocity.y -= 0.8
+		velocity.x += 0.8
 		$Animation.play("up&right")		
 		
 	elif  Input.is_action_pressed("Left"):
