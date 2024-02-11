@@ -21,7 +21,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
 		
 func _on_projectile_collision_area_entered(area):
-	if area.is_in_group("Enemy"):
+	if area.is_in_group("shootable_enemy"):
 		queue_free()
 	if area.is_in_group("Interactable_Hazards"):
 		queue_free()

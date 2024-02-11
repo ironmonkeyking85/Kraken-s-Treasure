@@ -10,3 +10,4 @@ res://Scenes/CoralWall.tscn
 res://Scripts/sea_mine.gd
 res://Scripts/player.gd
 res://Scenes/gold_coin.tscn
+res://Scripts/player_projectile.gd

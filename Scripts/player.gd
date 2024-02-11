@@ -110,7 +110,7 @@ func _on_hurtbox_area_entered(area):
 		current_health -= 2
 		health_changed.emit(current_health)
 	if current_health <= 0:
-		_death()
+		_death()	
 ###############################################	
 #Player death and respawn area###############
 func _death():
