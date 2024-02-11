@@ -268,8 +268,8 @@ emitting = false
 amount = 600
 process_material = SubResource("ParticleProcessMaterial_qtjl2")
 texture = ExtResource("3_exuy5")
-lifetime = 0.6
 one_shot = true
+speed_scale = 2.0
 explosiveness = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://tgmdcnkiwank"]
+[gd_scene load_steps=15 format=3 uid="uid://tgmdcnkiwank"]
 
 [ext_resource type="Script" path="res://Scripts/player_projectile.gd" id="1_364jn"]
 [ext_resource type="Texture2D" uid="uid://dc77727y81ovu" path="res://Assets/Interactables/Canonball.png" id="2_qmjwx"]
 [ext_resource type="Texture2D" uid="uid://dnxgixs66yj78" path="res://Assets/VFX/Bubbles.png" id="3_n45e3"]
+[ext_resource type="Texture2D" uid="uid://ch25fijnfgnme" path="res://Assets/VFX/ContactPartical.png" id="4_45cb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3h1mo"]
 radius = 24.9098
@@ -44,6 +45,27 @@ scale_over_velocity_max = 0.5
 scale_over_velocity_curve = SubResource("CurveTexture_p0jib")
 color_ramp = SubResource("GradientTexture1D_5l63e")
 
+[sub_resource type="CurveTexture" id="CurveTexture_kjm5r"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e51ru"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(50, 100, 1)
+direction = Vector3(0, 0, 0)
+spread = 171.76
+flatness = 0.845
+initial_velocity_min = 697.19
+initial_velocity_max = 1000.0
+radial_velocity_min = 281.69
+radial_velocity_max = 619.72
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -66.2
+linear_accel_max = -66.2
+radial_accel_min = 38.03
+radial_accel_max = 100.0
+scale_min = 0.01
+scale_max = 0.06
+hue_variation_curve = SubResource("CurveTexture_kjm5r")
+
 [node name="PlayerProjectile" type="Node2D"]
 rotation = 1.5708
 script = ExtResource("1_364jn")
@@ -54,7 +76,7 @@ texture = ExtResource("2_qmjwx")
 
 [node name="ProjectileCollision" type="Area2D" parent="."]
 collision_layer = 16
-collision_mask = 101
+collision_mask = 229
 
 [node name="Collision2d" type="CollisionShape2D" parent="ProjectileCollision"]
 position = Vector2(6.50002, 4.99998)
@@ -67,6 +89,20 @@ amount = 100
 process_material = SubResource("ParticleProcessMaterial_87ay7")
 texture = ExtResource("3_n45e3")
 
+[node name="ContactParticales" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_e51ru")
+texture = ExtResource("4_45cb7")
+lifetime = 0.2
+one_shot = true
+explosiveness = 1.0
+randomness = 0.39
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="area_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_area_entered"]
 [connection signal="body_entered" from="ProjectileCollision" to="." method="_on_projectile_collision_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="Sprite2D" method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
