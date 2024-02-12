@@ -11,3 +11,7 @@ res://Scripts/sea_mine.gd
 res://Scripts/player.gd
 res://Scenes/gold_coin.tscn
 res://Scripts/player_projectile.gd
+res://Scripts/floatingtext.gd
+res://Scripts/squid.gd
+res://UI/In-game HUD/Main.gd
+res://Scenes/floating_text.tscn

@@ -1,3 +1,4 @@
+Label
 Timer
 CollisionShape2D
 Area2D
@@ -11,4 +12,3 @@ Polygon2D
 RigidBody2D
 TileMap
 ParallaxLayer
-AnimationPlayer
