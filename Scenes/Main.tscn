@@ -47,28 +47,29 @@ offset_bottom = 25.5
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-position = Vector2(425, -1729)
+position = Vector2(672, -1752)
 up_direction = Vector2(0, -1)
 
 [node name="Squid enemies" type="Node2D" parent="."]
 
 [node name="Squid" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
-position = Vector2(-1332, 1362)
-rotation = -0.915402
+position = Vector2(-472, 920)
+rotation = 0.255529
 scale = Vector2(2, 2)
 
 [node name="Squid2" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
-position = Vector2(1285, 1725)
-rotation = 0.884804
+position = Vector2(2594, 1861)
+rotation = 0.233721
 scale = Vector2(2, 2)
 
 [node name="Squid3" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
-position = Vector2(724, -523)
-rotation = -0.9943
-scale = Vector2(2, 2)
+unique_name_in_owner = true
+position = Vector2(1418, -1132)
+rotation = -0.200713
+scale = Vector2(-2, 2)
 
 [node name="Squid4" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
-position = Vector2(-1468, -1274)
+position = Vector2(-1175, 1464)
 rotation = -0.0692866
 scale = Vector2(-2, 2)
 
@@ -80,69 +81,437 @@ script = ExtResource("5_yx5k5")
 [node name="Coins" type="Node" parent="."]
 
 [node name="GoldCoin" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(-432, -1280)
+position = Vector2(-442, -1309)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin2" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(-1624, -976)
+position = Vector2(-444, -1433)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin15" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-672, -1488)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin16" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-800, -1488)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin17" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1056, -1488)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin18" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1312, -1432)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin19" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1408, -1384)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin20" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1312, -1296)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin21" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1216, -1392)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin22" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1216, -1200)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin23" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1312, -1160)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin24" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1408, -1200)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin25" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-928, -1032)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin26" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-853, -1028)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin27" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-928, -912)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin28" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-856, -912)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin29" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-856, -784)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin30" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-928, -784)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin3" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(168, -600)
+position = Vector2(96, -200)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin42" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(680, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin43" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(800, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin44" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(928, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin45" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1056, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin87" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1888, -456)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin94" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2344, -1104)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin95" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2216, -1104)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin96" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2088, -1104)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin97" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1960, -1104)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin98" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1832, -1104)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin88" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1760, -456)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin89" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1640, -456)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin90" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1512, -456)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin41" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(96, -336)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin4" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(1840, 88)
+position = Vector2(1688, 112)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin46" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1696, 240)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin47" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1696, 368)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin48" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(1696, 496)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin91" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2080, 568)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin92" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2208, 568)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin93" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(2344, 560)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin5" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(32, -637)
+position = Vector2(96, -456)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin6" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(64, -1166)
+position = Vector2(-928, -1488)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin7" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(-1368, -456)
+position = Vector2(-1448, -656)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin9" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1536, -520)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin31" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1536, -616)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin32" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1344, -616)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin10" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1344, -520)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin11" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1440, -520)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin12" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1344, -432)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin13" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1440, -392)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin33" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1632, -72)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin34" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1632, 48)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin35" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1632, 176)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin36" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1536, 112)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin37" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1536, -16)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin38" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1440, -72)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin49" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-352, -344)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin50" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-352, -200)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin51" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-416, -272)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin52" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-480, -208)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin53" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-480, -336)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin54" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-600, -336)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin55" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-608, -200)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin56" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-544, -272)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin57" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-544, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin59" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-856, 752)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin67" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1376, 688)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin68" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 688)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin69" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 760)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin70" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1376, 760)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin71" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1376, 824)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin72" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 824)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin73" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 880)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin74" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1376, 888)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin75" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1376, 952)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin76" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 952)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin77" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1248, 1016)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin78" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1384, 1008)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin79" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(544, 1320)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin80" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(416, 1320)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin81" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(296, 1320)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin82" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(168, 1328)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin83" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(40, 1336)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin84" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-96, 1400)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin85" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-104, 1528)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin86" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-96, 1648)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin60" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-736, 752)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin61" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-608, 752)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin62" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-664, 816)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin63" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-800, 816)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin64" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-800, 952)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin65" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-672, 952)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin66" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-728, 1008)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin58" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-416, -144)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin39" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1432, 48)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin40" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1432, 176)
+scale = Vector2(0.04, 0.04)
+
+[node name="GoldCoin14" parent="Coins" instance=ExtResource("8_a4lnq")]
+position = Vector2(-1536, -432)
 scale = Vector2(0.04, 0.04)
 
 [node name="GoldCoin8" parent="Coins" instance=ExtResource("8_a4lnq")]
-position = Vector2(-291, -701)
+position = Vector2(96, -592)
 scale = Vector2(0.04, 0.04)
 
 [node name="SeaMines" type="Node" parent="."]
 
 [node name="SeaMine" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(-257, -1017)
+position = Vector2(-248, -1176)
 scale = Vector2(4, 4)
 
 [node name="SeaMine3" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(-665, -682)
+position = Vector2(-368, -816)
 scale = Vector2(4, 4)
 
 [node name="SeaMine4" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(989, 1061)
+position = Vector2(1152, 856)
 scale = Vector2(4, 4)
 
 [node name="SeaMine5" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(2421, 764)
+position = Vector2(2680, 544)
 scale = Vector2(4, 4)
 
 [node name="SeaMine6" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(-452, 374)
+position = Vector2(-472, 1728)
+scale = Vector2(4, 4)
+
+[node name="SeaMine9" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(1424, 1528)
 scale = Vector2(4, 4)
 
 [node name="SeaMine7" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(413, 26)
+position = Vector2(472, -160)
+scale = Vector2(4, 4)
+
+[node name="SeaMine10" parent="SeaMines" instance=ExtResource("7_8vm6u")]
+position = Vector2(-840, -88)
 scale = Vector2(4, 4)
 
 [node name="SeaMine8" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(1286, 60)
+position = Vector2(1632, -32)
 scale = Vector2(4, 4)
 
 [node name="SeaMine2" parent="SeaMines" instance=ExtResource("7_8vm6u")]
-position = Vector2(1182, -333)
+position = Vector2(1400, -608)
 scale = Vector2(4, 4)
 
 [node name="Chest" type="Node" parent="."]
@@ -153,12 +522,13 @@ visible = false
 [node name="GoldBricks" type="Node" parent="."]
 
 [node name="StageOneCave" parent="." instance=ExtResource("15_s6kmg")]
-position = Vector2(520, 320)
+position = Vector2(515, 182)
 
 [node name="CoralWalls" type="Node2D" parent="."]
+position = Vector2(-16, -104)
 
 [node name="CoralWall" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-178, -1440)
+position = Vector2(-184, -1496)
 scale = Vector2(0.08, 0.08)
 
 [node name="CoralWall26" parent="CoralWalls" instance=ExtResource("14_vlcms")]
@@ -195,7 +565,7 @@ rotation = -1.5708
 scale = Vector2(0.08, 0.08)
 
 [node name="CoralWall12" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(576, 50)
+position = Vector2(848, 40)
 rotation = -1.5708
 scale = Vector2(0.08, 0.08)
 
@@ -210,12 +580,12 @@ rotation = -1.5708
 scale = Vector2(0.06, 0.06)
 
 [node name="CoralWall24" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-579, -550)
+position = Vector2(-576, -544)
 rotation = -1.5708
 scale = Vector2(0.06, 0.06)
 
 [node name="CoralWall25" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(-302, -533)
+position = Vector2(-256, -552)
 rotation = -1.5708
 scale = Vector2(-0.06, -0.06)
 
@@ -226,7 +596,7 @@ scale = Vector2(0.08, 0.08)
 skew = -0.0575959
 
 [node name="CoralWall7" parent="CoralWalls" instance=ExtResource("14_vlcms")]
-position = Vector2(278, -442)
+position = Vector2(312, -480)
 rotation = -0.0855211
 scale = Vector2(0.09, 0.09)
 
@@ -297,3 +667,27 @@ scale = Vector2(0.08, 0.08)
 position = Vector2(1420, 1168)
 rotation = -1.55967
 scale = Vector2(0.1, 0.1)
+
+[node name="Control Manual keybaord" type="Label" parent="."]
+offset_left = 448.0
+offset_top = -1696.0
+offset_right = 689.0
+offset_bottom = -1662.0
+theme_override_font_sizes/font_size = 24
+text = "KEYBAORD & MOUSE"
+
+[node name="Control Manual Joystick" type="Label" parent="."]
+offset_left = 280.0
+offset_top = -1696.0
+offset_right = 384.0
+offset_bottom = -1662.0
+theme_override_font_sizes/font_size = 24
+text = "JOYSTICK"
+
+[node name="Control Manual Banner" type="Label" parent="."]
+offset_left = 344.0
+offset_top = -1768.0
+offset_right = 504.0
+offset_bottom = -1726.0
+theme_override_font_sizes/font_size = 30
+text = "CONTROLS"
