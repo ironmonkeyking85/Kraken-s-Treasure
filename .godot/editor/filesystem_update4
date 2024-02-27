@@ -4,7 +4,4 @@ res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
 res://Scenes/squid.tscn
-res://Scenes/CoralWall.tscn
-res://Scenes/floating_text.tscn
-res://Scenes/player_projectile.tscn
-res://Scenes/gold_coin.tscn
+res://Scenes/parallax_background.tscn

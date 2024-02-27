@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqhrfirxt5x8m"]
+
+[ext_resource type="Texture2D" uid="uid://bdohni815558e" path="res://Assets/Level/Stage one/Cave background  paint .png" id="1_mmgpq"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+modulate = Color(0, 0.745098, 0.74902, 1)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+z_index = -2
+texture = ExtResource("1_mmgpq")

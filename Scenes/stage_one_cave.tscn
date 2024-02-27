@@ -243,7 +243,7 @@ shape = SubResource("RectangleShape2D_f37jy")
 collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stage border/StaticBody2D2"]
-position = Vector2(-68, -2388)
+position = Vector2(-72, -2216)
 shape = SubResource("RectangleShape2D_3nq74")
 
 [node name="Maze" type="Node2D" parent="."]
