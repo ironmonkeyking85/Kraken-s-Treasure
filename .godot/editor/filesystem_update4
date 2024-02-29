@@ -5,3 +5,6 @@ res://Shaders/Mainwater.gdshader
 res://Scenes/player.tscn
 res://Scenes/squid.tscn
 res://Scenes/parallax_background.tscn
+res://Scripts/squid.gd
+res://Scenes/ink_bubble.tscn
+res://Scripts/squid_ink_bubble.gd

@@ -21,6 +21,91 @@
 script = ExtResource("1_bdt2q")
 metadata/_edit_horizontal_guides_ = [-2440.0]
 
+[node name="PlayerInputLabels" type="Node2D" parent="."]
+
+[node name="Control Manual Joystick" type="Label" parent="PlayerInputLabels"]
+z_index = 1
+offset_left = 568.0
+offset_top = -1728.0
+offset_right = 672.0
+offset_bottom = -1694.0
+theme_override_font_sizes/font_size = 24
+text = "JOYSTICK"
+
+[node name="Joystick Inputs" type="Label" parent="PlayerInputLabels"]
+z_index = 1
+offset_left = 192.0
+offset_top = -1696.0
+offset_right = 544.0
+offset_bottom = -1514.0
+theme_override_font_sizes/font_size = 24
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerInputLabels/Joystick Inputs"]
+position = Vector2(432, 64)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_85bv7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="PlayerInputLabels/Joystick Inputs"]
+position = Vector2(340, 98)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_2mtd5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="PlayerInputLabels/Joystick Inputs"]
+position = Vector2(516, 82)
+scale = Vector2(0.16, 0.2)
+texture = ExtResource("16_yujse")
+
+[node name="Joystick labels" type="Label" parent="PlayerInputLabels/Joystick Inputs"]
+z_index = 2
+layout_mode = 0
+offset_left = 247.0
+offset_top = 124.0
+offset_right = 384.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 24
+text = "MOVEMENT"
+
+[node name="Joystick labals2" type="Label" parent="PlayerInputLabels/Joystick Inputs"]
+z_index = 2
+layout_mode = 0
+offset_left = 483.0
+offset_top = 109.0
+offset_right = 620.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 24
+text = "SHOOT"
+
+[node name="Keyboard Inputs" type="Label" parent="PlayerInputLabels"]
+z_index = 1
+offset_left = 72.0
+offset_top = -1696.0
+offset_right = 424.0
+offset_bottom = -1514.0
+theme_override_font_sizes/font_size = 24
+text = "UP:          W                                       
+DOWN:   S
+LEFT:       A
+RIGHT:    D
+SHOOT:  LEFT MOUSE BUTTON"
+
+[node name="Control Manual Banner" type="Label" parent="PlayerInputLabels"]
+z_index = 1
+offset_left = 344.0
+offset_top = -1768.0
+offset_right = 504.0
+offset_bottom = -1726.0
+theme_override_font_sizes/font_size = 30
+text = "CONTROLS"
+
+[node name="Control Manual keybaord" type="Label" parent="PlayerInputLabels"]
+z_index = 1
+offset_left = 64.0
+offset_top = -1728.0
+offset_right = 305.0
+offset_bottom = -1694.0
+theme_override_font_sizes/font_size = 24
+text = "KEYBAORD & MOUSE"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
 zoom = Vector2(2, 2)
@@ -73,6 +158,61 @@ scale = Vector2(-2, 2)
 
 [node name="Squid4" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
 position = Vector2(-1175, 1464)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid5" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(-918, -344)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid6" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(169, 169)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid7" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(615, 1732)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid8" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(2215, 1332)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid9" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(1688, 1783)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid10" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(2247, 507)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid11" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(1129, 202)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid12" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(1040, -547)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid13" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(-1055, 431)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid14" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(-1557, -1487)
+rotation = -0.0692866
+scale = Vector2(-2, 2)
+
+[node name="Squid15" parent="Squid enemies" instance=ExtResource("6_qsyl1")]
+position = Vector2(30.0005, -839)
 rotation = -0.0692866
 scale = Vector2(-2, 2)
 
@@ -704,7 +844,7 @@ scale = Vector2(0.107813, 0.113426)
 texture = ExtResource("7_eyawi")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_sg3t2")]
-layer = 2
+layer = 0
 
 [node name="Coins" type="Node" parent="."]
 
@@ -1419,77 +1559,3 @@ scale = Vector2(0.08, 0.08)
 position = Vector2(1420, 1168)
 rotation = -1.55967
 scale = Vector2(0.1, 0.1)
-
-[node name="Control Manual keybaord" type="Label" parent="."]
-offset_left = 64.0
-offset_top = -1728.0
-offset_right = 305.0
-offset_bottom = -1694.0
-theme_override_font_sizes/font_size = 24
-text = "KEYBAORD & MOUSE"
-
-[node name="Control Manual Joystick" type="Label" parent="."]
-offset_left = 568.0
-offset_top = -1728.0
-offset_right = 672.0
-offset_bottom = -1694.0
-theme_override_font_sizes/font_size = 24
-text = "JOYSTICK"
-
-[node name="Keyboard Inputs" type="Label" parent="."]
-offset_left = 72.0
-offset_top = -1696.0
-offset_right = 424.0
-offset_bottom = -1514.0
-theme_override_font_sizes/font_size = 24
-text = "UP:          W                                       
-DOWN:   S
-LEFT:       A
-RIGHT:    D
-SHOOT:  LEFT MOUSE BUTTON"
-
-[node name="Joystick Inputs" type="Label" parent="."]
-offset_left = 192.0
-offset_top = -1696.0
-offset_right = 544.0
-offset_bottom = -1514.0
-theme_override_font_sizes/font_size = 24
-
-[node name="Sprite2D" type="Sprite2D" parent="Joystick Inputs"]
-position = Vector2(432, 64)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("14_85bv7")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Joystick Inputs"]
-position = Vector2(340, 98)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("15_2mtd5")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Joystick Inputs"]
-position = Vector2(516, 82)
-scale = Vector2(0.16, 0.2)
-texture = ExtResource("16_yujse")
-
-[node name="Joystick labals" type="Label" parent="Joystick Inputs"]
-offset_left = 247.0
-offset_top = 124.0
-offset_right = 384.0
-offset_bottom = 158.0
-theme_override_font_sizes/font_size = 24
-text = "MOVEMENT"
-
-[node name="Joystick labals2" type="Label" parent="Joystick Inputs"]
-offset_left = 483.0
-offset_top = 109.0
-offset_right = 620.0
-offset_bottom = 143.0
-theme_override_font_sizes/font_size = 24
-text = "SHOOT"
-
-[node name="Control Manual Banner" type="Label" parent="."]
-offset_left = 344.0
-offset_top = -1768.0
-offset_right = 504.0
-offset_bottom = -1726.0
-theme_override_font_sizes/font_size = 30
-text = "CONTROLS"

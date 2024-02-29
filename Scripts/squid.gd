@@ -27,3 +27,8 @@ func _hit_labal(health: int):
 	floating_text.text = var_to_str(-health) # Display negative damage as positive
 	get_parent().add_child(floating_text)
 	floating_text.global_position = global_position + Vector2(0, -20) # Adjust position above character 	
+
+
+func _on_sees_player_body_entered(body):
+	if body.name == "Player":
+		

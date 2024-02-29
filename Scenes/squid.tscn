@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/squid.gd" id="1_c03dy"]
 [ext_resource type="Texture2D" uid="uid://b2r223hrllemb" path="res://Assets/Enemies/level one/Squid Enemy.png" id="2_35k0u"]
-[ext_resource type="Theme" uid="uid://bs0xanauafhft" path="res://Assets/enemyhealthbar.tres" id="3_6atnm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khv7s"]
 radius = 18.7379
@@ -55,10 +54,16 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_v5266"]
 radius = 30.7907
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4li2"]
+radius = 88.8008
+height = 692.524
+
 [node name="Squid" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
 collision_mask = 19
 script = ExtResource("1_c03dy")
+speed = null
+buoyancy = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.174747, -2.22323)
@@ -96,18 +101,12 @@ position = Vector2(-25.7903, 8.84667)
 shape = SubResource("CircleShape2D_v5266")
 debug_color = Color(0.8, 0.27451, 0.796078, 0.419608)
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-visible = false
-offset_left = 102.0
-offset_top = -34.0
-offset_right = 164.0
-offset_bottom = -7.0
-scale = Vector2(0.2, 0.1)
-theme = ExtResource("3_6atnm")
-theme_override_colors/font_color = Color(0, 0, 0, 0)
-max_value = 4.0
-step = 1.0
-value = 4.0
+[node name="SeesPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SeesPlayer"]
+rotation = -1.5593
+shape = SubResource("CapsuleShape2D_y4li2")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_entered" from="SeesPlayer" to="." method="_on_sees_player_body_entered"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cly7okgclnluq"]
+
+[ext_resource type="Script" path="res://Scripts/squid_ink_bubble.gd" id="1_0nnq8"]
+[ext_resource type="Texture2D" uid="uid://rhjkxb346ipi" path="res://Assets/VFX/SquidInkbubble.png" id="2_1eoya"]
+
+[sub_resource type="Animation" id="Animation_ishrj"]
+resource_name = "inkshot"
+
+[sub_resource type="Animation" id="Animation_de7lw"]
+resource_name = "inkhit"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vv338"]
+_data = {
+"inkhit": SubResource("Animation_de7lw"),
+"inkshot": SubResource("Animation_ishrj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2rpbe"]
+radius = 7.0
+
+[node name="Ink Bubble" type="Node2D"]
+script = ExtResource("1_0nnq8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vv338")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_1eoya")
+hframes = 5
+
+[node name="InkCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InkCollision"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_2rpbe")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -1.5)
+scale = Vector2(0.5, 0.45)
+
+[connection signal="body_entered" from="InkCollision" to="." method="_on_ink_collision_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
