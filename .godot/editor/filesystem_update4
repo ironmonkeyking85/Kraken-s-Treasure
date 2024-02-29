@@ -8,3 +8,5 @@ res://Scenes/parallax_background.tscn
 res://Scripts/squid.gd
 res://Scenes/ink_bubble.tscn
 res://Scripts/squid_ink_bubble.gd
+res://Scenes/player_projectile.tscn
+res://Scripts/player_projectile.gd

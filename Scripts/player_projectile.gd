@@ -4,6 +4,7 @@ extends Node2D
 @onready var timer = $Timer
 @export var speed: float = 1000.0
 var velocity = Vector2.ZERO
+var ink_projectile = preload("res://Scenes/ink_bubble.tscn")
 
 func _ready():
 	contact_paticales.emitting = false

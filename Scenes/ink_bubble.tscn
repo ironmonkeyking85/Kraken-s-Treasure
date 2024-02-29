@@ -41,5 +41,8 @@ shape = SubResource("CircleShape2D_2rpbe")
 position = Vector2(0, -1.5)
 scale = Vector2(0.5, 0.45)
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="InkCollision" to="." method="_on_ink_collision_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

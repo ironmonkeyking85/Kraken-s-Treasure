@@ -135,7 +135,7 @@ offset_bottom = 25.5
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-position = Vector2(408, -1640)
+position = Vector2(-1184, -1555)
 up_direction = Vector2(0, -1)
 
 [node name="Squid enemies" type="Node2D" parent="."]
