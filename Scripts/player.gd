@@ -72,18 +72,18 @@ func _movement(_delta: float):
 	if  velocity.x == 0 :
 		$Animation.play("idle")
 				
+	velocity *= propulsion
+	move_and_slide()
 #Controller input for shooting
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:
-		direction.x -= 1
+		#direction.x -= 1
 		_attack()
 	elif Input.is_action_pressed("Right") and Input.is_action_just_pressed("Shoot") and  can_attack:
-		direction.x += 1	
+		#direction.x += 1	
 		_attack()
 	elif Input.is_action_just_released("Shoot"):
 		pass		
-	velocity *= propulsion
-	move_and_slide()
 # Area for instantiated prjectiles###################	
 func _attack():
 	can_attack = false

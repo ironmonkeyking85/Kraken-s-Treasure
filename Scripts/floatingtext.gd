@@ -1,7 +1,7 @@
 extends Label
 
-var speed = 100
-var direction = Vector2(0, -1)
+var speed = 50
+var direction = Vector2(1, -1)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	direction.y  = -1

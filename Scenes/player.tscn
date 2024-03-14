@@ -1536,8 +1536,8 @@ libraries = {
 autoplay = "idle"
 
 [node name="CannonBall" type="Marker2D" parent="."]
-position = Vector2(-147.5, -15)
-rotation = 1.5708
+position = Vector2(145, -17.5)
+rotation = -1.5708
 gizmo_extents = 41.6
 
 [node name="AttackAudio" type="AudioStreamPlayer2D" parent="."]
@@ -1548,7 +1548,6 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_gsncv")
 hframes = 6
 vframes = 2
-frame = 4
 
 [node name="Action_timer" type="Timer" parent="."]
 wait_time = 3.0
@@ -1573,15 +1572,15 @@ shape = SubResource("RectangleShape2D_87sca")
 wait_time = 3.0
 
 [node name="CanonMuzzle" parent="." instance=ExtResource("3_vfdxq")]
-position = Vector2(-142.5, -5)
+position = Vector2(130, -2.5)
 rotation = -2.82798
 
 [node name="BreathingBubbles" parent="." instance=ExtResource("4_23men")]
-position = Vector2(-160, -30)
+position = Vector2(115, -40)
 rotation = -2.72026
 
 [node name="Swimingbubbles" parent="." instance=ExtResource("5_ye2r7")]
-position = Vector2(55, -20)
+position = Vector2(-90, -12.5)
 rotation = -5.9282
 
 [connection signal="timeout" from="Action_timer" to="." method="_on_action_timer_timeout"]

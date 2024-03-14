@@ -2,11 +2,18 @@ extends CharacterBody2D
 
 enum ENEMYSTATES {IDLE, ATTACK, HURT, DEAD,}
 
-@export var speed = 500.0
+@export var speed:float = 500.0
 @export var buoyancy = 25.0
 @export var health = Globals.enemy_health
 var current_states = ENEMYSTATES.IDLE
+var can_attack = true
+var bubble_shot = preload("res://Scenes/ink_bubble.tscn")
+@onready var player = get_node("../../Player")
 
+
+func _ready():
+	$AnimationPlayer.play("Idle")
+	
 func _physics_process(delta):
 	match current_states:
 		ENEMYSTATES.IDLE:
@@ -18,20 +25,16 @@ func _physics_process(delta):
 		ENEMYSTATES.DEAD:
 			_dead()	
 			
-func _process(_delta) -> void:
-	$AnimationPlayer.play("Idle")
 	move_and_slide()
 
-
+func _process(delta):
+	_rotation_to_target(player,delta)
+				
 func _on_hurtbox_area_entered(area):
 	if area.name == "ProjectileCollision":
-		health -= 2
-		_hit_labal(health)
-		$AnimationPlayer.play("Hurt")
+		_hurt()
 	if health <= 0:
-		_hit_labal(health)	
-		$AnimationPlayer.play("Dead")
-		queue_free()
+		_dead()
 	
 
 func _on_hitbox_body_entered(body):
@@ -44,19 +47,61 @@ func _hit_labal(health: int):
 	floating_text.global_position = global_position + Vector2(0, -20) # Adjust position above character 	
 
 
-func _on_sees_player_body_entered(body):
-	if body.name == "Player":
-		pass
-
 
 func _on_timer_timeout():
-	pass # Replace with function body.
+	_attack()
 
 func _idle(delta):
-	pass
+	current_states = ENEMYSTATES.IDLE
+	
 func _attack():
-	pass	
+	
+	var ink_bubble = bubble_shot.instantiate()
+	get_tree().root.add_child(ink_bubble)
+	
+	
+			
 func _hurt():
-	pass
+	$AnimationPlayer.play("Hurt")
+	health -= 1
+	_hit_labal(health)
+	
+	
 func _dead():
-	pass	
+	$AnimationPlayer.play("Dead")
+	_hit_labal(health)
+	await $AnimationPlayer.animation_finished
+	queue_free()	
+	
+func _on_state_finished():
+	current_states = ENEMYSTATES.IDLE	
+
+
+func _on_sees_player_area_entered(area):
+	if area.name == "Hazard Area":
+		_attack()
+		
+func _rotation_to_target(player, delta):
+	# Define the speed at which the enemy rotates towards the player
+	var rotation_speed = 5000.0
+
+# Calculate the direction vector from the enemy to the player
+# Subtracting the enemy's global position from the player's global position gives the direction vector
+	var player_position = player.global_position - global_position
+
+# Calculate the angle between the enemy's current forward direction and the direction to the player
+# This gives the angle the enemy needs to rotate to face the player
+	var enemy_rotation = $".".transform.y.angle_to(player_position)
+
+# Rotate the enemy towards the player
+# The sign function determines the direction of rotation (clockwise or counterclockwise)
+# The min function ensures the rotation does not exceed the angle to the player, preventing overshooting
+# The rotation speed is multiplied by delta to make the rotation frame-rate independent
+	$".".rotate(sign(enemy_rotation)* min(delta * rotation_speed, abs(enemy_rotation)))
+
+	
+	 
+	
+		
+		
+		
