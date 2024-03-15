@@ -410,7 +410,7 @@ shape = SubResource("CircleShape2D_v5266")
 debug_color = Color(0.8, 0.27451, 0.796078, 0.419608)
 
 [node name="SeesPlayer" type="Area2D" parent="."]
-rotation = -1.52539
+rotation = -1.10814
 collision_layer = 4
 collision_mask = 2
 
