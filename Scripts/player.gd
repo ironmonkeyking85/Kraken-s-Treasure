@@ -42,20 +42,20 @@ func _movement(_delta: float):
 	velocity.y = 0
 	
 	if  Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
-		velocity.y += 0.8
-		velocity.x += 0.8
+		velocity.y += 1
+		velocity.x += 1
 		$Animation.play("down&right")
 	elif  Input.is_action_pressed("Down") and Input.is_action_pressed("Left"):
-		velocity.y += 0.8
-		velocity.x -= 0.8
+		velocity.y += 1
+		velocity.x -= 1
 		$Animation.play("down&left")
 	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Left"):
-		velocity.y -= 0.8
-		velocity.x -= 0.8
+		velocity.y -= 1
+		velocity.x -= 1
 		$Animation.play("up&left")
 	elif  Input.is_action_pressed("Up") and Input.is_action_pressed("Right"):
-		velocity.y -= 0.8
-		velocity.x += 0.8
+		velocity.y -= 1
+		velocity.x += 1
 		$Animation.play("up&right")		
 		
 	elif  Input.is_action_pressed("Left"):
@@ -108,6 +108,8 @@ func _on_hazard_area_area_entered(area):
 func _on_hurtbox_area_entered(area):
 	if area.is_in_group("Enemy"):
 		current_health -= 2
+	if area.is_in_group("enemy_projectile"):
+		current_health -= 1	
 		health_changed.emit(current_health)
 	if current_health <= 0:
 		_death()	

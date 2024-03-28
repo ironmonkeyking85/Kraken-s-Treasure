@@ -36,11 +36,17 @@ func _idle(delta):
 	
 func _attack():
 	can_attack = false
-	var ink_bubble = bubble_shot.instantiate()
-	get_tree().root.add_child(ink_bubble)
+	$AttackCoolDown.start()
+	var direction_to_player = (player.global_position - global_position).normalized()
+	var projectile = bubble_shot.instantiate()
+	projectile.global_position = global_position
+	projectile.set_direction(direction_to_player)
+	get_tree().root.call_deferred("add_child", projectile)
+	projectile.start($Sprite2D/Inkbubble.global_transform)	
 	
 func _on_timer_timeout():
 	can_attack = true
+	_attack()
 				
 func _rotation_to_target(player, delta):
 	# Define the speed at which the enemy rotates towards the player
@@ -59,7 +65,7 @@ func _rotation_to_target(player, delta):
 	
 func _hurt():
 	$AnimationPlayer.play("Hurt")
-	health -= 1
+	health -= 3.5
 	_hit_labal(health)
 	
 func _dead():
@@ -79,7 +85,7 @@ func _on_hurtbox_area_entered(area):
 
 func _on_sees_player_area_entered(area):
 	if area.name == "Hazard Area":
-		_attack()
+		_on_timer_timeout()
 
 func _on_hitbox_body_entered(body):
 	pass # Replace with function body.

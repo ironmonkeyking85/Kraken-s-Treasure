@@ -1,16 +1,10 @@
+res://Scripts/squid_ink_bubble.gd
 res://Scenes/Main.tscn
 res://Scripts/State Machine/Moving.gd
-res://Assets/enemyhealthbar.tres
 res://Shaders/Mainwater.gdshader
+res://Scripts/player.gd
 res://Scenes/player.tscn
 res://Scenes/squid.tscn
-res://Scenes/parallax_background.tscn
-res://Scripts/squid.gd
 res://Scenes/ink_bubble.tscn
-res://Scripts/squid_ink_bubble.gd
 res://Scenes/player_projectile.tscn
-res://Scripts/player_projectile.gd
-res://Auto Loads/Singletons/Globals.gd
-res://Scripts/floatingtext.gd
-res://Scenes/floating_text.tscn
-res://Scripts/player.gd
+res://Scenes/stage_one_cave.tscn

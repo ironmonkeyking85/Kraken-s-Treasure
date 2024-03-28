@@ -52,7 +52,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Inkbubble:rotation")
+tracks/3/path = NodePath("Sprite2D/Inkbubble:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -64,7 +64,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Inkbubble:position")
+tracks/4/path = NodePath("Sprite2D/Inkbubble:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -368,10 +368,6 @@ script = ExtResource("1_c03dy")
 position = Vector2(0.174747, -2.22323)
 shape = SubResource("CircleShape2D_khv7s")
 
-[node name="Inkbubble" type="Marker2D" parent="."]
-position = Vector2(-13, -6)
-rotation = 1.5708
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.209696, -1.15333)
 scale = Vector2(0.1, 0.1)
@@ -380,9 +376,11 @@ texture = ExtResource("2_35k0u")
 hframes = 3
 frame = 2
 
-[node name="line of attack" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-36.35, 97.2582)
-scale = Vector2(7.5, 6)
+[node name="Inkbubble" type="Marker2D" parent="Sprite2D"]
+position = Vector2(-45.7365, 44.6394)
+rotation = 1.74533
+scale = Vector2(21.2539, 21.7349)
+skew = -0.37461
 
 [node name="Hurtbox" type="Area2D" parent="." groups=["Shootable_enemy"]]
 collision_layer = 128
@@ -418,10 +416,10 @@ collision_mask = 2
 rotation = -1.56741
 shape = SubResource("CapsuleShape2D_y4li2")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 6.0
+[node name="AttackCoolDown" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="SeesPlayer" to="." method="_on_sees_player_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AttackCoolDown" to="." method="_on_timer_timeout"]

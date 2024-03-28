@@ -248,8 +248,8 @@ shape = SubResource("RectangleShape2D_3nq74")
 
 [node name="Maze" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
-collision_mask = 19
+[node name="StaticBody2D" type="StaticBody2D" parent="Maze" groups=["Collidable", "WallCollision"]]
+collision_mask = 23
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D"]
 position = Vector2(-676, -1240)
@@ -335,7 +335,7 @@ shape = SubResource("RectangleShape2D_dvfdu")
 position = Vector2(1884, -32)
 shape = SubResource("RectangleShape2D_x06we")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Maze" groups=["Collidable", "WallCollision"]]
 collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
@@ -424,10 +424,8 @@ position = Vector2(-1519.14, 668.01)
 rotation = 0.104241
 shape = SubResource("RectangleShape2D_0qgho")
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Maze/StaticBody2D2"]
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="Maze" groups=["Collidable"]]
-collision_mask = 19
+[node name="StaticBody2D3" type="StaticBody2D" parent="Maze" groups=["Collidable", "WallCollision"]]
+collision_mask = 23
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D3"]
 position = Vector2(1818.5, 530.5)
