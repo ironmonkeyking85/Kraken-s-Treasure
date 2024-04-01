@@ -40,7 +40,7 @@ func _physics_process(delta: float)-> void:
 func _movement(_delta: float):	
 	velocity.x = 0
 	velocity.y = 0
-	
+# Quarter turn directional controls	
 	if  Input.is_action_pressed("Down") and Input.is_action_pressed("Right"):
 		velocity.y += 1
 		velocity.x += 1
@@ -57,7 +57,7 @@ func _movement(_delta: float):
 		velocity.y -= 1
 		velocity.x += 1
 		$Animation.play("up&right")		
-		
+# Four directional controls		
 	elif  Input.is_action_pressed("Left"):
 		velocity.x -= 1
 		$Animation.play("moving left", )
@@ -79,15 +79,19 @@ func _movement(_delta: float):
 #Controller input for shooting
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:
-		#direction.x -= 1
 		$Canonshot.play()
 		_attack()
 	elif Input.is_action_pressed("Right") and Input.is_action_just_pressed("Shoot") and  can_attack:
-		#direction.x += 1	
 		$Canonshot.play()
 		_attack()
-	elif Input.is_action_just_released("Shoot"):
-		pass		
+	elif Input.is_action_pressed("Up") and Input.is_action_just_pressed("Shoot") and  can_attack:
+		$Canonshot.play()
+		_attack()
+	elif Input.is_action_pressed("Down") and Input.is_action_just_pressed("Shoot") and  can_attack:
+		$Canonshot.play()
+		_attack()			
+		
+			
 # Area for instantiated prjectiles###################	
 func _attack():
 	can_attack = false

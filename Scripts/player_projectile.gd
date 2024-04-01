@@ -11,7 +11,7 @@ func _ready():
 
 func start(_transform):
 	transform = _transform
-	velocity = transform.x * speed
+	velocity = transform.x * speed 
 		
 func _process(delta):
 	position += transform.y * speed  * delta

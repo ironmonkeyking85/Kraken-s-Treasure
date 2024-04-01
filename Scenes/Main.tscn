@@ -1562,9 +1562,9 @@ position = Vector2(1420, 1168)
 rotation = -1.55967
 scale = Vector2(0.1, 0.1)
 
-[node name="Background_music" type="AudioStreamPlayer" parent="."]
+[node name="Background_music_Ocean" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_3yp7v")
-volume_db = -24.098
+volume_db = -13.318
 autoplay = true
 
 [node name="Background_music_Main" type="AudioStreamPlayer" parent="."]

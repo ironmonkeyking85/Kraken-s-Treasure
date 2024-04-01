@@ -72,6 +72,30 @@ tracks/4/keys = {
 "update": 1,
 "values": [4]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CannonBall:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2.5, -170)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CannonBall:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-3.07296]
+}
 
 [sub_resource type="Animation" id="Animation_kmqm7"]
 resource_name = "dead"
@@ -638,35 +662,6 @@ tracks/10/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_3kec7"]
-resource_name = "moving down"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-4.80489, -4.80489, -4.80489]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 5, 4]
-}
-
 [sub_resource type="Animation" id="Animation_gv16n"]
 resource_name = "moving left"
 length = 0.5
@@ -1169,35 +1164,6 @@ tracks/19/keys = {
 "values": [0.0, 0.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_pmcmu"]
-resource_name = "moving up"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 5, 4]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-1.74533, -1.74533, -1.74533]
-}
-
 [sub_resource type="Animation" id="Animation_duam4"]
 resource_name = "taking_damage"
 
@@ -1547,6 +1513,112 @@ tracks/15/keys = {
 "values": [-2.68662, -2.68662, -2.68662]
 }
 
+[sub_resource type="Animation" id="Animation_3kec7"]
+resource_name = "moving up"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.74533, -1.7558, -1.74533]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 5, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CannonBall:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2.5, 172.5), Vector2(-4.76837e-07, 197.5), Vector2(1.90735e-06, 172.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CannonBall:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0283477, -0.0107024, -6.23696]
+}
+
+[sub_resource type="Animation" id="Animation_pmcmu"]
+resource_name = "moving down"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 5, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.74533, 1.74533, 1.74533]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CannonBall:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-3.1212, -3.14078, 3.13914]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CannonBall:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-5, -200), Vector2(-10, -182.5), Vector2(-20, -190)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n8d3w"]
 _data = {
 "RESET": SubResource("Animation_cpujk"),
@@ -1554,10 +1626,10 @@ _data = {
 "down&left": SubResource("Animation_haij6"),
 "down&right": SubResource("Animation_evjug"),
 "idle": SubResource("Animation_uach0"),
-"moving down": SubResource("Animation_3kec7"),
+"moving down": SubResource("Animation_pmcmu"),
 "moving left": SubResource("Animation_gv16n"),
 "moving right": SubResource("Animation_hnxs1"),
-"moving up": SubResource("Animation_pmcmu"),
+"moving up": SubResource("Animation_3kec7"),
 "taking_damage": SubResource("Animation_duam4"),
 "up&left": SubResource("Animation_j0yrb"),
 "up&right": SubResource("Animation_qjpee")
@@ -1584,8 +1656,8 @@ libraries = {
 autoplay = "idle"
 
 [node name="CannonBall" type="Marker2D" parent="."]
-position = Vector2(-55, -152.5)
-rotation = 2.67426
+position = Vector2(-2.5, -170)
+rotation = -3.07296
 gizmo_extents = 41.6
 
 [node name="AttackAudio" type="AudioStreamPlayer2D" parent="."]

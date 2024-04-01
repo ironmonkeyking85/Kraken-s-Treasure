@@ -8,3 +8,5 @@ res://Scenes/player_projectile.tscn
 res://Scenes/gold_coin.tscn
 res://Scenes/sea_mine.tscn
 res://Scripts/player.gd
+res://UI/In-game HUD/Main.gd
+res://Scripts/player_projectile.gd
