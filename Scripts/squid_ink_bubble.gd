@@ -6,7 +6,9 @@ var velocity = Vector2.ZERO
 
 func _physics_process(delta):
 	position += transform.x * speed * delta
-	$Sprite2D.rotate + 1
+	
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func start(_transform):
 	transform = _transform
@@ -29,6 +31,9 @@ func _rotation_to_target(player, delta):
 # The min function ensures the rotation does not exceed the angle to the player, preventing overshooting
 # The rotation speed is multiplied by delta to make the rotation frame-rate independent
 	$".".rotate(sign(enemy_rotation)* min(delta * rotation_speed, abs(enemy_rotation)))	
+
+
+	 
 	
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfv8d5by4efgo"]
+[gd_scene load_steps=9 format=3 uid="uid://dfv8d5by4efgo"]
 
 [ext_resource type="Script" path="res://Scripts/gold_coin.gd" id="1_aa6c6"]
 [ext_resource type="Texture2D" uid="uid://d137vobmd5y8j" path="res://Assets/Interactables/Gold coin animation .png" id="2_al0wc"]
+[ext_resource type="AudioStream" uid="uid://de3vx2g54a865" path="res://Assets/SFX/coin5.ogg" id="3_j72s1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdknv"]
 radius = 937.385
@@ -267,7 +268,8 @@ texture = ExtResource("2_al0wc")
 hframes = 5
 frame = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Pick_up" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-1, 0)
+stream = ExtResource("3_j72s1")
 
 [connection signal="body_entered" from="CoinPickUp" to="." method="_on_coin_pick_up_body_entered"]

@@ -96,7 +96,6 @@ func _hit_labal(health: int):
 	get_parent().add_child(floating_text)
 	floating_text.global_position = global_position + Vector2(0, -20) # Adjust position above character 	
 	 
-	
-		
-		
-		
+
+func _on_sees_player_area_exited(area):
+	pass

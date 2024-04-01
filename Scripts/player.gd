@@ -4,6 +4,7 @@ extends CharacterBody2D
 signal health_changed
 
 enum PLAYERSTATES {MOVEMENT, ATTACK, HURT, DEAD, GAMEOVER}
+var current_states = PLAYERSTATES.MOVEMENT
 
 @export var buoyancy: float = 25.0
 @export var gravity: float = 100.0
@@ -16,7 +17,6 @@ enum PLAYERSTATES {MOVEMENT, ATTACK, HURT, DEAD, GAMEOVER}
 @export var attack_rate = 0.25
 @export var canon_vfx_rate = 0.25
 var treasure_amount: int = 0
-var current_states = PLAYERSTATES.MOVEMENT
 var can_attack = true
 
 # adding "as" and class name allow for better auto complete
@@ -60,16 +60,18 @@ func _movement(_delta: float):
 		
 	elif  Input.is_action_pressed("Left"):
 		velocity.x -= 1
-		$Animation.play("moving left")
+		$Animation.play("moving left", )
 	elif  Input.is_action_pressed("Right"):
 		velocity.x += 1 
 		$Animation.play("moving right")
 	elif  Input.is_action_pressed("Up"):
 		velocity.y -= 1	
+		$Animation.play("moving down" )
 	elif  Input.is_action_pressed("Down"):
 		velocity.y += 1
+		$Animation.play("moving up")
 		
-	if  velocity.x == 0 :
+	elif velocity.x == 0 and velocity.y == 0:
 		$Animation.play("idle")
 				
 	velocity *= propulsion
@@ -78,9 +80,11 @@ func _movement(_delta: float):
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("Left") and Input.is_action_just_pressed("Shoot") and  can_attack:
 		#direction.x -= 1
+		$Canonshot.play()
 		_attack()
 	elif Input.is_action_pressed("Right") and Input.is_action_just_pressed("Shoot") and  can_attack:
 		#direction.x += 1	
+		$Canonshot.play()
 		_attack()
 	elif Input.is_action_just_released("Shoot"):
 		pass		
@@ -93,7 +97,16 @@ func _attack():
 	projectile.start($CannonBall.global_transform)		
 func _on_attack_cool_down_timeout():
 	can_attack = true	
+#############################################
+# State manager
+func _on_state_finished():
+	current_states = PLAYERSTATES.MOVEMENT
 ##############################################	
+#Player death and respawn area###############
+func _death():
+	$Animation.play("dead")
+	get_tree().reload_current_scene()
+#############################################	
 # Collision, hazards, and stage interactions area############
 func _on_hazard_area_area_entered(area):
 	if area.is_in_group("Hazards"):
@@ -103,7 +116,7 @@ func _on_hazard_area_area_entered(area):
 		current_health -= 1
 		health_changed.emit(current_health)				
 	if current_health <= 0:
-		_death()
+		current_states = PLAYERSTATES.DEAD
 
 func _on_hurtbox_area_entered(area):
 	if area.is_in_group("Enemy"):
@@ -112,12 +125,7 @@ func _on_hurtbox_area_entered(area):
 		current_health -= 1	
 		health_changed.emit(current_health)
 	if current_health <= 0:
-		_death()	
+		current_states = PLAYERSTATES.DEAD	
 ###############################################	
-#Player death and respawn area###############
-func _death():
-	$Animation.play("dead")
-	get_tree().reload_current_scene()
-#############################################	
 		
 

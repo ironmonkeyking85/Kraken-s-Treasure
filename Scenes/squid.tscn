@@ -417,9 +417,10 @@ rotation = -1.56741
 shape = SubResource("CapsuleShape2D_y4li2")
 
 [node name="AttackCoolDown" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="SeesPlayer" to="." method="_on_sees_player_area_entered"]
+[connection signal="area_exited" from="SeesPlayer" to="." method="_on_sees_player_area_exited"]
 [connection signal="timeout" from="AttackCoolDown" to="." method="_on_timer_timeout"]

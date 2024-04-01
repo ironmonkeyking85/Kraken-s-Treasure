@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://ch4y04wsoqxds"]
+[gd_scene load_steps=23 format=3 uid="uid://ch4y04wsoqxds"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_00ytg"]
 [ext_resource type="Texture2D" uid="uid://bacmq4n73pdjl" path="res://Assets/Player/Player animation sheet.png" id="2_gsncv"]
 [ext_resource type="PackedScene" uid="uid://ckfxsixisvipn" path="res://Assets/VFX/canon_muzzle.tscn" id="3_vfdxq"]
 [ext_resource type="PackedScene" uid="uid://b6a0hj54uk8p5" path="res://Assets/VFX/breathing_bubbles.tscn" id="4_23men"]
 [ext_resource type="PackedScene" uid="uid://bev0qnwxftmw4" path="res://Assets/VFX/swimingbubbles.tscn" id="5_ye2r7"]
+[ext_resource type="AudioStream" uid="uid://cixka8j4vcfdm" path="res://Assets/SFX/canon.wav" id="6_2hqbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upnop"]
 size = Vector2(222.5, 110)
@@ -58,6 +59,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
 }
 
 [sub_resource type="Animation" id="Animation_kmqm7"]
@@ -118,24 +131,10 @@ tracks/4/path = NodePath("BreathingBubbles:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-30, -125)]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(1.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_death"
-}]
+"values": [Vector2(-30, -125), Vector2(-30, -125)]
 }
 
 [sub_resource type="Animation" id="Animation_haij6"]
@@ -641,8 +640,32 @@ tracks/10/keys = {
 
 [sub_resource type="Animation" id="Animation_3kec7"]
 resource_name = "moving down"
-length = 0.7
+length = 0.5
 loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-4.80489, -4.80489, -4.80489]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 5, 4]
+}
 
 [sub_resource type="Animation" id="Animation_gv16n"]
 resource_name = "moving left"
@@ -1150,6 +1173,30 @@ tracks/19/keys = {
 resource_name = "moving up"
 length = 0.5
 loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 5, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.74533, -1.74533, -1.74533]
+}
 
 [sub_resource type="Animation" id="Animation_duam4"]
 resource_name = "taking_damage"
@@ -1526,6 +1573,7 @@ script = ExtResource("1_00ytg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12.5, -6.66667)
+rotation = 1.22348
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_upnop")
 
@@ -1536,18 +1584,19 @@ libraries = {
 autoplay = "idle"
 
 [node name="CannonBall" type="Marker2D" parent="."]
-position = Vector2(145, -17.5)
-rotation = -1.5708
+position = Vector2(-55, -152.5)
+rotation = 2.67426
 gizmo_extents = 41.6
 
 [node name="AttackAudio" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 2
-scale = Vector2(0.25, 0.25)
+scale = Vector2(-0.25, -0.25)
 texture = ExtResource("2_gsncv")
 hframes = 6
 vframes = 2
+frame = 4
 
 [node name="Action_timer" type="Timer" parent="."]
 wait_time = 3.0
@@ -1558,6 +1607,7 @@ collision_mask = 44
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(-9.16667, -9.16667)
+rotation = 1.22348
 shape = SubResource("RectangleShape2D_068bu")
 
 [node name="Hazard Area" type="Area2D" parent="."]
@@ -1566,22 +1616,30 @@ collision_mask = 44
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard Area"]
 position = Vector2(-15, -12.5)
+rotation = 1.22348
 shape = SubResource("RectangleShape2D_87sca")
 
 [node name="AttackCoolDown" type="Timer" parent="."]
 wait_time = 3.0
 
 [node name="CanonMuzzle" parent="." instance=ExtResource("3_vfdxq")]
-position = Vector2(130, -2.5)
-rotation = -2.82798
+position = Vector2(-45, -135)
+rotation = 2.64569
 
 [node name="BreathingBubbles" parent="." instance=ExtResource("4_23men")]
-position = Vector2(115, -40)
-rotation = -2.72026
+position = Vector2(-12.5, -132.5)
+rotation = -2.63692
 
 [node name="Swimingbubbles" parent="." instance=ExtResource("5_ye2r7")]
-position = Vector2(-90, -12.5)
+position = Vector2(-55, 95)
 rotation = -5.9282
+
+[node name="Canonshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2hqbe")
+volume_db = -13.823
+pitch_scale = 0.75
+max_distance = 100.0
+attenuation = 0.34151
 
 [connection signal="timeout" from="Action_timer" to="." method="_on_action_timer_timeout"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

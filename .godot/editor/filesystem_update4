@@ -1,10 +1,10 @@
-res://Scripts/squid_ink_bubble.gd
 res://Scenes/Main.tscn
 res://Scripts/State Machine/Moving.gd
 res://Shaders/Mainwater.gdshader
-res://Scripts/player.gd
 res://Scenes/player.tscn
 res://Scenes/squid.tscn
 res://Scenes/ink_bubble.tscn
 res://Scenes/player_projectile.tscn
-res://Scenes/stage_one_cave.tscn
+res://Scenes/gold_coin.tscn
+res://Scenes/sea_mine.tscn
+res://Scripts/player.gd

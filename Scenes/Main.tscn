@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dsmo1nei03b0x"]
+[gd_scene load_steps=19 format=3 uid="uid://dsmo1nei03b0x"]
 
 [ext_resource type="PackedScene" uid="uid://ch4y04wsoqxds" path="res://Scenes/player.tscn" id="1_awg6l"]
 [ext_resource type="Script" path="res://UI/In-game HUD/Main.gd" id="1_bdt2q"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://d0m3u1l7oo15n" path="res://Assets/Props/Forground/logo selector.png" id="15_2mtd5"]
 [ext_resource type="PackedScene" uid="uid://sa6h2j2q3ilb" path="res://Scenes/stage_one_cave.tscn" id="15_s6kmg"]
 [ext_resource type="Texture2D" uid="uid://dsl8i3hj82rx1" path="res://Assets/Props/Forground/logo selector shoot.png" id="16_yujse"]
+[ext_resource type="AudioStream" uid="uid://d1olvc2kfpsg5" path="res://Assets/Music/WATRUndwtr_Evolving Underwater Bubbles_JSE_WIM.wav" id="17_3yp7v"]
+[ext_resource type="AudioStream" uid="uid://d0sl8m6pnambn" path="res://Assets/Music/Fantasy Relaxed Main.wav" id="18_ehxur"]
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_bdt2q")
@@ -135,7 +137,7 @@ offset_bottom = 25.5
 grow_horizontal = 0
 
 [node name="Player" parent="." instance=ExtResource("1_awg6l")]
-position = Vector2(-943, -1507)
+position = Vector2(438, -1656)
 up_direction = Vector2(0, -1)
 
 [node name="Squid enemies" type="Node2D" parent="."]
@@ -1559,3 +1561,14 @@ scale = Vector2(0.08, 0.08)
 position = Vector2(1420, 1168)
 rotation = -1.55967
 scale = Vector2(0.1, 0.1)
+
+[node name="Background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_3yp7v")
+volume_db = -24.098
+autoplay = true
+
+[node name="Background_music_Main" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_ehxur")
+volume_db = -17.756
+pitch_scale = 0.69
+autoplay = true
